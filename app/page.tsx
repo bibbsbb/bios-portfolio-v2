@@ -390,7 +390,7 @@ INFRASTRUCTURE=["AWS", "Azure", "Windows Server", "Cisco Meraki", "Palo Alto", "
   → 73% phishing reduction via 1Password rollout
   → AI Governance Board member
 
-[2020-2022] IT Director @ Princess Polly
+[2020-2025] IT Director @ Princess Polly
   → Scaled IT from 1 to multi-person team
   → 14+ global retail locations supported
   → 45% resolution time improvement
@@ -482,7 +482,7 @@ EDUCATION:
       case 'experience':
         output = `Work Experience:
   2022-Present: IT Director @ Liquid I.V. (Unilever)
-  2020-2022: IT Director @ Princess Polly
+  2020-2025: IT Director @ Princess Polly
   2017-2020: IT Manager @ Drinks.com
   2016-2017: Senior IT Tech @ Playtika
   2014-2016: IT Support @ David & Goliath`;
@@ -641,15 +641,16 @@ contact.cfg   certs.bin     games/`;
     >
       {/* Top Header Bar */}
       <div
-        className="text-center py-1 font-bold"
+        className="text-center py-1 font-bold text-xs sm:text-sm"
         style={{ background: colors.text, color: colors.bg }}
       >
-        CMOS Setup Utility - Copyright (C) 2014-2025, Brandon Bibbins Inc.
+        <span className="hidden sm:inline">CMOS Setup Utility - Copyright (C) 2014-2025, Brandon Bibbins Inc.</span>
+        <span className="sm:hidden">BIOS Setup - Brandon Bibbins</span>
       </div>
 
-      <div className="flex mt-2 gap-2" style={{ height: 'calc(100vh - 120px)' }}>
+      <div className="flex flex-col md:flex-row mt-2 gap-2" style={{ minHeight: 'calc(100vh - 140px)' }}>
         {/* Left Menu */}
-        <div className="w-64 border-2 flex flex-col" style={{ borderColor: colors.text }}>
+        <div className="w-full md:w-64 border-2 flex flex-col" style={{ borderColor: colors.text }}>
           <div
             className="px-2 py-1 font-bold text-center"
             style={{ background: colors.text, color: colors.bg }}
@@ -664,13 +665,14 @@ contact.cfg   certs.bin     games/`;
                   setFocusArea('menu');
                   setSelectedIndex(index);
                   setSelectedMenu(item.id);
+                  playBeep('click');
                 }}
                 onMouseEnter={() => {
                   setFocusArea('menu');
                   setSelectedIndex(index);
                   setSelectedMenu(item.id);
                 }}
-                className="px-2 py-1 cursor-pointer"
+                className="px-2 py-2 md:py-1 cursor-pointer active:opacity-80 transition-opacity"
                 style={
                   selectedIndex === index && focusArea === 'menu'
                     ? { background: colors.text, color: colors.bg }
@@ -686,7 +688,7 @@ contact.cfg   certs.bin     games/`;
         </div>
 
         {/* Right Content Panel */}
-        <div className="flex-1 border-2 flex flex-col" style={{ borderColor: colors.text }}>
+        <div className="flex-1 border-2 flex flex-col order-first md:order-none" style={{ borderColor: colors.text }}>
           <div
             className="px-2 py-1 font-bold"
             style={{ background: colors.text, color: colors.bg }}
@@ -710,8 +712,8 @@ contact.cfg   certs.bin     games/`;
           </div>
         </div>
 
-        {/* Help Panel */}
-        <div className="w-48 border-2 flex flex-col" style={{ borderColor: colors.text }}>
+        {/* Help Panel - Hidden on mobile */}
+        <div className="hidden lg:flex w-48 border-2 flex-col" style={{ borderColor: colors.text }}>
           <div
             className="px-2 py-1 font-bold text-center"
             style={{ background: colors.text, color: colors.bg }}
@@ -764,20 +766,52 @@ contact.cfg   certs.bin     games/`;
             >
               [ TERMINAL ]
             </button>
+
+            {/* Games Button */}
+            <button
+              onClick={() => {
+                setPongScore({ player: 0, cpu: 0 });
+                setPlayerY(50);
+                setCpuY(50);
+                setBallPos({ x: 50, y: 50 });
+                setBallVel({ x: 0, y: 0 });
+                setPongStarted(false);
+                setPongWinner(null);
+                setPongActive(true);
+                setTerminalOpen(true);
+                playBeep('enter');
+              }}
+              className="mt-2 w-full py-1 text-center cursor-pointer hover:opacity-80"
+              style={{ background: colors.highlight, color: colors.bg }}
+            >
+              [ PLAY PONG ]
+            </button>
           </div>
         </div>
       </div>
 
       {/* Bottom Status Bar */}
       <div className="mt-2 border-2" style={{ borderColor: colors.text }}>
-        <div className="flex justify-between items-center px-2 py-1">
-          <div className="flex gap-6">
+        <div className="flex flex-wrap justify-between items-center px-2 py-1 gap-2">
+          <div className="hidden md:flex gap-6">
             <span><span style={{ color: colors.highlight }}>↑↓</span>:Select</span>
             <span><span style={{ color: colors.highlight }}>Enter</span>:Select</span>
             <span><span style={{ color: colors.highlight }}>Esc</span>:Menu</span>
             <span><span style={{ color: colors.accent }}>~</span>:Terminal</span>
           </div>
-          <div className="flex items-center gap-4">
+          {/* Mobile: Terminal button */}
+          <button
+            onClick={() => {
+              setTerminalOpen(true);
+              playBeep('enter');
+              setTimeout(() => terminalInputRef.current?.focus(), 50);
+            }}
+            className="md:hidden px-2 py-1 cursor-pointer"
+            style={{ background: colors.accent, color: colors.bg }}
+          >
+            [ TERMINAL ]
+          </button>
+          <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={toggleSound}
               className="cursor-pointer hover:opacity-80"
@@ -796,14 +830,14 @@ contact.cfg   certs.bin     games/`;
                 />
               ))}
             </div>
-            <span style={{ color: colors.highlight }}>Time:</span> {time}
+            <span className="hidden sm:inline"><span style={{ color: colors.highlight }}>Time:</span> {time}</span>
           </div>
         </div>
         <div
-          className="px-2 py-1 text-center"
+          className="px-2 py-1 text-center text-xs sm:text-sm"
           style={{ background: colors.text, color: colors.bg }}
         >
-          ▲▼ Select Menu Item │ Email: brandonbibbins@gmail.com │ Phone: (310) 749-0728
+          <span className="hidden sm:inline">▲▼ Select Menu Item │ </span>Email: brandonbibbins@gmail.com<span className="hidden sm:inline"> │ Phone: (310) 749-0728</span>
         </div>
       </div>
 
@@ -820,7 +854,7 @@ contact.cfg   certs.bin     games/`;
           }}
         >
           <div
-            className="w-full max-w-2xl h-96 mx-4 p-4 font-mono text-sm overflow-hidden flex flex-col terminal-window"
+            className="w-full max-w-2xl h-[80vh] md:h-96 mx-2 md:mx-4 p-3 md:p-4 font-mono text-xs md:text-sm overflow-hidden flex flex-col terminal-window"
             style={{
               background: '#0a0a0a',
               border: '2px solid #33ff33',

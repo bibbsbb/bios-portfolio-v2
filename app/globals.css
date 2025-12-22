@@ -56,7 +56,14 @@ body {
   font-family: 'VT323', monospace;
   background: var(--bg-dark);
   color: var(--crt-green);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 /* CRT Screen Effect */
@@ -542,4 +549,51 @@ body {
 
 .terminal-window ::-webkit-scrollbar-thumb:hover {
   background: #55ff55;
+}
+
+/* ========================================
+   Mobile Responsive Styles
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Make menu items more touch-friendly */
+  .bios-item {
+    padding: 10px 12px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Larger touch targets for theme buttons */
+  .theme-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Adjust terminal for mobile */
+  .terminal-window {
+    border-radius: 0;
+  }
+
+  /* Ensure proper text sizing */
+  .boot-text {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  /* Better scrolling in content areas */
+  .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Touch-friendly cursor for mobile */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: pointer;
+  }
+
+  button, [role="button"] {
+    cursor: pointer;
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/_app": [
+      "static/chunks/[root-of-the-server]__89361303._.js",
+      "static/chunks/c9403_react-dom_2084edbb._.js",
+      "static/chunks/c9403_5f33f748._.js",
+      "static/chunks/[root-of-the-server]__8f5c2475._.js",
+      "static/chunks/Documents_Brandons Work_bios-portfolio_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-Documents_Brandons Work_bios-portfolio_pages__app_5e2b376a._.js"
+    ]
+  },
+  "ampFirstPages": []
+}

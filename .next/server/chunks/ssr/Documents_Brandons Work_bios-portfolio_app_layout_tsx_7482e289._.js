@@ -1,0 +1,3 @@
+module.exports=[75169,a=>{"use strict";var b=a.i(34508);function c({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{children:a})})}a.s(["default",()=>c,"metadata",0,{title:"Brandon Bibbins | IT Director",description:"IT Director with 12+ years experience - BIOS-style interactive portfolio",robots:{index:!1,follow:!1,googleBot:{index:!1,follow:!1}}}])}];
+
+//# sourceMappingURL=Documents_Brandons%20Work_bios-portfolio_app_layout_tsx_7482e289._.js.map

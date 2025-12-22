@@ -12,19 +12,21 @@ export const resumeData: ResumeData = {
 
   experience: [
     { company: 'Liquid I.V. (Unilever)', role: 'IT Director', years: '2022-Present' },
-    { company: 'Princess Polly', role: 'IT Manager', years: '2020-2022' },
+    { company: 'Princess Polly', role: 'IT Manager', years: '2020-2025' },
     { company: 'Drinks.com', role: 'IT Manager', years: '2017-2020' },
     { company: 'Playtika', role: 'IT Administrator', years: '2016-2017' },
     { company: 'David & Goliath', role: 'IT Administrator', years: '2014-2016' },
   ],
 
   achievements: [
-    { label: 'Phishing Reduction', value: '73%' },
-    { label: 'Zero-Touch Resolution', value: '40-60%' },
-    { label: 'Efficiency Improvement', value: '30%' },
-    { label: 'Devices Managed', value: '500+' },
-    { label: 'Locations Supported', value: '14+' },
-    { label: 'SOC 2 Compliance', value: 'Achieved' },
+    { label: 'IT Budget Managed', value: '$500K+' },
+    { label: 'Team Growth', value: '1 → 5+' },
+    { label: 'Global Locations', value: '14+' },
+    { label: 'Employees Supported', value: '500+' },
+    { label: 'Operational Efficiency', value: '+30%' },
+    { label: 'Security Risk Reduction', value: '73%' },
+    { label: 'Vendor Cost Savings', value: '20%+' },
+    { label: 'Resolution Time Improvement', value: '45%' },
   ],
 
   skills: {
