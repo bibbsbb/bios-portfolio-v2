@@ -31,7 +31,7 @@ const resumeData = {
         {
             company: 'Princess Polly',
             role: 'IT Manager',
-            years: '2020-2022'
+            years: '2020-2025'
         },
         {
             company: 'Drinks.com',
@@ -51,28 +51,36 @@ const resumeData = {
     ],
     achievements: [
         {
-            label: 'Phishing Reduction',
-            value: '73%'
+            label: 'IT Budget Managed',
+            value: '$500K+'
         },
         {
-            label: 'Zero-Touch Resolution',
-            value: '40-60%'
+            label: 'Team Growth',
+            value: '1 → 5+'
         },
         {
-            label: 'Efficiency Improvement',
-            value: '30%'
-        },
-        {
-            label: 'Devices Managed',
-            value: '500+'
-        },
-        {
-            label: 'Locations Supported',
+            label: 'Global Locations',
             value: '14+'
         },
         {
-            label: 'SOC 2 Compliance',
-            value: 'Achieved'
+            label: 'Employees Supported',
+            value: '500+'
+        },
+        {
+            label: 'Operational Efficiency',
+            value: '+30%'
+        },
+        {
+            label: 'Security Risk Reduction',
+            value: '73%'
+        },
+        {
+            label: 'Vendor Cost Savings',
+            value: '20%+'
+        },
+        {
+            label: 'Resolution Time Improvement',
+            value: '45%'
         }
     ],
     skills: {
@@ -169,64 +177,133 @@ const bootMessages = [
     },
     {
         text: 'Copyright (C) 2014-2025, Brandon Bibbins Inc.',
-        delay: 250
+        delay: 120
     },
     {
         text: '',
-        delay: 500
+        delay: 200
     },
     {
         text: 'CPU: Brandon Core i7-12700K @ 3.6GHz... OK',
-        delay: 700
+        delay: 280
     },
     {
         text: 'Memory Test: ',
-        delay: 900,
+        delay: 360,
         counter: true
     },
     {
         text: '',
-        delay: 1500
+        delay: 900
     },
     {
         text: 'Detecting Primary IDE Master... Career Drive [500GB]',
-        delay: 1700
+        delay: 980
     },
     {
         text: 'Detecting Secondary IDE... Skills Module [256GB]',
-        delay: 1950
+        delay: 1060
+    },
+    {
+        text: 'Detecting Tertiary IDE... Projects Archive [128GB]',
+        delay: 1140
+    },
+    {
+        text: '',
+        delay: 1220
+    },
+    {
+        text: 'PCI Device Listing:',
+        delay: 1300
+    },
+    {
+        text: '  Bus 00 Device 01: Jamf Pro Controller v11.0',
+        delay: 1360
+    },
+    {
+        text: '  Bus 00 Device 02: Okta Identity Module v2024.1',
+        delay: 1420
+    },
+    {
+        text: '  Bus 00 Device 03: Google Workspace Adapter',
+        delay: 1480
+    },
+    {
+        text: '  Bus 00 Device 04: CrowdStrike Falcon Sensor',
+        delay: 1540
+    },
+    {
+        text: '  Bus 00 Device 05: Claude AI Coprocessor',
+        delay: 1600
+    },
+    {
+        text: '',
+        delay: 1680
+    },
+    {
+        text: 'USB Devices:',
+        delay: 1760
+    },
+    {
+        text: '  Port 1: Leadership Module [Active]',
+        delay: 1820
+    },
+    {
+        text: '  Port 2: Problem Solving Unit [Active]',
+        delay: 1880
+    },
+    {
+        text: '  Port 3: Communication Interface [Active]',
+        delay: 1940
+    },
+    {
+        text: '',
+        delay: 2020
     },
     {
         text: 'Initializing Network... LinkedIn Connected',
-        delay: 2200
+        delay: 2100
+    },
+    {
+        text: 'Initializing Portfolio... brandonbibbins.io',
+        delay: 2180
     },
     {
         text: 'CMOS Checksum... OK',
-        delay: 2450
+        delay: 2260
+    },
+    {
+        text: 'NVRAM Integrity... OK',
+        delay: 2340
     },
     {
         text: '',
-        delay: 2700
+        delay: 2420
     },
     {
-        text: 'Loading Experience Data... OK',
-        delay: 2900
+        text: 'Loading Experience Data...',
+        delay: 2500
     },
     {
         text: '',
-        delay: 3100
+        delay: 2580,
+        progressBar: true
+    },
+    {
+        text: '',
+        delay: 3400
     },
     {
         text: 'All systems operational.',
-        delay: 3300
+        delay: 3480
     },
     {
         text: '',
-        delay: 3500
+        delay: 3560
     },
     {
         text: 'Press any key to continue or wait...',
-        delay: 3700,
+        delay: 3640,
         blink: true
     }
 ];
@@ -549,16 +626,22 @@ const experienceDetails = [
         company: 'Liquid I.V. (Unilever)',
         role: 'IT Director, Employee Technology & Experience',
         years: '2022-Present',
-        description: 'Lead IT Support & Operations across helpdesk, systems operations, and asset management for health & wellness brand.',
+        description: 'Lead IT Support & Operations across helpdesk, systems operations, and asset management for rapidly growing health & wellness brand acquired by Unilever. Oversee end-to-end employee technology experience from onboarding through daily operations.',
         bullets: [
-            'Built high-performing team delivering 30% operational efficiency gains',
-            'Transformed IT from reactive to proactive, data-driven experience management',
-            'Built self-service IT Hub achieving 40-60% zero-touch resolutions',
-            'Design AI-first workflows with Claude, GPT for provisioning & triage',
-            'Serve on AI Governance Board, guiding responsible AI adoption',
-            'Spearheaded 1Password rollout, reducing phishing susceptibility by 73%',
-            'Authored 350+ pages of policies and playbooks',
-            'Built employee experience metrics tracking reliability & performance'
+            'Built and lead high-performing IT team delivering 30% operational efficiency gains while improving employee satisfaction scores across all touchpoints',
+            'Transformed IT from reactive ticket-based support to proactive, data-driven experience management with predictive issue resolution',
+            'Architected and own roadmap for company self-service IT Hub, achieving 40-60% zero-touch resolutions and significantly reducing employee friction',
+            'Pioneer AI-first workflows where LLM agents (Claude, GPT, Gemini) handle provisioning, triage, policy interpretation, and tier-1 troubleshooting',
+            'Serve on AI Governance Board, developing frameworks for responsible AI adoption that enable productivity without compromising security',
+            'Spearheaded enterprise-wide 1Password rollout and security awareness training program, reducing phishing susceptibility by 73%',
+            'Authored 350+ pages of IT policies, runbooks, and playbooks with design-first mindset ensuring compliance feels intuitive',
+            'Built comprehensive employee experience metrics tracking reliability, performance, and effort, using data to identify friction before escalation',
+            'Partner cross-functionally with Security, Engineering, HR, and Workplace teams to ensure seamless platform deployments',
+            'Regularly brief executives on experience trends, operational risk, and strategic technology investments',
+            'Manage $500K+ annual IT budget including hardware, software licensing, and vendor contracts',
+            'Lead vendor evaluation and negotiations for enterprise tools, achieving 20%+ cost savings on key renewals',
+            'Implemented CrowdStrike EDR across all endpoints, achieving 99.9% deployment coverage and real-time threat visibility',
+            'Designed zero-touch Mac deployment pipeline reducing new hire setup time from 4 hours to under 30 minutes'
         ],
         tools: [
             'Jamf Pro',
@@ -566,40 +649,62 @@ const experienceDetails = [
             '1Password',
             'CrowdStrike',
             'Claude Code',
-            'Jira Service Management'
+            'Jira Service Management',
+            'Google Workspace',
+            'Slack',
+            'Notion'
         ]
     },
     {
         company: 'Princess Polly (International E-Commerce)',
         role: 'IT Director, Employee Experience Lead',
-        years: '2020-2022',
-        description: 'Built and scaled IT organization from one-person to multi-person team during hypergrowth.',
+        years: '2020-2025',
+        description: 'Built and scaled IT organization from one-person operation to multi-person global team during explosive hypergrowth. Established IT as strategic partner to business expansion across retail, e-commerce, and international operations.',
         bullets: [
-            'Led global IT transformation across 14+ retail locations',
-            'Improved resolution times by 45% with scalable hybrid support',
-            'Implemented Okta identity management with role-based provisioning',
-            'Delivered day-one access through automated onboarding workflows',
-            'Created standardized global helpdesk framework with self-service',
-            'Collaborated with C-suite contributing to 50%+ e-commerce expansion'
+            'Scaled IT department from solo operator to multi-person team, hiring and developing future leaders with deep empathy for employee needs',
+            'Led global IT transformation across 14+ retail locations and distribution centers spanning US, Australia, and international markets',
+            'Improved mean time to resolution by 45% through scalable hybrid workforce support models and automated workflows',
+            'Implemented Okta identity management with role-based provisioning and SCIM, enabling seamless access management at scale',
+            'Delivered day-one productivity for new hires through fully automated onboarding workflows and zero-touch device deployment',
+            'Created standardized global helpdesk framework with self-service capabilities, reducing recurring tickets by 35%',
+            'Collaborated directly with C-suite leadership to align technology strategy with business growth, contributing to 50%+ e-commerce expansion',
+            'Unified global procurement and hardware lifecycle operations, maintaining accurate asset tracking across international operations',
+            'Designed and implemented network infrastructure for new retail locations, ensuring PCI compliance and reliable POS operations',
+            'Built IT knowledge base with 200+ articles enabling employee self-service and reducing support dependency',
+            'Managed relationships with 30+ technology vendors, negotiating contracts and ensuring SLA compliance',
+            'Led SOC 2 Type II compliance initiatives for IT controls, security policies, and access management',
+            'Implemented Hexnode MDM for BYOD program, balancing security requirements with employee flexibility',
+            'Established IT metrics and reporting dashboards providing visibility into team performance and operational health'
         ],
         tools: [
             'Jamf Pro',
             'Okta',
             'Google Workspace',
             'Zendesk',
-            'Hexnode'
+            'Hexnode',
+            'Slack',
+            'Shopify',
+            'NetSuite'
         ]
     },
     {
         company: 'Drinks.com (E-Commerce Startup)',
         role: 'IT Manager',
         years: '2017-2020',
-        description: 'Established IT infrastructure foundation for rapidly scaling e-commerce startup.',
+        description: 'Established IT infrastructure foundation for rapidly scaling e-commerce startup. Built all IT systems and processes from the ground up to support hypergrowth and positioned IT as strategic business partner.',
         bullets: [
-            'Reduced new hire time-to-productivity by 50%',
-            'Deployed Okta with SSO across 20+ SaaS applications',
-            'Built asset management and ticketing systems from scratch',
-            'Developed self-service knowledge base deflecting 30% of tickets'
+            'Reduced new hire time-to-productivity by 50% through streamlined onboarding workflows and pre-configured systems',
+            'Deployed Okta identity management platform with SSO integrations across 20+ SaaS applications, eliminating password fatigue',
+            'Built asset management and ticketing systems from scratch, creating full visibility into hardware lifecycle and procurement needs',
+            'Developed self-service knowledge base that deflected 30% of incoming tickets and empowered employees to resolve common issues',
+            'Managed all IT operations as sole IT team member, supporting 50+ employees across Engineering, Sales, Marketing, and Operations',
+            'Implemented endpoint management and security policies for Mac and Windows fleet ensuring compliance and data protection',
+            'Established IT budget tracking and vendor management processes, optimizing software licensing costs by 15%',
+            'Designed and deployed conference room AV systems and collaboration tools improving meeting efficiency',
+            'Created IT onboarding and offboarding checklists ensuring consistent employee experience and security compliance',
+            'Partnered with HR to automate provisioning workflows, reducing manual IT tasks by 40%',
+            'Managed AWS infrastructure and cloud resources supporting e-commerce platform operations',
+            'Led security awareness initiatives including phishing simulations and best practices training'
         ],
         tools: [
             'Okta',
@@ -607,81 +712,94 @@ const experienceDetails = [
             'Slack',
             'Jamf',
             'AWS',
-            'Wrike'
+            'Wrike',
+            'Zendesk'
         ]
     },
     {
         company: 'Playtika (Mobile Gaming)',
         role: 'Senior IT Technician',
         years: '2016-2017',
-        description: 'Managed enterprise helpdesk operations for 200+ employee gaming company.',
+        description: 'Managed enterprise helpdesk operations for 200+ employee mobile gaming company during rapid growth phase. Served as escalation point for complex technical issues and VIP support.',
         bullets: [
-            'Maintained 95%+ SLA compliance with high-volume tickets',
-            'Supported rapid company scaling through standardized IT processes',
-            'Administered Google Workspace and endpoint management tools'
+            'Maintained 95%+ SLA compliance while handling high-volume ticket queues across Engineering, Design, Marketing, and Executive teams',
+            'Supported rapid company scaling through standardized IT processes and comprehensive documentation',
+            'Administered Google Workspace and endpoint management tools ensuring consistent employee experience across departments',
+            'Provided white-glove VIP support for executive team and high-priority escalations requiring immediate resolution',
+            'Managed new hire onboarding including hardware provisioning, account setup, and orientation training',
+            'Configured and maintained developer workstations with specialized software for mobile game development',
+            'Supported audio/visual equipment for all-hands meetings, product demos, and company events',
+            'Collaborated with Security team on access reviews, offboarding procedures, and compliance audits',
+            'Maintained inventory tracking for 200+ devices including laptops, monitors, and peripherals',
+            'Troubleshot network connectivity issues and coordinated with facilities on infrastructure needs'
         ],
         tools: [
             'Google Workspace',
             'Jamf',
             'Active Directory',
-            'Zendesk'
+            'Zendesk',
+            'Slack',
+            'JIRA'
         ]
     },
     {
         company: 'David & Goliath (Advertising Agency)',
         role: 'IT Support Technician',
         years: '2014-2016',
-        description: 'Delivered IT support for award-winning creative agency.',
+        description: 'Delivered IT support for award-winning creative advertising agency with demanding technical requirements. Supported high-pressure creative workflows and client-facing presentations.',
         bullets: [
-            'Managed Mac-heavy environment with Adobe Creative Suite',
-            'Maintained hybrid Windows/macOS for 100+ creative professionals',
-            'Created training materials improving technology adoption'
+            'Managed Mac-heavy environment supporting Adobe Creative Suite, video editing, 3D rendering, and motion graphics workflows',
+            'Maintained hybrid Windows/macOS infrastructure for 100+ creative professionals including designers, copywriters, and producers',
+            'Created training materials and conducted workshops improving technology adoption and reducing repeat support requests',
+            'Supported high-profile client presentations and live production events with zero downtime and immediate on-site response',
+            'Configured specialized creative workstations with high-performance specs for video editing and rendering projects',
+            'Managed file server infrastructure and backup systems ensuring creative assets were protected and accessible',
+            'Coordinated with external vendors for print production, broadcast delivery, and media asset management',
+            'Supported remote shoots and off-site productions with mobile technology kits and connectivity solutions',
+            'Maintained studio equipment including cameras, lighting, and audio gear for in-house production capabilities',
+            'Provided after-hours support for critical campaign deadlines and client deliverables',
+            'Troubleshot Adobe Creative Cloud licensing and plugin compatibility issues across creative teams',
+            'Assisted with office relocations and buildouts including network infrastructure and workstation setup'
         ],
         tools: [
             'macOS',
             'Adobe Creative Suite',
             'Windows Server',
-            'Dropbox'
+            'Dropbox',
+            'Final Cut Pro',
+            'After Effects',
+            'Cinema 4D'
         ]
     }
 ];
 function ExperiencePanel({ data, focusArea, setFocusArea, contentIndex, setContentIndex }) {
     _s();
-    const [selectedExp, setSelectedExp] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // Start with Liquid I.V. (index 0) expanded
+    const [expandedIndex, setExpandedIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isLocked, setIsLocked] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const detailRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // Handle keyboard navigation
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ExperiencePanel.useEffect": ()=>{
             const handleKeyDown = {
                 "ExperiencePanel.useEffect.handleKeyDown": (e)=>{
                     if (focusArea !== 'content') return;
-                    if (selectedExp !== null) {
-                        if (e.key === 'Escape' || e.key === 'Backspace' || e.key === 'ArrowLeft') {
-                            e.preventDefault();
-                            setSelectedExp(null);
-                        } else if (e.key === 'ArrowDown') {
-                            e.preventDefault();
-                            detailRef.current?.scrollBy({
-                                top: 60,
-                                behavior: 'smooth'
-                            });
-                        } else if (e.key === 'ArrowUp') {
-                            e.preventDefault();
-                            detailRef.current?.scrollBy({
-                                top: -60,
-                                behavior: 'smooth'
-                            });
-                        }
-                        return;
-                    }
                     if (e.key === 'ArrowUp') {
                         e.preventDefault();
-                        setContentIndex(contentIndex > 0 ? contentIndex - 1 : experienceDetails.length - 1);
+                        const newIndex = expandedIndex > 0 ? expandedIndex - 1 : experienceDetails.length - 1;
+                        setExpandedIndex(newIndex);
+                        setContentIndex(newIndex);
                     } else if (e.key === 'ArrowDown') {
                         e.preventDefault();
-                        setContentIndex(contentIndex < experienceDetails.length - 1 ? contentIndex + 1 : 0);
-                    } else if (e.key === 'Enter' || e.key === 'ArrowRight') {
+                        const newIndex = expandedIndex < experienceDetails.length - 1 ? expandedIndex + 1 : 0;
+                        setExpandedIndex(newIndex);
+                        setContentIndex(newIndex);
+                    } else if (e.key === 'Enter') {
                         e.preventDefault();
-                        setSelectedExp(contentIndex);
+                        setIsLocked(true);
+                    } else if (e.key === 'Escape') {
+                        e.preventDefault();
+                        setIsLocked(false);
                     }
                 }
             }["ExperiencePanel.useEffect.handleKeyDown"];
@@ -691,101 +809,148 @@ function ExperiencePanel({ data, focusArea, setFocusArea, contentIndex, setConte
             })["ExperiencePanel.useEffect"];
         }
     }["ExperiencePanel.useEffect"], [
-        experienceDetails.length,
-        contentIndex,
-        selectedExp,
+        expandedIndex,
         focusArea,
         setContentIndex
     ]);
-    if (selectedExp !== null) {
-        const exp = experienceDetails[selectedExp];
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "space-y-3",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-between items-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            onClick: ()=>setSelectedExp(null),
-                            className: "bg-[#aaaaaa] text-[#0000aa] px-3 py-1 cursor-pointer hover:bg-[#cccccc] inline-block",
-                            children: "◄ Back to List (Esc)"
-                        }, void 0, false, {
+    const handleMouseEnter = (index)=>{
+        if (!isLocked) {
+            setExpandedIndex(index);
+            setContentIndex(index);
+            setFocusArea('content');
+        }
+    };
+    const handleClick = (index)=>{
+        setExpandedIndex(index);
+        setContentIndex(index);
+        setFocusArea('content');
+        setIsLocked(true);
+    };
+    const exp = experienceDetails[expandedIndex];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex flex-col md:flex-row gap-3 h-full",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "md:w-1/3 space-y-1",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-[#ffff55] text-sm mb-2",
+                        children: "▸ Experience"
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                        lineNumber: 179,
+                        columnNumber: 9
+                    }, this),
+                    experienceDetails.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            onClick: ()=>handleClick(i),
+                            onMouseEnter: ()=>handleMouseEnter(i),
+                            className: `border p-2 cursor-pointer transition-all text-sm ${expandedIndex === i ? 'bg-[#aaaaaa] text-[#0000aa] border-[#aaaaaa]' : 'border-[#555555] hover:border-[#888888]'}`,
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex justify-between items-center",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: expandedIndex === i ? 'text-[#0000aa] font-bold' : 'text-[#55ffff]',
+                                        children: [
+                                            expandedIndex === i ? '► ' : '  ',
+                                            item.company.split(' (')[0]
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                                        lineNumber: 192,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                                    lineNumber: 191,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `text-xs ${expandedIndex === i ? 'text-[#000088]' : 'text-[#ffff55]'}`,
+                                    children: item.years
+                                }, void 0, false, {
+                                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                                    lineNumber: 196,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, i, true, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 129,
+                            lineNumber: 181,
                             columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#888888] text-xs",
-                            children: "Use ↑↓ to scroll"
-                        }, void 0, false, {
-                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 135,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                    lineNumber: 128,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        }, this)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-[#888888] text-xs mt-2",
+                        children: isLocked ? '🔒 Locked (Esc to unlock)' : 'Hover to preview, click to lock'
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                        lineNumber: 201,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
+                lineNumber: 178,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "md:w-2/3 border border-[#aaaaaa] p-3 overflow-y-auto",
+                style: {
+                    maxHeight: 'calc(100vh - 200px)'
+                },
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     ref: detailRef,
-                    className: "border border-[#aaaaaa] p-4 overflow-y-auto",
-                    style: {
-                        maxHeight: 'calc(100vh - 220px)'
-                    },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-[#aaaaaa] text-[#0000aa] px-2 py-1 text-xl font-bold mb-1 inline-block",
+                            className: "bg-[#aaaaaa] text-[#0000aa] px-2 py-1 text-lg font-bold mb-1 inline-block",
                             children: exp.company
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 143,
+                            lineNumber: 209,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#55ffff] text-lg mt-2",
+                            className: "text-[#55ffff] mt-2",
                             children: exp.role
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 146,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#ffff55] mb-4",
+                            className: "text-[#ffff55] text-sm mb-3",
                             children: exp.years
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 147,
+                            lineNumber: 213,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#aaaaaa] mb-4 leading-relaxed",
+                            className: "text-[#aaaaaa] mb-3 text-sm leading-relaxed",
                             children: exp.description
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 149,
+                            lineNumber: 215,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#ffff55] mb-2",
+                            className: "text-[#ffff55] text-sm mb-2",
                             children: "▸ Key Accomplishments"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 151,
+                            lineNumber: 217,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-4 space-y-1",
+                            className: "mb-3 space-y-1",
                             children: exp.bullets.map((b, j)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-start gap-2",
+                                    className: "flex items-start gap-2 text-sm",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-[#55ffff]",
                                             children: "•"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 221,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -793,146 +958,62 @@ function ExperiencePanel({ data, focusArea, setFocusArea, contentIndex, setConte
                                             children: b
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 222,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, j, true, {
                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 220,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 152,
+                            lineNumber: 218,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#ffff55] mb-2",
+                            className: "text-[#ffff55] text-sm mb-2",
                             children: "▸ Tools & Technologies"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 161,
+                            lineNumber: 227,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-wrap gap-2",
                             children: exp.tools.map((tool, j)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "bg-[#000088] border border-[#aaaaaa] px-2 py-1 text-[#55ffff]",
+                                    className: "bg-[#000088] border border-[#aaaaaa] px-2 py-1 text-[#55ffff] text-xs",
                                     children: tool
                                 }, j, false, {
                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 230,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 162,
+                            lineNumber: 228,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                    lineNumber: 138,
+                    lineNumber: 208,
                     columnNumber: 9
                 }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-            lineNumber: 127,
-            columnNumber: 7
-        }, this);
-    }
-    const isHighlighted = (i)=>contentIndex === i && focusArea === 'content';
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-2",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-[#ffff55]",
-                children: "▸ Professional Experience Timeline"
             }, void 0, false, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                lineNumber: 181,
+                lineNumber: 207,
                 columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-[#888888] text-xs mb-2",
-                children: focusArea === 'content' ? 'Use ↑↓ to navigate, Enter to select' : '← Arrow right or hover to navigate'
-            }, void 0, false, {
-                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                lineNumber: 182,
-                columnNumber: 7
-            }, this),
-            experienceDetails.map((exp, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    onClick: ()=>{
-                        setFocusArea('content');
-                        setContentIndex(i);
-                        setSelectedExp(i);
-                    },
-                    onMouseEnter: ()=>{
-                        setFocusArea('content');
-                        setContentIndex(i);
-                    },
-                    className: `border p-2 cursor-pointer transition-colors ${isHighlighted(i) ? 'bg-[#aaaaaa] text-[#0000aa] border-[#aaaaaa]' : 'border-[#555555]'}`,
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-between items-center",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: isHighlighted(i) ? 'text-[#0000aa] font-bold' : 'text-[#55ffff]',
-                                    children: [
-                                        isHighlighted(i) ? '► ' : '  ',
-                                        exp.company
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                    lineNumber: 204,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: isHighlighted(i) ? 'text-[#000088]' : 'text-[#ffff55]',
-                                    children: exp.years
-                                }, void 0, false, {
-                                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                                    lineNumber: 207,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 203,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: isHighlighted(i) ? 'text-[#000066] ml-4' : 'text-[#aaaaaa] ml-4',
-                            children: exp.role
-                        }, void 0, false, {
-                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 211,
-                            columnNumber: 11
-                        }, this),
-                        isHighlighted(i) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[#000088] text-xs mt-1 ml-4",
-                            children: "Press Enter to view details →"
-                        }, void 0, false, {
-                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                            lineNumber: 213,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, i, true, {
-                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-                    lineNumber: 186,
-                    columnNumber: 9
-                }, this))
+            }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/ExperiencePanel.tsx",
-        lineNumber: 180,
+        lineNumber: 176,
         columnNumber: 5
     }, this);
 }
-_s(ExperiencePanel, "XISXEpvJcFMntqSWjk8gVCyRnOk=");
+_s(ExperiencePanel, "tJg+qPqUHngE5YQ5+mxDqCz8qTQ=");
 _c = ExperiencePanel;
 var _c;
 __turbopack_context__.k.register(_c, "ExperiencePanel");
@@ -1180,7 +1261,7 @@ function AchievementsPanel({ data }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-[#ffff55] mb-2",
-                        children: "▸ Notable Accomplishments"
+                        children: "▸ Leadership & Strategic Impact"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
                         lineNumber: 27,
@@ -1199,7 +1280,7 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 29,
                                         columnNumber: 14
                                     }, this),
-                                    " Built AI-powered provisioning using Claude & GPT"
+                                    " Executive Leadership: Regular briefings to C-suite on technology strategy, risk, and investment priorities"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
@@ -1216,7 +1297,7 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 30,
                                         columnNumber: 14
                                     }, this),
-                                    " Scaled IT from 1-person to full team"
+                                    " Team Development: Built and scaled IT organizations from ground up, mentoring future leaders"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
@@ -1233,7 +1314,7 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 31,
                                         columnNumber: 14
                                     }, this),
-                                    " Achieved SOC 2 compliance"
+                                    " AI Governance: Founding member of enterprise AI Governance Board, shaping responsible adoption policies"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
@@ -1250,7 +1331,7 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 32,
                                         columnNumber: 14
                                     }, this),
-                                    " Member of AI Governance Board"
+                                    " Vendor Strategy: Managed 30+ vendor relationships, negotiating enterprise contracts and SLAs"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
@@ -1267,7 +1348,7 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 33,
                                         columnNumber: 14
                                     }, this),
-                                    " Deployed Jamf Pro for 500+ devices"
+                                    " Compliance Leadership: Led SOC 2 Type II and PCI DSS compliance initiatives across organizations"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
@@ -1284,11 +1365,45 @@ function AchievementsPanel({ data }) {
                                         lineNumber: 34,
                                         columnNumber: 14
                                     }, this),
-                                    " Implemented Okta SSO for 20+ apps"
+                                    " Cross-Functional Partnership: Aligned IT strategy with HR, Security, Finance, and Operations stakeholders"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
                                 lineNumber: 34,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[#55ff55]",
+                                        children: "[✓]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                        lineNumber: 35,
+                                        columnNumber: 14
+                                    }, this),
+                                    " Global Operations: Standardized IT delivery across US, Australia, and international markets"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                lineNumber: 35,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-[#55ff55]",
+                                        children: "[✓]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                        lineNumber: 36,
+                                        columnNumber: 14
+                                    }, this),
+                                    " Digital Transformation: Pioneered AI-first IT service delivery using Claude, GPT, and automation"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -1308,46 +1423,56 @@ function AchievementsPanel({ data }) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-[#ffff55] mb-2",
-                        children: "▸ Impact Summary"
+                        children: "▸ Executive Summary"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
-                        lineNumber: 39,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-[#000055] border border-[#5555ff] p-3",
+                        className: "bg-[#000055] border border-[#5555ff] p-3 text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: "Transformed IT operations at multiple high-growth companies,"
-                            }, void 0, false, {
-                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
-                                lineNumber: 41,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: "reducing friction and enabling business scale through"
-                            }, void 0, false, {
-                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
-                                lineNumber: 42,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: "automation, security, and AI-powered workflows."
+                                className: "mb-2",
+                                children: "Strategic IT leader with proven ability to scale technology operations"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
                                 lineNumber: 43,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mb-2",
+                                children: "through hypergrowth while driving measurable business outcomes."
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mb-2",
+                                children: "Expert in building high-performing teams, optimizing vendor investments,"
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: "and transforming IT from cost center to strategic enabler."
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
-                        lineNumber: 40,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/components/panels/AchievementsPanel.tsx",
-                lineNumber: 38,
+                lineNumber: 40,
                 columnNumber: 7
             }, this)
         ]
@@ -1722,6 +1847,8 @@ function Home() {
     const [bootPhase, setBootPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('booting');
     const [bootText, setBootText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [memoryCount, setMemoryCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [progressBar, setProgressBar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [showProgressBar, setShowProgressBar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showCursor, setShowCursor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const [terminalOpen, setTerminalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [terminalHistory, setTerminalHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -1814,7 +1941,26 @@ function Home() {
                                         }
                                     }
                                 }["Home.useEffect.processNextMessage.counterInterval"], 50);
-                            } else if (msg.text.includes('OK') || msg.text.includes('Connected')) {
+                            } else if (msg.progressBar) {
+                                setShowProgressBar(true);
+                                setProgressBar(0);
+                                let progress = 0;
+                                const progressInterval = setInterval({
+                                    "Home.useEffect.processNextMessage.progressInterval": ()=>{
+                                        progress += 5;
+                                        setProgressBar(progress);
+                                        if (progress >= 100) {
+                                            clearInterval(progressInterval);
+                                            setShowProgressBar(false);
+                                            currentText += '[####################] 100% Complete\n';
+                                            setBootText(currentText);
+                                            playBeep('enter');
+                                            messageIndex++;
+                                            processNextMessage();
+                                        }
+                                    }
+                                }["Home.useEffect.processNextMessage.progressInterval"], 30);
+                            } else if (msg.text.includes('OK') || msg.text.includes('Connected') || msg.text.includes('Active]')) {
                                 currentText += msg.text + '\n';
                                 setBootText(currentText);
                                 playBeep('click');
@@ -1850,7 +1996,7 @@ function Home() {
                     setBootPhase('ready');
                     playBeep('boot');
                 }
-            }["Home.useEffect.autoAdvance"], 4500);
+            }["Home.useEffect.autoAdvance"], 5000);
             return ({
                 "Home.useEffect": ()=>{
                     window.removeEventListener('keydown', handleSkip);
@@ -2218,7 +2364,7 @@ INFRASTRUCTURE=["AWS", "Azure", "Windows Server", "Cisco Meraki", "Palo Alto", "
   → 73% phishing reduction via 1Password rollout
   → AI Governance Board member
 
-[2020-2022] IT Director @ Princess Polly
+[2020-2025] IT Director @ Princess Polly
   → Scaled IT from 1 to multi-person team
   → 14+ global retail locations supported
   → 45% resolution time improvement
@@ -2318,7 +2464,7 @@ EDUCATION:
             case 'experience':
                 output = `Work Experience:
   2022-Present: IT Director @ Liquid I.V. (Unilever)
-  2020-2022: IT Director @ Princess Polly
+  2020-2025: IT Director @ Princess Polly
   2017-2020: IT Manager @ Drinks.com
   2016-2017: Senior IT Tech @ Playtika
   2014-2016: IT Support @ David & Goliath`;
@@ -2414,6 +2560,8 @@ contact.cfg   certs.bin     games/`;
                 setBootPhase('booting');
                 setBootText('');
                 setMemoryCount(0);
+                setProgressBar(0);
+                setShowProgressBar(false);
                 return;
             case 'sudo hire brandon':
                 output = `
@@ -2477,44 +2625,118 @@ contact.cfg   certs.bin     games/`;
     // Boot screen
     if (bootPhase === 'booting') {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen font-mono text-sm p-4 crt-screen crt-flicker",
+            className: "min-h-screen font-mono text-sm crt-screen crt-flicker relative",
             style: {
                 background: colors.bg,
                 color: colors.text
             },
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
-                    className: "boot-text",
-                    children: bootText
-                }, void 0, false, {
-                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                    lineNumber: 627,
-                    columnNumber: 9
-                }, this),
-                memoryCount > 0 && memoryCount < 65536 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "p-4",
                     children: [
-                        memoryCount,
-                        " KB"
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
+                            className: "boot-text",
+                            children: bootText
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                            lineNumber: 650,
+                            columnNumber: 11
+                        }, this),
+                        memoryCount > 0 && memoryCount < 65536 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            children: [
+                                memoryCount,
+                                " KB"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                            lineNumber: 652,
+                            columnNumber: 13
+                        }, this),
+                        !showProgressBar && showCursor && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "typing-cursor",
+                            style: {
+                                background: colors.text
+                            }
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                            lineNumber: 654,
+                            columnNumber: 46
+                        }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                    lineNumber: 629,
-                    columnNumber: 11
+                    lineNumber: 649,
+                    columnNumber: 9
                 }, this),
-                showCursor && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "typing-cursor",
-                    style: {
-                        background: colors.text
-                    }
+                showProgressBar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute inset-0 flex items-center justify-center",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-center",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mb-2",
+                                style: {
+                                    color: colors.highlight
+                                },
+                                children: "Initializing System..."
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 661,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "border-2 relative overflow-hidden",
+                                style: {
+                                    borderColor: colors.text,
+                                    width: '300px',
+                                    height: '24px',
+                                    background: colors.bg
+                                },
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "h-full transition-all duration-75",
+                                    style: {
+                                        width: `${progressBar}%`,
+                                        background: colors.highlight
+                                    }
+                                }, void 0, false, {
+                                    fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                    lineNumber: 671,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 662,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-2",
+                                style: {
+                                    color: colors.text
+                                },
+                                children: [
+                                    progressBar,
+                                    "%"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 679,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                        lineNumber: 660,
+                        columnNumber: 13
+                    }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                    lineNumber: 631,
-                    columnNumber: 24
+                    lineNumber: 659,
+                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-            lineNumber: 623,
+            lineNumber: 644,
             columnNumber: 7
         }, this);
     }
@@ -2527,25 +2749,42 @@ contact.cfg   certs.bin     games/`;
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-center py-1 font-bold",
+                className: "text-center py-1 font-bold text-xs sm:text-sm",
                 style: {
                     background: colors.text,
                     color: colors.bg
                 },
-                children: "CMOS Setup Utility - Copyright (C) 2014-2025, Brandon Bibbins Inc."
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "hidden sm:inline",
+                        children: "CMOS Setup Utility - Copyright (C) 2014-2025, Brandon Bibbins Inc."
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                        lineNumber: 698,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "sm:hidden",
+                        children: "BIOS Setup - Brandon Bibbins"
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                        lineNumber: 699,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                lineNumber: 643,
+                lineNumber: 694,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex mt-2 gap-2",
+                className: "flex flex-col md:flex-row mt-2 gap-2",
                 style: {
-                    height: 'calc(100vh - 120px)'
+                    minHeight: 'calc(100vh - 140px)'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-64 border-2 flex flex-col",
+                        className: "w-full md:w-64 border-2 flex flex-col",
                         style: {
                             borderColor: colors.text
                         },
@@ -2559,7 +2798,7 @@ contact.cfg   certs.bin     games/`;
                                 children: "▼ Main Menu ▼"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 653,
+                                lineNumber: 705,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2569,13 +2808,14 @@ contact.cfg   certs.bin     games/`;
                                             setFocusArea('menu');
                                             setSelectedIndex(index);
                                             setSelectedMenu(item.id);
+                                            playBeep('click');
                                         },
                                         onMouseEnter: ()=>{
                                             setFocusArea('menu');
                                             setSelectedIndex(index);
                                             setSelectedMenu(item.id);
                                         },
-                                        className: "px-2 py-1 cursor-pointer",
+                                        className: "px-2 py-2 md:py-1 cursor-pointer active:opacity-80 transition-opacity",
                                         style: selectedIndex === index && focusArea === 'menu' ? {
                                             background: colors.text,
                                             color: colors.bg
@@ -2586,22 +2826,22 @@ contact.cfg   certs.bin     games/`;
                                         children: item.label
                                     }, item.id, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 661,
+                                        lineNumber: 713,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 659,
+                                lineNumber: 711,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                        lineNumber: 652,
+                        lineNumber: 704,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1 border-2 flex flex-col",
+                        className: "flex-1 border-2 flex flex-col order-first md:order-none",
                         style: {
                             borderColor: colors.text
                         },
@@ -2615,7 +2855,7 @@ contact.cfg   certs.bin     games/`;
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$lib$2f$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["menuItems"].find((m)=>m.id === selectedMenu)?.label
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 690,
+                                lineNumber: 743,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2625,7 +2865,7 @@ contact.cfg   certs.bin     games/`;
                                         data: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$lib$2f$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resumeData"]
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 697,
+                                        lineNumber: 750,
                                         columnNumber: 41
                                     }, this),
                                     selectedMenu === 'experience' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$components$2f$panels$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ExperiencePanel"], {
@@ -2636,44 +2876,44 @@ contact.cfg   certs.bin     games/`;
                                         setContentIndex: setContentIndex
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 699,
+                                        lineNumber: 752,
                                         columnNumber: 15
                                     }, this),
                                     selectedMenu === 'skills' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$components$2f$panels$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SkillsPanel"], {
                                         data: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$lib$2f$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resumeData"]
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 707,
+                                        lineNumber: 760,
                                         columnNumber: 43
                                     }, this),
                                     selectedMenu === 'achievements' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$components$2f$panels$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AchievementsPanel"], {
                                         data: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$lib$2f$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resumeData"]
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 708,
+                                        lineNumber: 761,
                                         columnNumber: 49
                                     }, this),
                                     selectedMenu === 'contact' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$components$2f$panels$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ContactPanel"], {
                                         data: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$lib$2f$data$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["resumeData"]
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 709,
+                                        lineNumber: 762,
                                         columnNumber: 44
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 696,
+                                lineNumber: 749,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                        lineNumber: 689,
+                        lineNumber: 742,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-48 border-2 flex flex-col",
+                        className: "hidden lg:flex w-48 border-2 flex-col",
                         style: {
                             borderColor: colors.text
                         },
@@ -2687,7 +2927,7 @@ contact.cfg   certs.bin     games/`;
                                 children: "Item Help"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 715,
+                                lineNumber: 768,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2700,7 +2940,7 @@ contact.cfg   certs.bin     games/`;
                                         children: "Navigation:"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 722,
+                                        lineNumber: 775,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2708,21 +2948,21 @@ contact.cfg   certs.bin     games/`;
                                         children: "↑↓ Select Item"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 723,
+                                        lineNumber: 776,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Enter: Select"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 724,
+                                        lineNumber: 777,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Esc: Back"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 725,
+                                        lineNumber: 778,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2733,7 +2973,7 @@ contact.cfg   certs.bin     games/`;
                                         children: "Quick Info:"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 726,
+                                        lineNumber: 779,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2741,21 +2981,21 @@ contact.cfg   certs.bin     games/`;
                                         children: "Experience: 12+ yrs"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 727,
+                                        lineNumber: 780,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Current: IT Director"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 728,
+                                        lineNumber: 781,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Location: Los Angeles"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 729,
+                                        lineNumber: 782,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2766,7 +3006,7 @@ contact.cfg   certs.bin     games/`;
                                         children: "Currently @ Liquid I.V."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 730,
+                                        lineNumber: 783,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2787,13 +3027,13 @@ contact.cfg   certs.bin     games/`;
                                                         children: "(hover)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 738,
+                                                        lineNumber: 791,
                                                         columnNumber: 29
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 737,
+                                                lineNumber: 790,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2808,14 +3048,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "~"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 741,
+                                                                lineNumber: 794,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Open Terminal"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 741,
+                                                        lineNumber: 794,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2827,14 +3067,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "↑↓"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 742,
+                                                                lineNumber: 795,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Navigate Menu"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 742,
+                                                        lineNumber: 795,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2846,14 +3086,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 743,
+                                                                lineNumber: 796,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Enter Section"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 743,
+                                                        lineNumber: 796,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2865,14 +3105,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "←"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 744,
+                                                                lineNumber: 797,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Go Back"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 744,
+                                                        lineNumber: 797,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2884,14 +3124,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "Esc"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 745,
+                                                                lineNumber: 798,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Close/Back"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 745,
+                                                        lineNumber: 798,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2899,7 +3139,7 @@ contact.cfg   certs.bin     games/`;
                                                         children: "Terminal Commands:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 746,
+                                                        lineNumber: 799,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2911,14 +3151,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "help"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 747,
+                                                                lineNumber: 800,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " List commands"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 747,
+                                                        lineNumber: 800,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2930,14 +3170,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "ls"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 748,
+                                                                lineNumber: 801,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " List files"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 748,
+                                                        lineNumber: 801,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2949,14 +3189,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "neofetch"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 749,
+                                                                lineNumber: 802,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " System info"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 749,
+                                                        lineNumber: 802,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2968,14 +3208,14 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "pong"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 750,
+                                                                lineNumber: 803,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Play game!"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 750,
+                                                        lineNumber: 803,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2987,26 +3227,26 @@ contact.cfg   certs.bin     games/`;
                                                                 children: "reboot"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                                lineNumber: 751,
+                                                                lineNumber: 804,
                                                                 columnNumber: 20
                                                             }, this),
                                                             " Restart"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                        lineNumber: 751,
+                                                        lineNumber: 804,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 740,
+                                                lineNumber: 793,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 733,
+                                        lineNumber: 786,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3023,25 +3263,58 @@ contact.cfg   certs.bin     games/`;
                                         children: "[ TERMINAL ]"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 756,
+                                        lineNumber: 809,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>{
+                                            setPongScore({
+                                                player: 0,
+                                                cpu: 0
+                                            });
+                                            setPlayerY(50);
+                                            setCpuY(50);
+                                            setBallPos({
+                                                x: 50,
+                                                y: 50
+                                            });
+                                            setBallVel({
+                                                x: 0,
+                                                y: 0
+                                            });
+                                            setPongStarted(false);
+                                            setPongWinner(null);
+                                            setPongActive(true);
+                                            setTerminalOpen(true);
+                                            playBeep('enter');
+                                        },
+                                        className: "mt-2 w-full py-1 text-center cursor-pointer hover:opacity-80",
+                                        style: {
+                                            background: colors.highlight,
+                                            color: colors.bg
+                                        },
+                                        children: "[ PLAY PONG ]"
+                                    }, void 0, false, {
+                                        fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                        lineNumber: 822,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 721,
+                                lineNumber: 774,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                        lineNumber: 714,
+                        lineNumber: 767,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                lineNumber: 650,
+                lineNumber: 702,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3051,10 +3324,10 @@ contact.cfg   certs.bin     games/`;
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex justify-between items-center px-2 py-1",
+                        className: "flex flex-wrap justify-between items-center px-2 py-1 gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex gap-6",
+                                className: "hidden md:flex gap-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: [
@@ -3065,14 +3338,14 @@ contact.cfg   certs.bin     games/`;
                                                 children: "↑↓"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 775,
+                                                lineNumber: 848,
                                                 columnNumber: 19
                                             }, this),
                                             ":Select"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 775,
+                                        lineNumber: 848,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3084,14 +3357,14 @@ contact.cfg   certs.bin     games/`;
                                                 children: "Enter"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 776,
+                                                lineNumber: 849,
                                                 columnNumber: 19
                                             }, this),
                                             ":Select"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 776,
+                                        lineNumber: 849,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3103,14 +3376,14 @@ contact.cfg   certs.bin     games/`;
                                                 children: "Esc"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 777,
+                                                lineNumber: 850,
                                                 columnNumber: 19
                                             }, this),
                                             ":Menu"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 777,
+                                        lineNumber: 850,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3122,24 +3395,41 @@ contact.cfg   certs.bin     games/`;
                                                 children: "~"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 778,
+                                                lineNumber: 851,
                                                 columnNumber: 19
                                             }, this),
                                             ":Terminal"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 778,
+                                        lineNumber: 851,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 774,
+                                lineNumber: 847,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>{
+                                    setTerminalOpen(true);
+                                    playBeep('enter');
+                                    setTimeout(()=>terminalInputRef.current?.focus(), 50);
+                                },
+                                className: "md:hidden px-2 py-1 cursor-pointer",
+                                style: {
+                                    background: colors.accent,
+                                    color: colors.bg
+                                },
+                                children: "[ TERMINAL ]"
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 854,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center gap-4",
+                                className: "flex items-center gap-2 md:gap-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: toggleSound,
@@ -3151,7 +3441,7 @@ contact.cfg   certs.bin     games/`;
                                         children: soundEnabled ? '🔊' : '🔇'
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 781,
+                                        lineNumber: 866,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3167,54 +3457,81 @@ contact.cfg   certs.bin     games/`;
                                                 title: `${t.charAt(0).toUpperCase() + t.slice(1)} theme`
                                             }, t, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 791,
+                                                lineNumber: 876,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 789,
+                                        lineNumber: 874,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        style: {
-                                            color: colors.highlight
-                                        },
-                                        children: "Time:"
-                                    }, void 0, false, {
+                                        className: "hidden sm:inline",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                style: {
+                                                    color: colors.highlight
+                                                },
+                                                children: "Time:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                                lineNumber: 884,
+                                                columnNumber: 48
+                                            }, this),
+                                            " ",
+                                            time
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 799,
+                                        lineNumber: 884,
                                         columnNumber: 13
-                                    }, this),
-                                    " ",
-                                    time
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 780,
+                                lineNumber: 865,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                        lineNumber: 773,
+                        lineNumber: 846,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "px-2 py-1 text-center",
+                        className: "px-2 py-1 text-center text-xs sm:text-sm",
                         style: {
                             background: colors.text,
                             color: colors.bg
                         },
-                        children: "▲▼ Select Menu Item │ Email: brandonbibbins@gmail.com │ Phone: (310) 749-0728"
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "hidden sm:inline",
+                                children: "▲▼ Select Menu Item │ "
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 891,
+                                columnNumber: 11
+                            }, this),
+                            "Email: brandonbibbins@gmail.com",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "hidden sm:inline",
+                                children: " │ Phone: (310) 749-0728"
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
+                                lineNumber: 891,
+                                columnNumber: 106
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                        lineNumber: 802,
+                        lineNumber: 887,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                lineNumber: 772,
+                lineNumber: 845,
                 columnNumber: 7
             }, this),
             terminalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3229,7 +3546,7 @@ contact.cfg   certs.bin     games/`;
                     }
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "w-full max-w-2xl h-96 mx-4 p-4 font-mono text-sm overflow-hidden flex flex-col terminal-window",
+                    className: "w-full max-w-2xl h-[80vh] md:h-96 mx-2 md:mx-4 p-3 md:p-4 font-mono text-xs md:text-sm overflow-hidden flex flex-col terminal-window",
                     style: {
                         background: '#0a0a0a',
                         border: '2px solid #33ff33',
@@ -3244,7 +3561,7 @@ contact.cfg   certs.bin     games/`;
                                     children: "BibbinsTech Terminal v1.0"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                    lineNumber: 831,
+                                    lineNumber: 916,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3256,13 +3573,13 @@ contact.cfg   certs.bin     games/`;
                                     children: "[X] Close"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                    lineNumber: 832,
+                                    lineNumber: 917,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                            lineNumber: 830,
+                            lineNumber: 915,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3279,7 +3596,7 @@ contact.cfg   certs.bin     games/`;
                                                 children: "PONG"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 846,
+                                                lineNumber: 931,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3290,7 +3607,7 @@ contact.cfg   certs.bin     games/`;
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 847,
+                                                lineNumber: 932,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3300,7 +3617,7 @@ contact.cfg   certs.bin     games/`;
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 848,
+                                                lineNumber: 933,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3308,13 +3625,13 @@ contact.cfg   certs.bin     games/`;
                                                 children: "(W/S or ↑/↓ to move, Q to quit)"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 849,
+                                                lineNumber: 934,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 845,
+                                        lineNumber: 930,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3331,7 +3648,7 @@ contact.cfg   certs.bin     games/`;
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 855,
+                                                lineNumber: 940,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3343,7 +3660,7 @@ contact.cfg   certs.bin     games/`;
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 859,
+                                                lineNumber: 944,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3355,7 +3672,7 @@ contact.cfg   certs.bin     games/`;
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 867,
+                                                lineNumber: 952,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3367,7 +3684,7 @@ contact.cfg   certs.bin     games/`;
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 875,
+                                                lineNumber: 960,
                                                 columnNumber: 21
                                             }, this),
                                             !pongStarted && !pongWinner && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3380,7 +3697,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: "PONG"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 886,
+                                                            lineNumber: 971,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3388,18 +3705,18 @@ contact.cfg   certs.bin     games/`;
                                                             children: "Press SPACE to Start"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 887,
+                                                            lineNumber: 972,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                    lineNumber: 885,
+                                                    lineNumber: 970,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 884,
+                                                lineNumber: 969,
                                                 columnNumber: 23
                                             }, this),
                                             pongWinner && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3412,7 +3729,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: pongWinner === 'You' ? 'YOU WIN!' : 'CPU WINS!'
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 894,
+                                                            lineNumber: 979,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3420,7 +3737,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: "Press SPACE to Play Again"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 897,
+                                                            lineNumber: 982,
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3428,24 +3745,24 @@ contact.cfg   certs.bin     games/`;
                                                             children: "or Q to quit"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 898,
+                                                            lineNumber: 983,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                    lineNumber: 893,
+                                                    lineNumber: 978,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 892,
+                                                lineNumber: 977,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 851,
+                                        lineNumber: 936,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3453,13 +3770,13 @@ contact.cfg   certs.bin     games/`;
                                         children: "First to 5 wins! Press Q or Esc to quit."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 903,
+                                        lineNumber: 988,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                lineNumber: 844,
+                                lineNumber: 929,
                                 columnNumber: 17
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
@@ -3468,7 +3785,7 @@ contact.cfg   certs.bin     games/`;
                                         children: "Type 'help' for available commands. Press Esc to close."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 909,
+                                        lineNumber: 994,
                                         columnNumber: 19
                                     }, this),
                                     terminalHistory.map((entry, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3481,7 +3798,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: "guest@bibbins"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 913,
+                                                            lineNumber: 998,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3489,7 +3806,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: ":"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 914,
+                                                            lineNumber: 999,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3497,7 +3814,7 @@ contact.cfg   certs.bin     games/`;
                                                             children: "~"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 915,
+                                                            lineNumber: 1000,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3505,20 +3822,20 @@ contact.cfg   certs.bin     games/`;
                                                             children: "$ "
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 916,
+                                                            lineNumber: 1001,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: entry.cmd
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                            lineNumber: 917,
+                                                            lineNumber: 1002,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                    lineNumber: 912,
+                                                    lineNumber: 997,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
@@ -3526,13 +3843,13 @@ contact.cfg   certs.bin     games/`;
                                                     children: entry.output
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                    lineNumber: 919,
+                                                    lineNumber: 1004,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, i, true, {
                                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                            lineNumber: 911,
+                                            lineNumber: 996,
                                             columnNumber: 21
                                         }, this)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3543,7 +3860,7 @@ contact.cfg   certs.bin     games/`;
                                                 children: "guest@bibbins"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 923,
+                                                lineNumber: 1008,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3551,7 +3868,7 @@ contact.cfg   certs.bin     games/`;
                                                 children: ":"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 924,
+                                                lineNumber: 1009,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3559,7 +3876,7 @@ contact.cfg   certs.bin     games/`;
                                                 children: "~"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 925,
+                                                lineNumber: 1010,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3567,7 +3884,7 @@ contact.cfg   certs.bin     games/`;
                                                 children: "$ "
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 926,
+                                                lineNumber: 1011,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3582,7 +3899,7 @@ contact.cfg   certs.bin     games/`;
                                                 autoComplete: "off"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 927,
+                                                lineNumber: 1012,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$2f$bios$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3590,41 +3907,41 @@ contact.cfg   certs.bin     games/`;
                                                 children: "▌"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                                lineNumber: 938,
+                                                lineNumber: 1023,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                                        lineNumber: 922,
+                                        lineNumber: 1007,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true)
                         }, void 0, false, {
                             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                            lineNumber: 842,
+                            lineNumber: 927,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                    lineNumber: 822,
+                    lineNumber: 907,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-                lineNumber: 812,
+                lineNumber: 897,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/page.tsx",
-        lineNumber: 638,
+        lineNumber: 689,
         columnNumber: 5
     }, this);
 }
-_s(Home, "q1wFw2JXaGkyz92M0w9KUh3649I=");
+_s(Home, "DuBEgS71H+8DRYNUonIb2GBkba4=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");

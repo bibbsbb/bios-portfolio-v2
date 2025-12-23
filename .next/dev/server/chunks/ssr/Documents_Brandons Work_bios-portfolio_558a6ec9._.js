@@ -13,7 +13,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Brandons__Work$
 ;
 const metadata = {
     title: "Brandon Bibbins | IT Director",
-    description: "IT Director with 12+ years experience - BIOS-style interactive portfolio",
+    description: "IT Director with 12+ years experience in IT leadership, endpoint management, identity & access, and AI-powered operations.",
+    metadataBase: new URL('https://brandonbibbins.io'),
     robots: {
         index: false,
         follow: false,
@@ -21,6 +22,29 @@ const metadata = {
             index: false,
             follow: false
         }
+    },
+    openGraph: {
+        title: "Brandon Bibbins | IT Director",
+        description: "IT Director with 12+ years experience in IT leadership, endpoint management, and AI-powered operations.",
+        url: 'https://brandonbibbins.io',
+        siteName: 'Brandon Bibbins',
+        images: [
+            {
+                url: '/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Brandon Bibbins - IT Director Portfolio'
+            }
+        ],
+        type: 'website'
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Brandon Bibbins | IT Director",
+        description: "IT Director with 12+ years experience in IT leadership and AI-powered operations.",
+        images: [
+            '/og-image.jpg'
+        ]
     }
 };
 function RootLayout({ children }) {
@@ -30,12 +54,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/layout.tsx",
-            lineNumber: 24,
+            lineNumber: 46,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Documents/Brandons Work/bios-portfolio/app/layout.tsx",
-        lineNumber: 23,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }

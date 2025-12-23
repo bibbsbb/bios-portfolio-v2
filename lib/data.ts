@@ -1,4 +1,4 @@
-import { ResumeData, MenuItemConfig, ThemeColors, Theme } from './types';
+import { ResumeData, MenuItemConfig, ThemeColors, Theme, BootMessage } from './types';
 
 export const resumeData: ResumeData = {
   name: 'Brandon Bibbins',
@@ -65,6 +65,7 @@ export const menuItems: MenuItemConfig[] = [
   { id: 'skills', label: 'Technical Expertise' },
   { id: 'achievements', label: 'Performance Metrics' },
   { id: 'contact', label: 'Connect' },
+  { id: 'games', label: 'Arcade' },
 ];
 
 export const themeColors: Record<Theme, ThemeColors> = {
@@ -74,23 +75,40 @@ export const themeColors: Record<Theme, ThemeColors> = {
   white: { bg: '#0a0a0a', text: '#ffffff', highlight: '#00ffff', accent: '#ffff00' },
 };
 
-export const bootMessages = [
+export const bootMessages: BootMessage[] = [
   { text: 'BibbinsTech BIOS v2.0', delay: 0 },
-  { text: 'Copyright (C) 2014-2025, Brandon Bibbins Inc.', delay: 250 },
-  { text: '', delay: 500 },
-  { text: 'CPU: Brandon Core i7-12700K @ 3.6GHz... OK', delay: 700 },
-  { text: 'Memory Test: ', delay: 900, counter: true },
-  { text: '', delay: 1500 },
-  { text: 'Detecting Primary IDE Master... Career Drive [500GB]', delay: 1700 },
-  { text: 'Detecting Secondary IDE... Skills Module [256GB]', delay: 1950 },
-  { text: 'Initializing Network... LinkedIn Connected', delay: 2200 },
-  { text: 'CMOS Checksum... OK', delay: 2450 },
-  { text: '', delay: 2700 },
-  { text: 'Loading Experience Data... OK', delay: 2900 },
-  { text: '', delay: 3100 },
-  { text: 'All systems operational.', delay: 3300 },
-  { text: '', delay: 3500 },
-  { text: 'Press any key to continue or wait...', delay: 3700, blink: true },
+  { text: 'Copyright (C) 2014-2025, Brandon Bibbins Inc.', delay: 50 },
+  { text: '', delay: 30 },
+  { text: 'CPU: Brandon Core i7-12700K @ 3.6GHz... OK', delay: 40 },
+  { text: 'Memory Test: ', delay: 40, counter: true },
+  { text: '', delay: 30 },
+  { text: 'Detecting Primary IDE Master... Career Drive [500GB]', delay: 40 },
+  { text: 'Detecting Secondary IDE... Skills Module [256GB]', delay: 30 },
+  { text: 'Detecting Tertiary IDE... Projects Archive [128GB]', delay: 30 },
+  { text: '', delay: 25 },
+  { text: 'PCI Device Listing:', delay: 30 },
+  { text: '  Bus 00 Device 01: Jamf Pro Controller v11.0', delay: 25 },
+  { text: '  Bus 00 Device 02: Okta Identity Module v2024.1', delay: 25 },
+  { text: '  Bus 00 Device 03: Google Workspace Adapter', delay: 25 },
+  { text: '  Bus 00 Device 04: CrowdStrike Falcon Sensor', delay: 25 },
+  { text: '  Bus 00 Device 05: Claude AI Coprocessor', delay: 25 },
+  { text: '', delay: 25 },
+  { text: 'USB Devices:', delay: 30 },
+  { text: '  Port 1: Leadership Module [Active]', delay: 25 },
+  { text: '  Port 2: Problem Solving Unit [Active]', delay: 25 },
+  { text: '  Port 3: Communication Interface [Active]', delay: 25 },
+  { text: '', delay: 25 },
+  { text: 'Initializing Network... LinkedIn Connected', delay: 30 },
+  { text: 'Initializing Portfolio... brandonbibbins.io', delay: 30 },
+  { text: 'CMOS Checksum... OK', delay: 30 },
+  { text: 'NVRAM Integrity... OK', delay: 30 },
+  { text: '', delay: 25 },
+  { text: 'Loading Experience Data...', delay: 40 },
+  { text: '', delay: 50, progressBar: true },
+  { text: '', delay: 50 },
+  { text: 'All systems operational.', delay: 50 },
+  { text: '', delay: 30 },
+  { text: 'Press any key to continue or wait...', delay: 50, blink: true },
 ];
 
 export const fortunes = [

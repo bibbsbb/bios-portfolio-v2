@@ -1,4 +1,4 @@
-export type MenuItem = 'main' | 'experience' | 'skills' | 'achievements' | 'contact';
+export type MenuItem = 'main' | 'experience' | 'skills' | 'achievements' | 'contact' | 'games';
 export type Theme = 'blue' | 'amber' | 'green' | 'white';
 export type BootPhase = 'booting' | 'ready';
 export type SoundType = 'boot' | 'click' | 'enter' | 'error';
@@ -66,4 +66,65 @@ export interface ThemeColors {
   text: string;
   highlight: string;
   accent: string;
+}
+
+export interface BootMessage {
+  text: string;
+  delay: number;
+  counter?: boolean;
+  blink?: boolean;
+  progressBar?: boolean;
+}
+
+export interface SnakeSegment {
+  x: number;
+  y: number;
+}
+
+export type SnakeDirection = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
+
+// Tetris types
+export type TetrominoType = 'I' | 'O' | 'T' | 'S' | 'Z' | 'J' | 'L';
+
+export interface TetrisBlock {
+  x: number;
+  y: number;
+  type: TetrominoType;
+}
+
+// Breakout types
+export interface Brick {
+  x: number;
+  y: number;
+  hits: number;
+  color: string;
+}
+
+export interface BreakoutBall {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+}
+
+// Minesweeper types
+export interface MineCell {
+  isMine: boolean;
+  isRevealed: boolean;
+  isFlagged: boolean;
+  neighborMines: number;
+}
+
+// Space Invaders types
+export interface Invader {
+  x: number;
+  y: number;
+  alive: boolean;
+  type: number;
+}
+
+export interface Bullet {
+  x: number;
+  y: number;
+  isPlayer: boolean;
 }

@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Brandon Bibbins | IT Director",
   description: "IT Director with 12+ years experience in IT leadership, endpoint management, identity & access, and AI-powered operations.",
   metadataBase: new URL('https://brandonbibbins.io'),
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   robots: {
     index: false,
     follow: false,
