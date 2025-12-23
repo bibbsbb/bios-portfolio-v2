@@ -19,7 +19,7 @@ export default function Home() {
   const [focusArea, setFocusArea] = useState<'menu' | 'content'>('menu');
   const [contentIndex, setContentIndex] = useState(0);
   const [time, setTime] = useState('');
-  const [theme, setTheme] = useState<Theme>('blue');
+  const [theme, setTheme] = useState<Theme>('green');
   const [bootPhase, setBootPhase] = useState<BootPhase>('booting');
   const [bootText, setBootText] = useState('');
   const [memoryCount, setMemoryCount] = useState(0);
@@ -103,6 +103,7 @@ export default function Home() {
 
   const terminalInputRef = useRef<HTMLInputElement>(null);
   const pongRef = useRef<HTMLDivElement>(null);
+  const breakoutKeysRef = useRef<{ left: boolean; right: boolean }>({ left: false, right: false });
 
   // Wrapper for sound that checks enabled state
   const playBeep = (type: 'boot' | 'click' | 'enter' | 'error') => createBeep(type, soundEnabled);
@@ -370,7 +371,7 @@ export default function Home() {
   }, [pongActive, pongStarted, pongWinner]);
 
   // Snake game constants
-  const GRID_WIDTH = 30;
+  const GRID_WIDTH = 40;
   const GRID_HEIGHT = 20;
   const POINTS_PER_FOOD = 10;
   const FOODS_PER_LEVEL = 5;
@@ -618,29 +619,45 @@ export default function Home() {
     if (!tetrisActive || !tetrisStarted || tetrisGameOver || tetrisPaused) return;
     const speed = Math.max(100, 500 - (tetrisLevel - 1) * 40);
     const gameLoop = setInterval(() => {
-      setTetrisPiece(prev => {
-        if (canMoveTetris(prev, 0, 1, tetrisBoard)) {
-          return prev.map(b => ({ ...b, y: b.y + 1 }));
+      setTetrisBoard(currentBoard => {
+        // Get current piece
+        const piece = tetrisPiece;
+        if (piece.length === 0) return currentBoard;
+
+        // Check if piece can move down
+        const canMoveDown = piece.every(b => {
+          const newY = b.y + 1;
+          return newY < TETRIS_ROWS && (newY < 0 || currentBoard[newY][b.x] === null);
+        });
+
+        if (canMoveDown) {
+          // Move piece down
+          setTetrisPiece(p => p.map(b => ({ ...b, y: b.y + 1 })));
+          return currentBoard;
         }
-        // Lock piece
-        const newBoard = tetrisBoard.map(row => [...row]);
-        prev.forEach(b => { if (b.y >= 0) newBoard[b.y][b.x] = b.type; });
+
+        // Lock piece into board
+        const newBoard = currentBoard.map(row => [...row]);
+        piece.forEach(b => { if (b.y >= 0 && b.y < TETRIS_ROWS) newBoard[b.y][b.x] = b.type; });
+
         // Check for game over
-        if (prev.some(b => b.y < 0)) {
+        if (piece.some(b => b.y < 0)) {
           setTetrisGameOver(true);
           playBeep('error');
-          return prev;
+          return currentBoard;
         }
-        // Clear lines
+
+        // Clear completed lines
         let linesCleared = 0;
         for (let y = TETRIS_ROWS - 1; y >= 0; y--) {
           if (newBoard[y].every(cell => cell !== null)) {
             newBoard.splice(y, 1);
             newBoard.unshift(Array(TETRIS_COLS).fill(null));
             linesCleared++;
-            y++;
+            y++; // Check same row again since rows shifted
           }
         }
+
         if (linesCleared > 0) {
           const points = [0, 100, 300, 500, 800][linesCleared] * tetrisLevel;
           setTetrisScore(s => s + points);
@@ -654,15 +671,18 @@ export default function Home() {
           });
           playBeep('enter');
         }
-        setTetrisBoard(newBoard);
+
+        // Spawn next piece
         const next = tetrisNextPiece;
         setTetrisPieceType(next);
         setTetrisNextPiece(getRandomTetromino());
-        return createPiece(next);
+        setTetrisPiece(createPiece(next));
+
+        return newBoard;
       });
     }, speed);
     return () => clearInterval(gameLoop);
-  }, [tetrisActive, tetrisStarted, tetrisGameOver, tetrisPaused, tetrisLevel, tetrisBoard, tetrisNextPiece]);
+  }, [tetrisActive, tetrisStarted, tetrisGameOver, tetrisPaused, tetrisLevel, tetrisPiece, tetrisNextPiece]);
 
   // Tetris keyboard controls
   useEffect(() => {
@@ -735,82 +755,130 @@ export default function Home() {
     setBreakoutStarted(false);
   };
 
+  // Store refs for real-time access in game loop
+  const breakoutBallRef = useRef(breakoutBall);
+  const breakoutPaddleRef = useRef(breakoutPaddleX);
+  const breakoutBricksRef = useRef(breakoutBricks);
+  useEffect(() => { breakoutBallRef.current = breakoutBall; }, [breakoutBall]);
+  useEffect(() => { breakoutPaddleRef.current = breakoutPaddleX; }, [breakoutPaddleX]);
+  useEffect(() => { breakoutBricksRef.current = breakoutBricks; }, [breakoutBricks]);
+
   // Breakout game loop
   useEffect(() => {
     if (!breakoutActive || !breakoutStarted || breakoutGameOver || breakoutWon) return;
     const gameLoop = setInterval(() => {
-      setBreakoutBall(prev => {
-        let { x, y, vx, vy } = prev;
-        x += vx; y += vy;
-        // Wall collisions
-        if (x <= 2 || x >= 98) { vx = -vx; x = x <= 2 ? 2 : 98; playBeep('click'); }
-        if (y <= 2) { vy = -vy; y = 2; playBeep('click'); }
-        // Paddle collision
-        if (y >= 85 && y <= 88 && x >= breakoutPaddleX - 10 && x <= breakoutPaddleX + 10) {
-          vy = -Math.abs(vy);
-          vx = (x - breakoutPaddleX) * 0.2;
-          y = 85;
-          playBeep('enter');
-        }
-        // Ball lost
-        if (y >= 100) {
-          const newLives = breakoutLives - 1;
-          setBreakoutLives(newLives);
+      // Smooth paddle movement based on held keys
+      if (breakoutKeysRef.current.left) {
+        setBreakoutPaddleX(p => {
+          const newP = Math.max(10, p - 3);
+          breakoutPaddleRef.current = newP;
+          return newP;
+        });
+      }
+      if (breakoutKeysRef.current.right) {
+        setBreakoutPaddleX(p => {
+          const newP = Math.min(90, p + 3);
+          breakoutPaddleRef.current = newP;
+          return newP;
+        });
+      }
+
+      // Get current values from refs
+      const ball = breakoutBallRef.current;
+      if (ball.vx === 0 && ball.vy === 0) return;
+
+      let { x, y, vx, vy } = ball;
+      x += vx; y += vy;
+
+      // Wall collisions
+      if (x <= 2 || x >= 98) { vx = -vx; x = x <= 2 ? 2 : 98; playBeep('click'); }
+      if (y <= 2) { vy = -vy; y = 2; playBeep('click'); }
+
+      // Paddle collision
+      const paddleX = breakoutPaddleRef.current;
+      if (y >= 83 && y <= 90 && x >= paddleX - 12 && x <= paddleX + 12 && vy > 0) {
+        vy = -Math.abs(vy);
+        vx = (x - paddleX) * 0.15;
+        y = 83;
+        playBeep('enter');
+      }
+
+      // Ball lost
+      if (y >= 100) {
+        setBreakoutLives(l => {
+          const newLives = l - 1;
           if (newLives <= 0) {
             setBreakoutGameOver(true);
-            playBeep('error');
+          }
+          playBeep('error');
+          return newLives;
+        });
+        setBreakoutBall({ x: 50, y: 80, vx: 0, vy: 0 });
+        return;
+      }
+
+      // Brick collisions
+      const bricks = breakoutBricksRef.current;
+      const ballRadius = 2;
+      for (let i = 0; i < bricks.length; i++) {
+        const b = bricks[i];
+        if (x + ballRadius >= b.x && x - ballRadius <= b.x + 10 &&
+            y + ballRadius >= b.y && y - ballRadius <= b.y + 5) {
+          // Hit a brick
+          const newBricks = bricks.filter((_, idx) => idx !== i);
+          setBreakoutBricks(newBricks);
+          breakoutBricksRef.current = newBricks;
+          setBreakoutScore(s => s + 10);
+
+          // Determine bounce direction
+          const overlapLeft = (x + ballRadius) - b.x;
+          const overlapRight = (b.x + 10) - (x - ballRadius);
+          const overlapTop = (y + ballRadius) - b.y;
+          const overlapBottom = (b.y + 5) - (y - ballRadius);
+          const minOverlapX = Math.min(overlapLeft, overlapRight);
+          const minOverlapY = Math.min(overlapTop, overlapBottom);
+          if (minOverlapX < minOverlapY) {
+            vx = -vx;
           } else {
-            playBeep('error');
+            vy = -vy;
           }
-          return { x: 50, y: 80, vx: 0, vy: 0 };
-        }
-        // Brick collisions
-        setBreakoutBricks(bricks => {
-          const newBricks = [...bricks];
-          let hit = false;
-          for (let i = 0; i < newBricks.length; i++) {
-            const b = newBricks[i];
-            if (x >= b.x && x <= b.x + 10 && y >= b.y && y <= b.y + 4) {
-              newBricks.splice(i, 1);
-              setBreakoutScore(s => s + 10);
-              vy = -vy;
-              hit = true;
-              playBeep('click');
-              break;
-            }
-          }
+          playBeep('click');
+
           if (newBricks.length === 0) {
             setBreakoutWon(true);
             playBeep('boot');
           }
-          return hit ? newBricks : bricks;
-        });
-        return { x, y, vx, vy };
-      });
-    }, 20);
-    return () => clearInterval(gameLoop);
-  }, [breakoutActive, breakoutStarted, breakoutGameOver, breakoutWon, breakoutPaddleX, breakoutLives]);
+          break;
+        }
+      }
 
-  // Breakout keyboard controls
+      const newBall = { x, y, vx, vy };
+      setBreakoutBall(newBall);
+      breakoutBallRef.current = newBall;
+    }, 16); // ~60fps for smoother animation
+    return () => clearInterval(gameLoop);
+  }, [breakoutActive, breakoutStarted, breakoutGameOver, breakoutWon]);
+
+  // Breakout keyboard controls - track key states for smooth movement
   useEffect(() => {
     if (!breakoutActive) return;
-    const handleBreakoutKeys = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.key === ' ' || e.key === 'Enter') && !breakoutStarted && !breakoutGameOver && !breakoutWon) {
         e.preventDefault();
         setBreakoutStarted(true);
-        setBreakoutBall({ x: 50, y: 80, vx: 2, vy: -2 });
+        setBreakoutBall({ x: 50, y: 80, vx: 2.5, vy: -2.5 });
         return;
       }
       if ((e.key === ' ' || e.key === 'Enter') && breakoutBall.vx === 0 && breakoutStarted && !breakoutGameOver) {
         e.preventDefault();
-        setBreakoutBall({ x: breakoutPaddleX, y: 80, vx: 2, vy: -2 });
+        setBreakoutBall(prev => ({ ...prev, vx: 2.5, vy: -2.5 }));
         return;
       }
       if ((e.key === ' ' || e.key === 'Enter') && (breakoutGameOver || breakoutWon)) {
         e.preventDefault();
         resetBreakout();
         setBreakoutStarted(true);
-        setBreakoutBall({ x: 50, y: 80, vx: 2, vy: -2 });
+        setBreakoutBall({ x: 50, y: 80, vx: 2.5, vy: -2.5 });
         return;
       }
       if (e.key === 'q' || e.key === 'Q' || e.key === 'Escape') {
@@ -819,18 +887,32 @@ export default function Home() {
         resetBreakout();
         return;
       }
-      if (!breakoutStarted || breakoutGameOver || breakoutWon) return;
+      // Track held keys for smooth movement
       if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
         e.preventDefault();
-        setBreakoutPaddleX(p => Math.max(10, p - 8));
-      } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        breakoutKeysRef.current.left = true;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
         e.preventDefault();
-        setBreakoutPaddleX(p => Math.min(90, p + 8));
+        breakoutKeysRef.current.right = true;
       }
     };
-    window.addEventListener('keydown', handleBreakoutKeys);
-    return () => window.removeEventListener('keydown', handleBreakoutKeys);
-  }, [breakoutActive, breakoutStarted, breakoutGameOver, breakoutWon, breakoutBall, breakoutPaddleX]);
+    const handleKeyUp = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+        breakoutKeysRef.current.left = false;
+      }
+      if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        breakoutKeysRef.current.right = false;
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+      breakoutKeysRef.current = { left: false, right: false };
+    };
+  }, [breakoutActive, breakoutStarted, breakoutGameOver, breakoutWon, breakoutBall]);
 
   // Minesweeper helpers
   const MINE_SIZE = 9;
@@ -1739,7 +1821,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                   <span className="text-[#888]">Hi: {snakeHighScore}</span>
                   <button onClick={() => { setSnakeActive(false); resetSnakeGame(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
                 </div>
-                <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '700px', aspectRatio: '1.5' }}>
+                <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '800px', aspectRatio: '2' }}>
                   {snake.map((segment, index) => (
                     <div key={index} className="absolute" style={{ left: `${(segment.x / GRID_WIDTH) * 100}%`, top: `${(segment.y / GRID_HEIGHT) * 100}%`, width: `${100 / GRID_WIDTH}%`, height: `${100 / GRID_HEIGHT}%`, background: index === 0 ? '#55ff55' : '#33ff33', border: '1px solid #0a0a0a' }} />
                   ))}
@@ -1782,7 +1864,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                   <button onClick={() => { setTetrisActive(false); resetTetris(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
                 </div>
                 <div className="flex gap-4 flex-1">
-                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '300px', height: '600px' }}>
+                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '400px', height: '800px' }}>
                     {tetrisBoard.map((row, y) => row.map((cell, x) => cell && (
                       <div key={`${x}-${y}`} className="absolute" style={{ left: `${x * 10}%`, top: `${y * 5}%`, width: '10%', height: '5%', background: TETRIS_COLORS[cell], border: '1px solid #0a0a0a' }} />
                     )))}
@@ -1847,7 +1929,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                     <div key={i} className="absolute" style={{ left: `${brick.x}%`, top: `${brick.y}%`, width: '10%', height: '4%', background: brick.color }} />
                   ))}
                   <div className="absolute" style={{ left: `${breakoutPaddleX - 8}%`, bottom: '3%', width: '16%', height: '2.5%', background: '#55ffff' }} />
-                  <div className="absolute rounded-full" style={{ left: `${breakoutBall.x}%`, top: `${breakoutBall.y}%`, width: '1.5%', height: '2.5%', background: '#ffffff', transform: 'translate(-50%, -50%)' }} />
+                  <div className="absolute rounded-full" style={{ left: `${breakoutBall.x}%`, top: `${breakoutBall.y}%`, width: '12px', height: '12px', background: '#ffffff', transform: 'translate(-50%, -50%)' }} />
                   {!breakoutStarted && !breakoutGameOver && !breakoutWon && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/70">
                       <div className="text-center">
@@ -2188,8 +2270,8 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                   <div
                     className="relative border border-[#33ff33]"
                     style={{
-                      width: 'min(280px, 45vw)',
-                      height: 'min(280px, 45vw)',
+                      width: 'min(320px, 60vw)',
+                      height: 'min(160px, 30vw)',
                       background: '#0a0a0a'
                     }}
                   >
@@ -2492,8 +2574,8 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                       style={{
                         left: `${breakoutBall.x}%`,
                         top: `${breakoutBall.y}%`,
-                        width: '2%',
-                        height: '3%',
+                        width: '8px',
+                        height: '8px',
                         background: '#ffffff',
                         transform: 'translate(-50%, -50%)',
                       }}
