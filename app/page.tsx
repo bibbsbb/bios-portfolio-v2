@@ -370,7 +370,8 @@ export default function Home() {
   }, [pongActive, pongStarted, pongWinner]);
 
   // Snake game constants
-  const GRID_SIZE = 20;
+  const GRID_WIDTH = 30;
+  const GRID_HEIGHT = 20;
   const POINTS_PER_FOOD = 10;
   const FOODS_PER_LEVEL = 5;
 
@@ -385,8 +386,8 @@ export default function Home() {
     let newFood: SnakeSegment;
     do {
       newFood = {
-        x: Math.floor(Math.random() * GRID_SIZE),
-        y: Math.floor(Math.random() * GRID_SIZE),
+        x: Math.floor(Math.random() * GRID_WIDTH),
+        y: Math.floor(Math.random() * GRID_HEIGHT),
       };
     } while (currentSnake.some(seg => seg.x === newFood.x && seg.y === newFood.y));
     return newFood;
@@ -432,7 +433,7 @@ export default function Home() {
         }
 
         // Check wall collision
-        if (newHead.x < 0 || newHead.x >= GRID_SIZE || newHead.y < 0 || newHead.y >= GRID_SIZE) {
+        if (newHead.x < 0 || newHead.x >= GRID_WIDTH || newHead.y < 0 || newHead.y >= GRID_HEIGHT) {
           setSnakeGameOver(true);
           playBeep('error');
           return prevSnake;
@@ -1738,11 +1739,11 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                   <span className="text-[#888]">Hi: {snakeHighScore}</span>
                   <button onClick={() => { setSnakeActive(false); resetSnakeGame(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
                 </div>
-                <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '500px', aspectRatio: '1' }}>
+                <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '700px', aspectRatio: '1.5' }}>
                   {snake.map((segment, index) => (
-                    <div key={index} className="absolute" style={{ left: `${(segment.x / GRID_SIZE) * 100}%`, top: `${(segment.y / GRID_SIZE) * 100}%`, width: `${100 / GRID_SIZE}%`, height: `${100 / GRID_SIZE}%`, background: index === 0 ? '#55ff55' : '#33ff33', border: '1px solid #0a0a0a' }} />
+                    <div key={index} className="absolute" style={{ left: `${(segment.x / GRID_WIDTH) * 100}%`, top: `${(segment.y / GRID_HEIGHT) * 100}%`, width: `${100 / GRID_WIDTH}%`, height: `${100 / GRID_HEIGHT}%`, background: index === 0 ? '#55ff55' : '#33ff33', border: '1px solid #0a0a0a' }} />
                   ))}
-                  <div className="absolute" style={{ left: `${(food.x / GRID_SIZE) * 100}%`, top: `${(food.y / GRID_SIZE) * 100}%`, width: `${100 / GRID_SIZE}%`, height: `${100 / GRID_SIZE}%`, background: '#ff5555', borderRadius: '50%' }} />
+                  <div className="absolute" style={{ left: `${(food.x / GRID_WIDTH) * 100}%`, top: `${(food.y / GRID_HEIGHT) * 100}%`, width: `${100 / GRID_WIDTH}%`, height: `${100 / GRID_HEIGHT}%`, background: '#ff5555', borderRadius: '50%' }} />
                   {!snakeStarted && !snakeGameOver && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/70">
                       <div className="text-center">
@@ -1781,7 +1782,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                   <button onClick={() => { setTetrisActive(false); resetTetris(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
                 </div>
                 <div className="flex gap-4 flex-1">
-                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '200px', height: '400px' }}>
+                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '300px', height: '600px' }}>
                     {tetrisBoard.map((row, y) => row.map((cell, x) => cell && (
                       <div key={`${x}-${y}`} className="absolute" style={{ left: `${x * 10}%`, top: `${y * 5}%`, width: '10%', height: '5%', background: TETRIS_COLORS[cell], border: '1px solid #0a0a0a' }} />
                     )))}
@@ -2014,39 +2015,6 @@ breakout.exe  minesweeper.exe  invaders.exe`;
               [ TERMINAL ]
             </button>
 
-            {/* Games Buttons */}
-            <button
-              onClick={() => {
-                setPongScore({ player: 0, cpu: 0 });
-                setPlayerY(50);
-                setCpuY(50);
-                setBallPos({ x: 50, y: 50 });
-                setBallVel({ x: 0, y: 0 });
-                setPongStarted(false);
-                setPongWinner(null);
-                setPongActive(true);
-                setTerminalOpen(true);
-                playBeep('enter');
-              }}
-              className="mt-2 w-full py-1 text-center cursor-pointer hover:opacity-80"
-              style={{ background: colors.accent, color: colors.bg }}
-            >
-              [ PLAY PONG ]
-            </button>
-
-            <button
-              onClick={() => {
-                resetSnakeGame();
-                setSnakeActive(true);
-                setTerminalOpen(true);
-                playBeep('enter');
-              }}
-              className="mt-2 w-full py-1 text-center cursor-pointer hover:opacity-80"
-              style={{ background: colors.accent, color: colors.bg }}
-            >
-              [ PLAY SNAKE ]
-            </button>
-
             {/* Resume Download Button */}
             <a
               href="/Brandon_Bibbins_Resume.pdf"
@@ -2231,10 +2199,10 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                         key={index}
                         className="absolute"
                         style={{
-                          left: `${(segment.x / GRID_SIZE) * 100}%`,
-                          top: `${(segment.y / GRID_SIZE) * 100}%`,
-                          width: `${100 / GRID_SIZE}%`,
-                          height: `${100 / GRID_SIZE}%`,
+                          left: `${(segment.x / GRID_WIDTH) * 100}%`,
+                          top: `${(segment.y / GRID_HEIGHT) * 100}%`,
+                          width: `${100 / GRID_WIDTH}%`,
+                          height: `${100 / GRID_HEIGHT}%`,
                           background: index === 0 ? '#55ff55' : '#33ff33',
                           border: '1px solid #0a0a0a',
                         }}
@@ -2244,10 +2212,10 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                     <div
                       className="absolute"
                       style={{
-                        left: `${(food.x / GRID_SIZE) * 100}%`,
-                        top: `${(food.y / GRID_SIZE) * 100}%`,
-                        width: `${100 / GRID_SIZE}%`,
-                        height: `${100 / GRID_SIZE}%`,
+                        left: `${(food.x / GRID_WIDTH) * 100}%`,
+                        top: `${(food.y / GRID_HEIGHT) * 100}%`,
+                        width: `${100 / GRID_WIDTH}%`,
+                        height: `${100 / GRID_HEIGHT}%`,
                         background: '#ff5555',
                         borderRadius: '50%',
                       }}
