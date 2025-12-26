@@ -55,6 +55,7 @@ export default function Home() {
 
   // Tetris game state
   const [tetrisActive, setTetrisActive] = useState(false);
+  const [gameSource, setGameSource] = useState<'arcade' | 'terminal' | null>(null);
   const [tetrisStarted, setTetrisStarted] = useState(false);
   const [tetrisGameOver, setTetrisGameOver] = useState(false);
   const [tetrisScore, setTetrisScore] = useState(0);
@@ -707,6 +708,7 @@ export default function Home() {
       if (e.key === 'q' || e.key === 'Q' || e.key === 'Escape') {
         e.preventDefault();
         setTetrisActive(false);
+        setGameSource(null);
         resetTetris();
         return;
       }
@@ -1484,6 +1486,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
       case 'games/tetris.exe':
         resetTetris();
         setTetrisActive(true);
+        setGameSource('terminal');
         setTerminalHistory(prev => [...prev, { cmd, output: 'Starting Tetris... Press SPACE to begin!\nControls: A/D or ←/→: Move | W or ↑: Rotate | S or ↓: Drop | P: Pause | Q: Quit' }]);
         setCommandHistory(prev => [cmd, ...prev]);
         setTerminalInput('');
@@ -1751,6 +1754,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                 onPlayTetris={() => {
                   resetTetris();
                   setTetrisActive(true);
+                  setGameSource('arcade');
                   playBeep('enter');
                 }}
                 onPlayBreakout={() => {
@@ -1854,17 +1858,17 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                 <div className="text-center mt-2 text-xs opacity-70">Eat 5 apples to level up! | WASD/Arrows: Move | P: Pause | Q: Quit</div>
               </div>
             )}
-            {selectedMenu === 'games' && tetrisActive && (
+            {selectedMenu === 'games' && tetrisActive && gameSource === 'arcade' && (
               <div className="h-full flex flex-col items-center">
                 <div className="text-center mb-2">
                   <span className="text-[#ff00ff] text-lg">TETRIS</span>
                   <span className="mx-3">Level: {tetrisLevel}</span>
                   <span className="mx-3">Lines: {tetrisLines}</span>
                   <span className="text-[#ffff55]">Score: {tetrisScore}</span>
-                  <button onClick={() => { setTetrisActive(false); resetTetris(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
+                  <button onClick={() => { setTetrisActive(false); setGameSource(null); resetTetris(); }} className="ml-4 px-2 py-0.5 text-xs" style={{ background: '#ff5555', color: '#000' }}>QUIT</button>
                 </div>
                 <div className="flex gap-4 flex-1">
-                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '400px', height: '800px' }}>
+                  <div className="relative border-2 border-[#aaaaaa]" style={{ width: '200px', height: '400px' }}>
                     {tetrisBoard.map((row, y) => row.map((cell, x) => cell && (
                       <div key={`${x}-${y}`} className="absolute" style={{ left: `${x * 10}%`, top: `${y * 5}%`, width: '10%', height: '5%', background: TETRIS_COLORS[cell], border: '1px solid #0a0a0a' }} />
                     )))}
@@ -2435,7 +2439,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                     </button>
                   </div>
                 </div>
-              ) : tetrisActive ? (
+              ) : tetrisActive && gameSource === 'terminal' ? (
                 <div className="h-full flex flex-col items-center justify-center">
                   <div className="text-center mb-1 text-xs">
                     <span className="text-[#ff00ff]">TETRIS</span>
@@ -2533,7 +2537,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
                       </div>
                     </div>
                   </div>
-                  <button onClick={() => { setTetrisActive(false); resetTetris(); }} className="mt-2 px-3 py-0.5 text-xs md:hidden" style={{ background: '#ff5555', color: '#0a0a0a' }}>QUIT</button>
+                  <button onClick={() => { setTetrisActive(false); setGameSource(null); resetTetris(); }} className="mt-2 px-3 py-0.5 text-xs md:hidden" style={{ background: '#ff5555', color: '#0a0a0a' }}>QUIT</button>
                 </div>
               ) : breakoutActive ? (
                 <div className="h-full flex flex-col items-center justify-center">
