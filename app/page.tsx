@@ -77,7 +77,7 @@ export default function Home() {
   const [breakoutScore, setBreakoutScore] = useState(0);
   const [breakoutLives, setBreakoutLives] = useState(3);
   const [breakoutPaddleX, setBreakoutPaddleX] = useState(50);
-  const [breakoutBall, setBreakoutBall] = useState<BreakoutBall>({ x: 50, y: 80, vx: 0, vy: 0 });
+  const [breakoutBall, setBreakoutBall] = useState<BreakoutBall>({ x: 50, y: 85, vx: 0, vy: 0 });
   const [breakoutBricks, setBreakoutBricks] = useState<Brick[]>([]);
 
   // Minesweeper game state
@@ -749,7 +749,7 @@ export default function Home() {
   const resetBreakout = () => {
     setBreakoutBricks(initBreakoutBricks());
     setBreakoutPaddleX(50);
-    setBreakoutBall({ x: 50, y: 80, vx: 0, vy: 0 });
+    setBreakoutBall({ x: 50, y: 85, vx: 0, vy: 0 });
     setBreakoutScore(0);
     setBreakoutLives(3);
     setBreakoutGameOver(false);
@@ -772,14 +772,14 @@ export default function Home() {
       // Smooth paddle movement based on held keys
       if (breakoutKeysRef.current.left) {
         setBreakoutPaddleX(p => {
-          const newP = Math.max(10, p - 3);
+          const newP = Math.max(10, p - 6);
           breakoutPaddleRef.current = newP;
           return newP;
         });
       }
       if (breakoutKeysRef.current.right) {
         setBreakoutPaddleX(p => {
-          const newP = Math.min(90, p + 3);
+          const newP = Math.min(90, p + 6);
           breakoutPaddleRef.current = newP;
           return newP;
         });
@@ -796,12 +796,12 @@ export default function Home() {
       if (x <= 2 || x >= 98) { vx = -vx; x = x <= 2 ? 2 : 98; playBeep('click'); }
       if (y <= 2) { vy = -vy; y = 2; playBeep('click'); }
 
-      // Paddle collision
+      // Paddle collision (paddle is at bottom ~3%, which is y ~94-97%)
       const paddleX = breakoutPaddleRef.current;
-      if (y >= 83 && y <= 90 && x >= paddleX - 12 && x <= paddleX + 12 && vy > 0) {
+      if (y >= 91 && y <= 98 && x >= paddleX - 12 && x <= paddleX + 12 && vy > 0) {
         vy = -Math.abs(vy);
-        vx = (x - paddleX) * 0.15;
-        y = 83;
+        vx = (x - paddleX) * 0.12;
+        y = 91;
         playBeep('enter');
       }
 
@@ -815,7 +815,7 @@ export default function Home() {
           playBeep('error');
           return newLives;
         });
-        setBreakoutBall({ x: 50, y: 80, vx: 0, vy: 0 });
+        setBreakoutBall({ x: 50, y: 85, vx: 0, vy: 0 });
         return;
       }
 
@@ -868,19 +868,19 @@ export default function Home() {
       if ((e.key === ' ' || e.key === 'Enter') && !breakoutStarted && !breakoutGameOver && !breakoutWon) {
         e.preventDefault();
         setBreakoutStarted(true);
-        setBreakoutBall({ x: 50, y: 80, vx: 2.5, vy: -2.5 });
+        setBreakoutBall({ x: 50, y: 85, vx: 1.5, vy: -1.5 });
         return;
       }
       if ((e.key === ' ' || e.key === 'Enter') && breakoutBall.vx === 0 && breakoutStarted && !breakoutGameOver) {
         e.preventDefault();
-        setBreakoutBall(prev => ({ ...prev, vx: 2.5, vy: -2.5 }));
+        setBreakoutBall(prev => ({ ...prev, vx: 1.5, vy: -1.5 }));
         return;
       }
       if ((e.key === ' ' || e.key === 'Enter') && (breakoutGameOver || breakoutWon)) {
         e.preventDefault();
         resetBreakout();
         setBreakoutStarted(true);
-        setBreakoutBall({ x: 50, y: 80, vx: 2.5, vy: -2.5 });
+        setBreakoutBall({ x: 50, y: 85, vx: 1.5, vy: -1.5 });
         return;
       }
       if (e.key === 'q' || e.key === 'Q' || e.key === 'Escape') {
