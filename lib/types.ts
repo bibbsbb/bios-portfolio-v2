@@ -1,5 +1,6 @@
 export type MenuItem = 'main' | 'experience' | 'skills' | 'achievements' | 'contact' | 'games';
 export type Theme = 'blue' | 'amber' | 'green' | 'white';
+export type ViewMode = 'terminal' | 'friendly';
 export type BootPhase = 'booting' | 'ready';
 export type SoundType = 'boot' | 'click' | 'enter' | 'error';
 

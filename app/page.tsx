@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Theme, BootPhase, TerminalEntry, PongScore, BallPosition, BallVelocity, BootMessage, SnakeSegment, SnakeDirection, TetrominoType, TetrisBlock, Brick, BreakoutBall, MineCell, Invader, Bullet } from '@/lib/types';
+import { Theme, BootPhase, TerminalEntry, PongScore, BallPosition, BallVelocity, BootMessage, SnakeSegment, SnakeDirection, TetrominoType, TetrisBlock, Brick, BreakoutBall, MineCell, Invader, Bullet, ViewMode } from '@/lib/types';
 import { resumeData, menuItems, themeColors, bootMessages, fortunes } from '@/lib/data';
 import { createBeep } from '@/lib/sounds';
 import {
@@ -12,15 +12,19 @@ import {
   ContactPanel,
   GamesPanel,
 } from '@/components';
+import { ModeToggle, FriendlyHome } from '@/components/friendly';
 
 export default function Home() {
+  // View mode state (terminal vs friendly) - friendly is default
+  const [viewMode, setViewMode] = useState<ViewMode>('friendly');
+
   const [selectedMenu, setSelectedMenu] = useState<typeof menuItems[number]['id']>('main');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [focusArea, setFocusArea] = useState<'menu' | 'content'>('menu');
   const [contentIndex, setContentIndex] = useState(0);
   const [time, setTime] = useState('');
   const [theme, setTheme] = useState<Theme>('green');
-  const [bootPhase, setBootPhase] = useState<BootPhase>('booting');
+  const [bootPhase, setBootPhase] = useState<BootPhase>('ready');
   const [bootText, setBootText] = useState('');
   const [memoryCount, setMemoryCount] = useState(0);
   const [progressBar, setProgressBar] = useState(0);
@@ -108,6 +112,26 @@ export default function Home() {
 
   // Wrapper for sound that checks enabled state
   const playBeep = (type: 'boot' | 'click' | 'enter' | 'error') => createBeep(type, soundEnabled);
+
+  // Load view mode preference from localStorage
+  useEffect(() => {
+    const savedMode = localStorage.getItem('bios-view-mode') as ViewMode | null;
+    if (savedMode === 'terminal') {
+      setViewMode('terminal');
+    }
+  }, []);
+
+  // Toggle body class for scroll behavior
+  useEffect(() => {
+    if (viewMode === 'friendly') {
+      document.body.classList.add('friendly-body');
+    } else {
+      document.body.classList.remove('friendly-body');
+    }
+    return () => {
+      document.body.classList.remove('friendly-body');
+    };
+  }, [viewMode]);
 
   // Load sound preference from localStorage
   useEffect(() => {
@@ -1287,7 +1311,6 @@ export default function Home() {
 │ ✓ 73% Phishing Reduction            │
 ├─────────────────────────────────────┤
 │ Email: brandonbibbins@gmail.com     │
-│ Phone: (310) 749-0728               │
 └─────────────────────────────────────┘`;
           break;
         case 'skills.dat':
@@ -1400,7 +1423,6 @@ EDUCATION:
       case 'contact':
         output = `Contact Information:
   Email: brandonbibbins@gmail.com
-  Phone: (310) 749-0728
   LinkedIn: linkedin.com/in/brandonbibbins
   Location: Los Angeles, CA`;
         break;
@@ -1592,6 +1614,54 @@ breakout.exe  minesweeper.exe  invaders.exe`;
 
   const colors = themeColors[theme];
 
+  // Toggle view mode
+  const toggleViewMode = () => {
+    const newMode = viewMode === 'terminal' ? 'friendly' : 'terminal';
+    setViewMode(newMode);
+    localStorage.setItem('bios-view-mode', newMode);
+  };
+
+  // Game handlers for friendly mode
+  const gameHandlers = {
+    onPlayPong: () => {
+      setPongScore({ player: 0, cpu: 0 });
+      setPlayerY(50);
+      setCpuY(50);
+      setBallPos({ x: 50, y: 50 });
+      setBallVel({ x: 0, y: 0 });
+      setPongStarted(false);
+      setPongWinner(null);
+      setPongActive(true);
+      playBeep('enter');
+    },
+    onPlaySnake: () => {
+      resetSnakeGame();
+      setSnakeActive(true);
+      playBeep('enter');
+    },
+    onPlayTetris: () => {
+      resetTetris();
+      setTetrisActive(true);
+      setGameSource('arcade');
+      playBeep('enter');
+    },
+    onPlayBreakout: () => {
+      resetBreakout();
+      setBreakoutActive(true);
+      playBeep('enter');
+    },
+    onPlayMinesweeper: () => {
+      resetMinesweeper();
+      setMinesweeperActive(true);
+      playBeep('enter');
+    },
+    onPlayInvaders: () => {
+      resetInvaders();
+      setInvadersActive(true);
+      playBeep('enter');
+    },
+  };
+
   // Boot screen
   if (bootPhase === 'booting') {
     const handleSkipBoot = () => {
@@ -1656,12 +1726,287 @@ breakout.exe  minesweeper.exe  invaders.exe`;
     );
   }
 
-  // Main BIOS interface
+  // Check if any game is active
+  const anyGameActive = pongActive || snakeActive || tetrisActive || breakoutActive || minesweeperActive || invadersActive;
+
+  // Friendly mode - render the modern homepage
+  if (viewMode === 'friendly') {
+    return (
+      <>
+        <ModeToggle mode={viewMode} onToggle={toggleViewMode} />
+        <FriendlyHome
+          data={resumeData}
+          snakeHighScore={snakeHighScore}
+          gameHandlers={gameHandlers}
+          onSwitchToTerminal={() => {
+            setViewMode('terminal');
+            localStorage.setItem('bios-view-mode', 'terminal');
+          }}
+        />
+        {/* Game modal overlay for friendly mode */}
+        {anyGameActive && (
+          <div className="game-modal-overlay" style={{ fontFamily: "'VT323', monospace" }}>
+            <div className="game-modal-content" style={{ background: '#0a0a0a' }}>
+              {/* Game content rendered here - using terminal game UI */}
+              <div className="p-4 text-[#33ff33]">
+                {pongActive && (
+                  <div className="h-full flex flex-col">
+                    <div className="text-center mb-2">
+                      <span className="text-[#ffff55] text-lg">PONG</span>
+                      <span className="mx-4">You: {pongScore.player}</span>
+                      <span>CPU: {pongScore.cpu}</span>
+                      <button onClick={() => { setPongActive(false); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="flex-1 relative border-2 border-[#33ff33]" style={{ minHeight: '300px' }}>
+                      <div className="absolute top-0 bottom-0 left-1/2 w-px" style={{ background: '#333', borderStyle: 'dashed' }} />
+                      <div className="absolute w-3 bg-[#33ff33]" style={{ left: '3%', top: `${playerY - 12}%`, height: '24%' }} />
+                      <div className="absolute w-3 bg-[#ff5555]" style={{ right: '3%', top: `${cpuY - 12}%`, height: '24%' }} />
+                      <div className="absolute w-4 h-4 bg-[#ffff55] rounded-full" style={{ left: `${ballPos.x}%`, top: `${ballPos.y}%`, transform: 'translate(-50%, -50%)' }} />
+                      {!pongStarted && !pongWinner && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                          <div className="text-center">
+                            <div className="text-[#ffff55] text-2xl mb-2">PONG</div>
+                            <div className="text-[#33ff33]">Press SPACE to Start</div>
+                            <div className="text-[#888] text-xs mt-2">W/S or Arrow Keys to move</div>
+                          </div>
+                        </div>
+                      )}
+                      {pongWinner && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                          <div className="text-center">
+                            <div className={`text-2xl mb-2 ${pongWinner === 'You' ? 'text-[#33ff33]' : 'text-[#ff5555]'}`}>
+                              {pongWinner === 'You' ? 'YOU WIN!' : 'CPU WINS!'}
+                            </div>
+                            <div className="text-[#888]">Press SPACE to Play Again</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-center mt-2 text-xs opacity-70">First to 5 wins! | W/S or Arrows: Move | Q: Quit</div>
+                  </div>
+                )}
+                {snakeActive && (
+                  <div className="h-full flex flex-col items-center">
+                    <div className="text-center mb-2">
+                      <span className="text-[#55ff55] text-lg">SNAKE</span>
+                      <span className="mx-3">Level: {snakeLevel}/20</span>
+                      <span className="mx-3">Score: {snakeScore}</span>
+                      <span className="text-[#888]">Hi: {snakeHighScore}</span>
+                      <button onClick={() => { setSnakeActive(false); resetSnakeGame(); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="relative border-2 border-[#33ff33]" style={{ width: '100%', maxWidth: '640px', aspectRatio: '2' }}>
+                      {snake.map((segment, index) => (
+                        <div key={index} className="absolute" style={{ left: `${(segment.x / 40) * 100}%`, top: `${(segment.y / 20) * 100}%`, width: '2.5%', height: '5%', background: index === 0 ? '#55ff55' : '#33ff33', border: '1px solid #0a0a0a' }} />
+                      ))}
+                      <div className="absolute" style={{ left: `${(food.x / 40) * 100}%`, top: `${(food.y / 20) * 100}%`, width: '2.5%', height: '5%', background: '#ff5555', borderRadius: '50%' }} />
+                      {!snakeStarted && !snakeGameOver && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#55ff55] text-2xl mb-2">SNAKE</div>
+                            <div className="text-[#33ff33]">Press SPACE to Start</div>
+                          </div>
+                        </div>
+                      )}
+                      {snakeGameOver && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#ff5555] text-2xl mb-2">GAME OVER</div>
+                            <div className="text-[#ffff55] mb-1">Score: {snakeScore}</div>
+                            {snakeScore >= snakeHighScore && snakeScore > 0 && <div className="text-[#55ff55] mb-2">NEW HIGH SCORE!</div>}
+                            <div className="text-[#33ff33]">Press SPACE to Play Again</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-center mt-2 text-xs opacity-70">WASD/Arrows: Move | P: Pause | Q: Quit</div>
+                  </div>
+                )}
+                {tetrisActive && (
+                  <div className="h-full flex flex-col items-center">
+                    <div className="text-center mb-2">
+                      <span className="text-[#ff00ff] text-lg">TETRIS</span>
+                      <span className="mx-3">Level: {tetrisLevel}</span>
+                      <span className="mx-3">Lines: {tetrisLines}</span>
+                      <span className="text-[#ffff55]">Score: {tetrisScore}</span>
+                      <button onClick={() => { setTetrisActive(false); setGameSource(null); resetTetris(); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="relative border-2 border-[#aaaaaa]" style={{ width: '200px', height: '400px' }}>
+                        {tetrisBoard.map((row, y) => row.map((cell, x) => cell && (
+                          <div key={`${x}-${y}`} className="absolute" style={{ left: `${x * 10}%`, top: `${y * 5}%`, width: '10%', height: '5%', background: TETRIS_COLORS[cell], border: '1px solid #0a0a0a' }} />
+                        )))}
+                        {tetrisPiece.map((block, i) => (
+                          <div key={i} className="absolute" style={{ left: `${block.x * 10}%`, top: `${block.y * 5}%`, width: '10%', height: '5%', background: TETRIS_COLORS[block.type], border: '1px solid #0a0a0a' }} />
+                        ))}
+                        {!tetrisStarted && !tetrisGameOver && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                            <div className="text-center">
+                              <div className="text-[#ff00ff] text-2xl mb-2">TETRIS</div>
+                              <div className="text-[#aaaaaa]">Press SPACE to Start</div>
+                            </div>
+                          </div>
+                        )}
+                        {tetrisGameOver && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                            <div className="text-center">
+                              <div className="text-[#ff5555] text-2xl mb-2">GAME OVER</div>
+                              <div className="text-[#ffff55] mb-2">Score: {tetrisScore}</div>
+                              <div className="text-[#aaaaaa]">Press SPACE to Retry</div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-sm text-[#888]">
+                        <div className="text-[#ffff55] mb-2">Controls:</div>
+                        <div>Arrow / WASD: Move</div>
+                        <div>Up/W: Rotate</div>
+                        <div>Down/S: Drop</div>
+                        <div>P: Pause</div>
+                        <div>Q: Quit</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {breakoutActive && (
+                  <div className="h-full flex flex-col">
+                    <div className="text-center mb-2">
+                      <span className="text-[#ff8800] text-lg">BREAKOUT</span>
+                      <span className="mx-4">Score: {breakoutScore}</span>
+                      <span className="text-[#ff5555]">Lives: {breakoutLives}</span>
+                      <button onClick={() => { setBreakoutActive(false); resetBreakout(); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '500px', aspectRatio: '1.5' }}>
+                      {breakoutBricks.map((brick, i) => (
+                        <div key={i} className="absolute" style={{ left: `${brick.x}%`, top: `${brick.y}%`, width: '10%', height: '4%', background: brick.color }} />
+                      ))}
+                      <div className="absolute" style={{ left: `${breakoutPaddleX - 8}%`, bottom: '3%', width: '16%', height: '2.5%', background: '#55ffff' }} />
+                      <div className="absolute rounded-full" style={{ left: `${breakoutBall.x}%`, top: `${breakoutBall.y}%`, width: '12px', height: '12px', background: '#ffffff', transform: 'translate(-50%, -50%)' }} />
+                      {!breakoutStarted && !breakoutGameOver && !breakoutWon && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#ff8800] text-2xl mb-2">BREAKOUT</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Start</div>
+                          </div>
+                        </div>
+                      )}
+                      {breakoutGameOver && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#ff5555] text-2xl mb-2">GAME OVER</div>
+                            <div className="text-[#ffff55] mb-2">Score: {breakoutScore}</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Retry</div>
+                          </div>
+                        </div>
+                      )}
+                      {breakoutWon && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#55ff55] text-2xl mb-2">YOU WIN!</div>
+                            <div className="text-[#ffff55] mb-2">Score: {breakoutScore}</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Play Again</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-center mt-2 text-xs opacity-70">A/D or Arrows: Move | Q: Quit</div>
+                  </div>
+                )}
+                {minesweeperActive && (
+                  <div className="h-full flex flex-col items-center">
+                    <div className="text-center mb-2">
+                      <span className="text-[#aaaaaa] text-lg">MINESWEEPER</span>
+                      <span className="mx-3">Mines: {minesweeperMines}</span>
+                      <span className="mx-3">Flags: {minesweeperFlags}</span>
+                      <span className="text-[#ffff55]">Time: {minesweeperTime}s</span>
+                      <button onClick={() => { setMinesweeperActive(false); resetMinesweeper(); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="grid gap-1" style={{ gridTemplateColumns: `repeat(9, 1fr)` }}>
+                      {minesweeperBoard.map((row, y) => row.map((cell, x) => (
+                        <button
+                          key={`${x}-${y}`}
+                          onClick={() => { if (!minesweeperStarted) setMinesweeperStarted(true); if (!minesweeperGameOver && !minesweeperWon) revealCell(x, y); }}
+                          onContextMenu={(e) => { e.preventDefault(); if (!minesweeperGameOver && !minesweeperWon) toggleFlag(x, y); }}
+                          className="flex items-center justify-center font-bold"
+                          style={{ width: '32px', height: '32px', background: cell.isRevealed ? (cell.isMine ? '#ff0000' : '#333') : '#666', color: cell.neighborMines === 1 ? '#0000ff' : cell.neighborMines === 2 ? '#008000' : cell.neighborMines >= 3 ? '#ff0000' : '#fff', fontSize: '14px' }}
+                        >
+                          {cell.isFlagged ? '🚩' : cell.isRevealed ? (cell.isMine ? '💣' : (cell.neighborMines || '')) : ''}
+                        </button>
+                      )))}
+                    </div>
+                    {(minesweeperGameOver || minesweeperWon) && (
+                      <div className="mt-4 text-center">
+                        <div className={`text-xl ${minesweeperWon ? 'text-[#55ff55]' : 'text-[#ff5555]'}`}>
+                          {minesweeperWon ? 'YOU WIN!' : 'GAME OVER'}
+                        </div>
+                        <div className="text-[#888] mt-1">Press SPACE to play again</div>
+                      </div>
+                    )}
+                    <div className="text-center mt-4 text-xs opacity-70">Click: Reveal | Right-click: Flag | Q: Quit</div>
+                  </div>
+                )}
+                {invadersActive && (
+                  <div className="h-full flex flex-col">
+                    <div className="text-center mb-2">
+                      <span className="text-[#00ff00] text-lg">SPACE INVADERS</span>
+                      <span className="mx-4">Score: {invadersScore}</span>
+                      <span className="text-[#ff5555]">Lives: {invadersLives}</span>
+                      <button onClick={() => { setInvadersActive(false); resetInvaders(); }} className="ml-4 px-3 py-1 text-sm" style={{ background: '#ff5555', color: '#000', borderRadius: '4px' }}>QUIT</button>
+                    </div>
+                    <div className="flex-1 relative border-2 border-[#aaaaaa] mx-auto" style={{ width: '100%', maxWidth: '500px', aspectRatio: '1.2' }}>
+                      {invaders.filter(i => i.alive).map((inv, i) => (
+                        <div key={i} className="absolute" style={{ left: `${inv.x}%`, top: `${inv.y}%`, fontSize: '20px', transform: 'translate(-50%, -50%)' }}>👾</div>
+                      ))}
+                      {invadersBullets.map((b, i) => (
+                        <div key={i} className="absolute" style={{ left: `${b.x}%`, top: `${b.y}%`, width: '3px', height: '12px', background: b.isPlayer ? '#00ff00' : '#ff0000', transform: 'translateX(-50%)' }} />
+                      ))}
+                      <div className="absolute" style={{ left: `${invadersPlayerX}%`, bottom: '3%', fontSize: '24px', transform: 'translateX(-50%)' }}>🚀</div>
+                      {!invadersStarted && !invadersGameOver && !invadersWon && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#00ff00] text-2xl mb-2">SPACE INVADERS</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Start</div>
+                          </div>
+                        </div>
+                      )}
+                      {invadersGameOver && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#ff5555] text-2xl mb-2">GAME OVER</div>
+                            <div className="text-[#ffff55] mb-2">Score: {invadersScore}</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Retry</div>
+                          </div>
+                        </div>
+                      )}
+                      {invadersWon && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+                          <div className="text-center">
+                            <div className="text-[#55ff55] text-2xl mb-2">EARTH SAVED!</div>
+                            <div className="text-[#ffff55] mb-2">Score: {invadersScore}</div>
+                            <div className="text-[#aaaaaa]">Press SPACE to Play Again</div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-center mt-2 text-xs opacity-70">A/D or Arrows: Move | W/Space: Shoot | Q: Quit</div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+
+  // Main BIOS interface (Terminal mode)
   return (
     <div
       className="min-h-screen font-mono text-sm p-2 select-none crt-screen crt-flicker"
       style={{ background: colors.bg, color: colors.text }}
     >
+      {/* Mode Toggle */}
+      <ModeToggle mode={viewMode} onToggle={toggleViewMode} />
+
       {/* Top Header Bar */}
       <div
         className="text-center py-1 font-bold text-xs sm:text-sm"
@@ -2162,7 +2507,7 @@ breakout.exe  minesweeper.exe  invaders.exe`;
           className="px-2 py-1 text-center text-xs sm:text-sm"
           style={{ background: colors.text, color: colors.bg }}
         >
-          <span className="hidden sm:inline">▲▼ Select Menu Item │ </span>Email: brandonbibbins@gmail.com<span className="hidden sm:inline"> │ Phone: (310) 749-0728</span>
+          <span className="hidden sm:inline">▲▼ Select Menu Item │ </span>Email: brandonbibbins@gmail.com
         </div>
       </div>
 

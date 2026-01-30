@@ -13,6 +13,19 @@
   --theme-highlight: #ffff55;
   --theme-accent: #55ffff;
   --theme-success: #55ff55;
+
+  /* Friendly mode colors */
+  --friendly-bg: #0a0a0a;
+  --friendly-bg-secondary: #111111;
+  --friendly-card: rgba(20, 20, 20, 0.8);
+  --friendly-card-hover: rgba(30, 30, 30, 0.9);
+  --friendly-border: rgba(255, 255, 255, 0.1);
+  --friendly-text: #ffffff;
+  --friendly-text-muted: #a3a3a3;
+  --friendly-accent: #22d3ee;
+  --friendly-accent-hover: #06b6d4;
+  --friendly-gradient-start: #ffffff;
+  --friendly-gradient-end: #22d3ee;
 }
 
 /* Color Themes */
@@ -596,4 +609,209 @@ body {
   button, [role="button"] {
     cursor: pointer;
   }
+}
+
+/* ========================================
+   Friendly Mode Styles
+   ======================================== */
+
+.friendly-mode {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--friendly-bg);
+  color: var(--friendly-text);
+}
+
+/* Override body overflow for friendly mode */
+body.friendly-body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.friendly-mode * {
+  cursor: default;
+}
+
+.friendly-mode a,
+.friendly-mode button,
+.friendly-mode [role="button"] {
+  cursor: pointer;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--friendly-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--friendly-border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--friendly-card-hover);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--friendly-gradient-start) 0%, var(--friendly-gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scroll for friendly mode */
+.friendly-scroll {
+  scroll-behavior: smooth;
+}
+
+/* Section animations */
+.friendly-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.friendly-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accent button */
+.friendly-btn-primary {
+  background: var(--friendly-accent);
+  color: #000000;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.friendly-btn-primary:hover {
+  background: var(--friendly-accent-hover);
+  transform: scale(1.02);
+}
+
+/* Outline button */
+.friendly-btn-outline {
+  background: transparent;
+  color: var(--friendly-text);
+  padding: 12px 32px;
+  border-radius: 9999px;
+  border: 1px solid var(--friendly-border);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.friendly-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Timeline line */
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--friendly-accent) 0%, transparent 100%);
+}
+
+/* Mode toggle button */
+.mode-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: var(--friendly-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--friendly-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: var(--friendly-text);
+}
+
+.mode-toggle:hover {
+  background: var(--friendly-card-hover);
+  transform: scale(1.02);
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Skill badge */
+.skill-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 9999px;
+  font-size: 13px;
+  color: var(--friendly-accent);
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+/* Game card */
+.game-card {
+  background: var(--friendly-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--friendly-border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  background: var(--friendly-card-hover);
+  border-color: var(--friendly-accent);
+  transform: translateY(-4px);
+}
+
+/* Game modal */
+.game-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.game-modal-content {
+  background: #0a0a0a;
+  border: 2px solid var(--friendly-accent);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
 }

@@ -4,7 +4,7 @@ export const resumeData: ResumeData = {
   name: 'Brandon Bibbins',
   title: 'IT Director',
   email: 'brandonbibbins@gmail.com',
-  phone: '(310) 749-0728',
+  phone: '',
   linkedin: 'linkedin.com/in/brandonbibbins',
   location: 'Los Angeles, CA',
 
@@ -12,10 +12,11 @@ export const resumeData: ResumeData = {
 
   experience: [
     { company: 'Liquid I.V. (Unilever)', role: 'IT Director', years: '2022-Present' },
-    { company: 'Princess Polly', role: 'IT Manager', years: '2020-2025' },
+    { company: 'Princess Polly', role: 'IT Director & Cybersecurity', years: '2020-2025' },
     { company: 'Drinks.com', role: 'IT Manager', years: '2017-2020' },
     { company: 'Playtika', role: 'IT Administrator', years: '2016-2017' },
-    { company: 'David & Goliath', role: 'IT Administrator', years: '2014-2016' },
+    { company: 'David & Goliath', role: 'IT Technician', years: '2014-2016' },
+    { company: 'LA County Sheriffs Department', role: 'Tech & Photography Intern', years: '2013-2014' },
   ],
 
   achievements: [

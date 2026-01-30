@@ -1,9 +1,17 @@
-[00:00:00.714] Server  LOG     ✓ Ready in 525ms
-[10:20:05.429] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[10:21:05.041] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[10:21:06.421] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[10:21:07.505] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[10:21:08.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[12:41:09.575] Server  LOG     ✓ Compiled in 218ms
-[13:00:36.704] Server  LOG     ✓ Compiled in 11ms
-[22:04:47.410] Server  LOG     ✓ Compiled in 55ms
+[00:00:00.567] Server  LOG     ✓ Ready in 436ms
+[00:00:13.409] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:25.757] Server  LOG     ✓ Compiled in 13ms
+[00:01:57.427] Server  LOG     ✓ Compiled in 38ms
+[00:02:02.651] Server  LOG     ✓ Compiled in 12ms
+[00:02:25.633] Server  LOG     ✓ Compiled in 35ms
+[00:02:36.271] Server  LOG     ✓ Compiled in 40ms
+[00:03:06.395] Server  LOG     ✓ Compiled in 12ms
+[00:03:23.224] Server  LOG     ✓ Compiled in 10ms
+[00:05:54.435] Server  LOG     ✓ Compiled in 15ms
+[00:06:07.502] Server  LOG     ✓ Compiled in 13ms
+[00:06:18.732] Server  LOG     ✓ Compiled in 36ms
+[00:06:26.689] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:27.585] Server  LOG     ✓ Compiled in 30ms
+[00:06:36.169] Server  LOG     ✓ Compiled in 21ms
+[00:07:05.115] Server  LOG     ✓ Compiled in 24ms
+[00:07:10.674] Server  LOG     ✓ Compiled in 30ms
