@@ -50,9 +50,9 @@ export function Hero() {
         </svg>
       </motion.div>
 
-      <motion.div style={{ opacity: fade }} className="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-end px-6 pb-14 pt-32 sm:px-10 sm:pb-20">
+      <motion.div style={{ opacity: fade }} className="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-center px-6 pb-16 pt-28 text-center sm:justify-end sm:px-10 sm:pb-20 sm:pt-32 sm:text-left">
         <motion.div
-          className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-2 sm:mb-14"
+          className="mb-10 flex flex-col items-center gap-x-6 gap-y-3 sm:mb-14 sm:flex-row sm:flex-wrap sm:items-center"
           initial={{ opacity: 0 }}
           animate={play ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.1 }}
@@ -81,9 +81,9 @@ export function Hero() {
           />
         </h1>
 
-        <div className="mt-12 grid gap-8 sm:mt-16 md:grid-cols-[1fr_auto] md:items-end">
+        <div className="mt-10 grid justify-items-center gap-8 sm:mt-16 sm:justify-items-start md:grid-cols-[1fr_auto] md:items-end">
           <motion.p
-            className="max-w-xl text-lg leading-relaxed text-mist sm:text-xl"
+            className="max-w-md text-lg leading-relaxed text-mist sm:max-w-xl sm:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={play ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.6, ease }}
@@ -92,7 +92,7 @@ export function Hero() {
             development and 12+ years of IT leadership.
           </motion.p>
           <motion.div
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap justify-center gap-3 sm:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={play ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.75, ease }}
@@ -201,7 +201,7 @@ function ProjectTile({ p }: { p: Project }) {
 export function Work() {
   return (
     <section id="work" className="mx-auto max-w-[1440px] scroll-mt-20 px-4 py-28 sm:px-10 sm:py-40">
-      <div className="mb-14 flex flex-wrap items-end justify-between gap-6 px-2 sm:mb-20 sm:px-0">
+      <div className="mb-14 flex flex-col items-center gap-6 px-2 text-center sm:mb-20 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:px-0 sm:text-left">
         <div>
           <Eyebrow>Selected work</Eyebrow>
           <Reveal>
@@ -235,7 +235,7 @@ export function Approach() {
     <section id="approach" className="scroll-mt-20 border-t border-white/5 bg-ink-2">
       <div className="mx-auto max-w-[1440px] px-6 py-28 sm:px-10 sm:py-40">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+          <div className="text-center lg:sticky lg:top-32 lg:self-start lg:text-left">
             <Eyebrow>Approach</Eyebrow>
             <Reveal>
               <h2 className="mt-5 font-display text-5xl font-light leading-[0.98] tracking-[-0.04em] sm:text-7xl">
@@ -248,7 +248,7 @@ export function Approach() {
           <div className="grid gap-px overflow-hidden rounded-3xl bg-white/5 sm:grid-cols-2">
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08} className="bg-ink-2">
-                <div className="group flex h-full min-h-[260px] flex-col justify-between bg-ink-2 p-8 transition-colors duration-500 hover:bg-ink-3 sm:p-10">
+                <div className="group flex h-full min-h-[200px] flex-col justify-between gap-8 bg-ink-2 p-7 transition-colors duration-500 hover:bg-ink-3 sm:min-h-[260px] sm:p-10">
                   <span className="font-mono text-sm text-fog">{s.n}</span>
                   <div>
                     <h3 className="font-display text-3xl font-light tracking-tight sm:text-4xl">{s.t}</h3>
@@ -282,9 +282,9 @@ const capabilities = [
 export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-[1440px] scroll-mt-20 px-6 py-28 sm:px-10 sm:py-40">
-      <Eyebrow>Experience</Eyebrow>
+      <Eyebrow className="text-center sm:text-left">Experience</Eyebrow>
       <Reveal>
-        <h2 className="mt-5 max-w-4xl font-display text-5xl font-light leading-[0.98] tracking-[-0.04em] sm:text-7xl">
+        <h2 className="mx-auto mt-5 max-w-4xl text-center font-display sm:mx-0 sm:text-left text-5xl font-light leading-[0.98] tracking-[-0.04em] sm:text-7xl">
           A builder’s eye, with the discipline of <span className="text-mist">enterprise IT.</span>
         </h2>
       </Reveal>
@@ -292,7 +292,7 @@ export function Experience() {
       <div className="mt-16 grid gap-px overflow-hidden rounded-3xl bg-white/5 sm:grid-cols-3">
         {stats.map((s, i) => (
           <Reveal key={s.l} delay={i * 0.08} className="bg-ink">
-            <div className="bg-ink p-8 sm:p-10">
+            <div className="bg-ink p-8 text-center sm:p-10 sm:text-left">
               <p className="font-display text-6xl font-light tracking-[-0.04em] sm:text-7xl">{s.v}</p>
               <p className="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-fog">{s.l}</p>
             </div>
@@ -350,9 +350,9 @@ export function About() {
           </motion.div>
         </motion.div>
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-black/50">About</p>
+          <p className="text-center font-mono text-xs uppercase tracking-[0.2em] text-black/50 lg:text-left">About</p>
           <Reveal>
-            <h2 className="mt-5 font-display text-5xl font-light leading-[0.98] tracking-[-0.04em] sm:text-7xl">Hi, I’m Brandon.</h2>
+            <h2 className="mt-5 text-center font-display lg:text-left text-5xl font-light leading-[0.98] tracking-[-0.04em] sm:text-7xl">Hi, I’m Brandon.</h2>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-black/70">
@@ -394,7 +394,7 @@ export function About() {
 export function Contact() {
   return (
     <section id="contact" className="grain relative scroll-mt-20 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-28 sm:px-10 sm:pt-40">
+      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-28 text-center sm:px-10 sm:pt-40 sm:text-left">
         <Eyebrow>Contact</Eyebrow>
         <h2 className="mt-6 font-display text-[clamp(3.4rem,10vw,11rem)] font-light leading-[0.9] tracking-[-0.05em]">
           <MaskLines play lines={['Let’s build', <span key="b" className="text-fog">something good.</span>]} />
@@ -402,7 +402,7 @@ export function Contact() {
         <Reveal delay={0.1}>
           <a
             href={`mailto:${resumeData.email}`}
-            className="group mt-14 inline-flex items-center gap-4 font-display text-2xl font-light tracking-tight sm:text-4xl"
+            className="group mt-14 inline-flex flex-wrap items-center justify-center gap-4 font-display text-[22px] font-light tracking-tight sm:justify-start sm:text-4xl"
           >
             <span className="draw-line">{resumeData.email}</span>
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper text-xl text-ink transition-transform duration-500 group-hover:rotate-[-45deg] sm:h-14 sm:w-14">
@@ -411,7 +411,7 @@ export function Contact() {
           </a>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-wrap gap-3">
+          <div className="mt-12 flex flex-wrap justify-center gap-3 sm:justify-start">
             <a href={`https://${resumeData.linkedin}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-6 py-3 text-sm transition-colors hover:border-white/40">
               LinkedIn ↗
             </a>
@@ -428,7 +428,7 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 border-t border-white/5 px-6 py-8 font-mono text-xs text-fog sm:px-10">
+    <footer className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-4 border-t border-white/5 px-6 py-8 text-center font-mono text-xs text-fog sm:flex-row sm:px-10 sm:text-left">
       <span>© {new Date().getFullYear()} Brandon Bibbins · {resumeData.location}</span>
       <a href="/terminal" className="transition-colors hover:text-paper" title="Open the original BIOS-style site (or press `)">
         &gt;_ terminal

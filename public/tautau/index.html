@@ -48,7 +48,11 @@ video{display:block;background:#111}
 body:hover #nav,#nav:focus-within{opacity:1}
 #nav button{font:500 13px/1 'JetBrains Mono',monospace;color:#f4eee3;background:rgba(20,20,20,.8);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 12px;cursor:pointer}
 #nav span{font:500 13px/1 'JetBrains Mono',monospace;color:#a3a3a3;align-self:center;padding:0 6px}
-@media (hover:none){#nav{opacity:1}}
+@media (hover:none){
+  #nav{opacity:1;left:50%;right:auto;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 10px)}
+  /* Leave a strip under the slide for the controls so they never cover content. */
+  #viewport{bottom:calc(env(safe-area-inset-bottom,0px) + 58px)}
+}
 #hint{display:none;position:fixed;left:0;right:0;padding:0 28px;top:calc(env(safe-area-inset-top,0px) + 20px);text-align:center;font:500 13px/1.4 'JetBrains Mono',monospace;color:#a3a3a3;z-index:10;pointer-events:none}
 @media (hover:none) and (orientation:portrait){#hint{display:block}}
 </style>
@@ -474,7 +478,8 @@ body:hover #nav,#nav:focus-within{opacity:1}
   });
 
   function fit(){
-    var s = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    var vp = document.getElementById('viewport');
+    var s = Math.min(vp.clientWidth/1920, vp.clientHeight/1080);
     stage.style.transform = 'scale(' + s + ')';
   }
   window.addEventListener('resize', fit); fit();

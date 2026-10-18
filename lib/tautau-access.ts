@@ -133,6 +133,17 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:4
 @keyframes rise{to{opacity:1;transform:none}}
 @keyframes draw{to{transform:scaleX(1)}}
 @keyframes shake{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(4px)}30%,50%,70%{transform:translateX(-8px)}40%,60%{transform:translateX(8px)}}
+/* Phones and tablets: center the intro and the card; the form fields stay full width. */
+@media (max-width:959px){
+  main>section:first-child{text-align:center}
+  .client{flex-direction:column;justify-content:center;text-align:center;gap:12px;margin-bottom:28px}
+  .lede{margin-left:auto;margin-right:auto}
+  .meta{justify-content:center}
+  .card{text-align:center}
+  .card .lock{margin:0 auto}
+  .error{justify-content:center}
+  footer{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:6px}
+}
 @media (prefers-reduced-motion:reduce){.rise,.shake{animation:none;opacity:1;transform:none}h1 em::after{animation:none;transform:none}}
 </style>
 </head>

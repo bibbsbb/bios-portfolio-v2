@@ -11,7 +11,7 @@ export function CaseStudy({ p, next }: { p: Project; next: Project }) {
   return (
     <main>
       {/* Hero */}
-      <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-36 sm:px-10 sm:pb-24 sm:pt-44">
+      <section className="mx-auto max-w-[1440px] px-6 pb-16 pt-32 text-center sm:px-10 sm:pb-24 sm:pt-44 sm:text-left">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
           <Link href="/#work" className="font-mono text-xs uppercase tracking-[0.2em] text-fog transition-colors hover:text-paper">
             ← All work
@@ -20,7 +20,7 @@ export function CaseStudy({ p, next }: { p: Project; next: Project }) {
             {p.index} · {p.name}
           </Eyebrow>
         </motion.div>
-        <h1 className="mt-6 max-w-5xl font-display text-[clamp(3rem,7.5vw,8rem)] font-light leading-[0.94] tracking-[-0.045em]">
+        <h1 className="mx-auto mt-6 max-w-5xl font-display sm:mx-0 text-[clamp(3rem,7.5vw,8rem)] font-light leading-[0.94] tracking-[-0.045em]">
           <MaskLines delay={0.1} lines={[p.headline]} />
         </h1>
         <motion.dl
@@ -137,9 +137,9 @@ export function CaseStudy({ p, next }: { p: Project; next: Project }) {
 
       {/* Next */}
       <section className="border-t border-white/5">
-        <Link href={`/work/${next.slug}`} className="group mx-auto block max-w-[1440px] px-6 py-24 sm:px-10 sm:py-32">
+        <Link href={`/work/${next.slug}`} className="group mx-auto block max-w-[1440px] px-6 py-24 text-center sm:px-10 sm:py-32 sm:text-left">
           <Eyebrow>Next project</Eyebrow>
-          <p className="mt-6 flex items-center gap-6 font-display text-5xl font-light tracking-[-0.04em] sm:text-8xl">
+          <p className="mt-6 flex items-center justify-center gap-4 font-display text-5xl font-light tracking-[-0.04em] sm:justify-start sm:gap-6 sm:text-8xl">
             <span className="draw-line">{next.name}</span>
             <span className="transition-transform duration-500 group-hover:translate-x-3">→</span>
           </p>
