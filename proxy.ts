@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { ACCESS_COOKIE, accessToken, safeEqual, unlockPage } from './lib/tautau-access';
+import { ACCESS_COOKIE, GATED_PAGES, accessToken, safeEqual, unlockPage } from './lib/tautau-access';
 
 // Gates /tautau (the pitch deck page and its assets) behind a passcode.
 export async function proxy(request: NextRequest) {
@@ -17,10 +17,12 @@ export async function proxy(request: NextRequest) {
     'X-Robots-Tag': 'noindex, nofollow',
   };
   // Assets get a bare 401; the page itself shows the passcode screen.
-  if (pathname.startsWith('/tautau/') && pathname !== '/tautau/' && pathname !== '/tautau/index.html') {
+  if (!Object.hasOwn(GATED_PAGES, pathname)) {
     return new NextResponse('Unauthorized', { status: 401, headers });
   }
-  return new NextResponse(unlockPage(searchParams.has('wrong')), {
+  // Numeric passcodes get one box per digit on the passcode screen.
+  const digits = passcode && /^\d{3,8}$/.test(passcode) ? passcode.length : 0;
+  return new NextResponse(unlockPage(searchParams.has('wrong'), digits, GATED_PAGES[pathname]), {
     status: 401,
     headers: { ...headers, 'Content-Type': 'text/html; charset=utf-8' },
   });

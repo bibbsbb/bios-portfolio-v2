@@ -21,6 +21,17 @@ html,body{height:100%;background:#0a0a0a;overflow:hidden;-webkit-font-smoothing:
 x-shape{display:block}
 x-shape.ellipse{border-radius:50%}
 img{display:block}
+.home-link{cursor:pointer}
+.home-link img{transition:opacity .25s}
+.home-link:hover img{opacity:.7}
+.cta-row{position:absolute;left:128px;top:396px;display:flex;gap:16px}
+.cta{display:inline-flex;align-items:center;gap:14px;padding:20px 32px;border-radius:999px;background:#f5f5f4;color:#0a0a0a;font:500 26px/1 'Inter',Arial,sans-serif;text-decoration:none;transition:transform .3s,background .3s}
+.cta:hover{transform:scale(1.03)}
+.cta span{transition:transform .3s}
+.cta:hover span{transform:translateX(4px)}
+.cta-ghost{background:transparent;color:#f5f5f4;box-shadow:inset 0 0 0 1px rgba(245,245,244,.35)}
+.cta-ghost:hover{background:rgba(245,245,244,.08)}
+.cta-dark{background:#0a0a0a;color:#f5f5f4;font-size:24px;padding:18px 28px}
 video{display:block;background:#111}
 .motion #stage>section{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .motion [data-build-in]{transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -42,8 +53,8 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <body>
 <div id="viewport"><div id="stage">
 <section id="cover" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px">
-<img src="/tautau/assets/bb-icon-white.png" alt="The b mark: a lowercase b between code brackets" style="position:absolute;left:128px;top:112px;width:84px;height:60px;object-fit:contain">
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="position:absolute;left:236px;top:120px;width:380px;height:45px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-icon-white.png" alt="The b mark: a lowercase b between code brackets" style="position:absolute;left:128px;top:112px;width:84px;height:60px;object-fit:contain"></a>
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="position:absolute;left:236px;top:120px;width:380px;height:45px;object-fit:contain"></a>
 <p style="position:absolute;right:314px;top:104px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;letter-spacing:2px;text-transform:uppercase;text-align:right;color:#8f8f8f">Prepared for</p>
 <p style="position:absolute;right:314px;top:140px;width:420px;font-family:'Inter Tight', Arial, sans-serif;font-size:36px;font-weight:300;line-height:1.1;text-align:right;color:#ffffff">Tau Tau Chapter</p>
 <img src="/tautau/assets/tau-tau-seal.png" alt="Tau Tau Chapter seal, Omega Psi Phi Fraternity, Inc." style="position:absolute;right:128px;top:72px;width:154px;height:154px;object-fit:contain">
@@ -73,7 +84,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <h3 style="width:220px;font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Strategy</h3>
 <p style="flex:1;font-size:24px;line-height:1.45;color:#5c5c5c">Technology strategy and leadership, from small practices to a national brand.</p>
 </div>
-<img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="position:absolute;left:1260px;top:128px;width:84px;height:60px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="position:absolute;left:1260px;top:128px;width:84px;height:60px;object-fit:contain"></a>
 <p style="position:absolute;left:1260px;top:250px;width:580px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">My approach</p>
 <h3 style="position:absolute;left:1260px;top:296px;width:580px;font-family:'Inter Tight', Arial, sans-serif;font-size:46px;font-weight:300;line-height:1.12;letter-spacing:-1px;color:#ffffff">Understand the people first. Then make it <span style="color:#d9c38f">beautiful.</span></h3>
 <img data-build-in="rise 1 auto" src="/tautau/assets/hello-hero.jpg" alt="Concept homepage for Tau Tau Chapter: the chapter portrait with The Mighty Tau Tau set large" style="position:absolute;left:1260px;top:478px;width:580px;height:346px;object-fit:cover;border-radius:6px;border:1px solid #2e2e2e">
@@ -86,7 +97,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <x-shape class="ellipse" data-build-in="pop 5 auto" style="position:absolute;left:1710px;top:868px;width:44px;height:44px;border-radius:22px;background:#f4eee3"></x-shape>
 <p style="position:absolute;left:1710px;top:924px;width:130px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f">Ivory</p>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02</p>
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -118,7 +129,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <p style="font-size:22px;line-height:1.45;color:#5c5c5c">Technology leadership supporting a nationally recognized consumer brand.</p>
 </div></div>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">03</p>
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:40px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:40px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -220,7 +231,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 </div>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#d9c38f">07</p>
 <p style="position:absolute;left:640px;bottom:66px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;text-align:center;color:#a993bd">Photos: Tau Tau Chapter gallery</p>
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -240,7 +251,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <img data-build-in="rise 2 auto" src="/tautau/assets/concept-scroll-mobile-poster.jpg" data-video="/tautau/assets/video/concept-scroll-mobile.mp4" alt="Animated scroll through the homepage concept on a phone" style="position:absolute;left:1240px;top:470px;width:200px;height:433px;object-fit:cover;border:6px solid #2e2e2e;border-radius:28px">
 <p style="position:absolute;left:1480px;top:840px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.3;color:#8f8f8f">Photos: Tau Tau Chapter</p>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">08</p>
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -258,7 +269,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <p data-build-in="pop 4 auto" style="position:absolute;left:1260px;top:748px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;background:#0a0a0a;padding:10px 20px;border-radius:4px">› Six-decade timeline</p>
 <p data-build-in="pop 5 auto" style="position:absolute;left:1260px;top:822px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;background:#4b1c6b;padding:10px 20px;border-radius:4px">› Every line since 1961</p>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">09</p>
-<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -276,7 +287,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <p data-build-in="pop 4 auto" style="position:absolute;left:1480px;top:640px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#2a0f3d;background:#d9c38f;padding:10px 20px;border-radius:4px">› Real figures</p>
 <p data-build-in="pop 5 auto" style="position:absolute;left:1480px;top:714px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#0a0a0a;background:#ffffff;padding:10px 20px;border-radius:4px">› Current officers</p>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">10</p>
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -291,7 +302,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 <p data-build-in="left 6 auto" style="position:absolute;left:128px;top:690px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;padding:14px 0;border-top:1px solid #0a0a0a">02 Our story</p>
 <p data-build-in="left 7 auto" style="position:absolute;left:128px;top:760px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;padding:14px 0;border-top:1px solid #0a0a0a;border-bottom:1px solid #0a0a0a;color:#4b1c6b">03 Member portal</p>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">11</p>
-<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -360,7 +371,7 @@ body:hover #nav,#nav:focus-within{opacity:1}
 </div>
 </div>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">14</p>
-<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
 </section>
 
@@ -402,10 +413,10 @@ body:hover #nav,#nav:focus-within{opacity:1}
 </div>
 </div>
 <p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">15</p>
-<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain"></a>
 
+<a href="/tautau/checklist" class="cta cta-dark" style="position:absolute;right:128px;top:128px">See the full checklist <span>↗</span></a>
 </section>
-
 <section id="next" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
 <div style="display:flex;flex-direction:column;gap:32px">
 <p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Next steps</p>
@@ -427,17 +438,17 @@ body:hover #nav,#nav:focus-within{opacity:1}
 </div>
 <div style="display:flex;flex-direction:row;align-items:end;justify-content:space-between">
 <div style="display:flex;flex-direction:column;gap:20px">
-<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="width:400px;height:47px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="width:400px;height:47px;object-fit:contain"></a>
 </div>
-<img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="width:160px;height:114px;object-fit:contain">
+<a href="/" class="home-link" aria-label="Brandon Bibbins, home page"><img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="width:160px;height:114px;object-fit:contain"></a>
 </div>
 
+<div class="cta-row"><a href="/tautau/checklist" class="cta">Onboarding checklist <span>↗</span></a><a href="/" class="home-link cta cta-ghost">See my work at brandonbibbins.io <span>→</span></a></div>
 </section>
-
 </div></div>
 <div id="ui"><div id="bar"></div></div>
 <p id="hint">Turn your phone sideways for a bigger view · Swipe to move</p>
-<div id="nav" aria-label="Slide controls"><button id="prev" aria-label="Previous slide">←</button><span id="count"></span><button id="next" aria-label="Next slide">→</button></div>
+<div id="nav" aria-label="Slide controls"><button id="nav-prev" aria-label="Previous slide">←</button><span id="count"></span><button id="nav-next" aria-label="Next slide">→</button></div>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -504,6 +515,9 @@ body:hover #nav,#nav:focus-within{opacity:1}
     cur = i;
     document.getElementById('bar').style.width = ((i + 1) / slides.length * 100) + '%';
     document.getElementById('count').textContent = (i + 1) + ' / ' + slides.length;
+    var nb = document.getElementById('nav-next');
+    nb.textContent = i === slides.length - 1 ? 'Home ↗' : '→';
+    nb.setAttribute('aria-label', i === slides.length - 1 ? 'Go to brandonbibbins.io' : 'Next slide');
     if (history.replaceState) history.replaceState(null, '', '#' + (i + 1));
   }
   function step(d){ go(cur + d, d); }
@@ -515,9 +529,12 @@ body:hover #nav,#nav:focus-within{opacity:1}
     else if (e.key === 'End') go(slides.length - 1, 1);
     else if (e.key === 'f' && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(function(){});
   });
-  document.getElementById('prev').addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
-  document.getElementById('next').addEventListener('click', function(e){ e.stopPropagation(); step(1); });
-  document.getElementById('viewport').addEventListener('click', function(e){ step(e.clientX < window.innerWidth * 0.3 ? -1 : 1); });
+  document.getElementById('nav-prev').addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
+  document.getElementById('nav-next').addEventListener('click', function(e){ e.stopPropagation(); if (cur === slides.length - 1) location.href = '/'; else step(1); });
+  document.getElementById('viewport').addEventListener('click', function(e){
+    if (e.target.closest('a')) return; // links (logo, last-slide button) navigate instead of flipping slides
+    step(e.clientX < window.innerWidth * 0.3 ? -1 : 1);
+  });
   var tx = null, ty = null;
   document.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
   document.addEventListener('touchend', function(e){

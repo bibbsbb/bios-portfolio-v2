@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       { source: '/tautau', destination: '/tautau/index.html' },
+      { source: '/tautau/checklist', destination: '/tautau/checklist/index.html' },
     ];
   },
 
