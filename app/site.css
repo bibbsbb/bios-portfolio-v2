@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display), "Inter Tight", Arial, sans-serif;
+  --font-sans: var(--font-body), Inter, Arial, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", "Courier New", monospace;
+
+  --color-ink: #0a0a0a;
+  --color-ink-2: #141414;
+  --color-ink-3: #1f1f1f;
+  --color-line: #2a2a2a;
+  --color-paper: #f5f5f4;
+  --color-mist: #a3a3a3;
+  --color-fog: #737373;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #0a0a0a;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f5f5f4;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: #f5f5f4;
+  color: #0a0a0a;
+}
+
+/* Intro overlay: hidden before paint when it already played this session. */
+html[data-intro="done"] .intro {
+  display: none;
+}
+html:not([data-intro="done"]) body:has(#intro) {
+  overflow: hidden;
+}
+
+/* Subtle film grain over dark sections */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+/* Underline that draws in on hover */
+.draw-line {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.draw-line:hover,
+.draw-line:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* Full-page screenshot that scrolls inside its frame on hover */
+.scroll-shot img {
+  transition: transform 6s cubic-bezier(0.45, 0, 0.2, 1);
+}
+.scroll-shot:hover img {
+  transform: translateY(calc(-100% + var(--frame-h, 560px)));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  .scroll-shot img { transition: none; }
+}
+
+:focus-visible {
+  outline: 2px solid #f5f5f4;
+  outline-offset: 3px;
+}
