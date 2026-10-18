@@ -206,11 +206,11 @@ export function Work() {
           <Eyebrow>Selected work</Eyebrow>
           <Reveal>
             <h2 className="mt-5 font-display text-5xl font-light leading-none tracking-[-0.04em] sm:text-7xl">
-              Four highlight projects<span className="text-fog">, 2026.</span>
+              Five highlight projects<span className="text-fog">, 2026.</span>
             </h2>
           </Reveal>
         </div>
-        <p className="max-w-sm text-mist">Two products I’ve built, a practice I advise, and the enterprise IT I lead.</p>
+        <p className="max-w-sm text-mist">Two products I’ve built, two client websites, and the enterprise IT I lead.</p>
       </div>
       <div className="flex flex-col gap-6 sm:gap-8">
         {projects.map((p) => (

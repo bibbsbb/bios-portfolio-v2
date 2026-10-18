@@ -1,6 +1,7 @@
 // Case studies shown on the homepage and at /work/[slug].
-// Wording rules: describe Brandon's role only. Child Therapy Center LA: no sole-authorship
-// or specific deliverables. Liquid I.V.: the public website is brand context only.
+// Wording rules: describe Brandon's role only. Child Therapy Center LA: website development
+// and digital strategy, without claiming sole authorship. Liquid I.V.: the public website is
+// brand context only.
 
 export type Project = {
   slug: string;
@@ -74,13 +75,36 @@ export const projects: Project[] = [
     note: 'Brand board with sample data. No real patient information is shown.',
   },
   {
+    slug: 'audreys-nest',
+    name: 'Audrey’s Nest',
+    index: '03',
+    headline: 'A calm, warm home for new mothers.',
+    summary: 'Website design and development for a maternal wellness practice in Los Angeles.',
+    role: 'Website design & development',
+    scope: ['Website design', 'Website development', 'Content management', 'Local search'],
+    url: 'https://audreysnest.com',
+    domain: 'audreysnest.com',
+    stage: '#f3eee3',
+    stageInk: '#4b5a3c',
+    images: { desktop: '/work/audreys-nest/desktop.jpg', mobile: '/work/audreys-nest/mobile.jpg', full: '/work/audreys-nest/full.jpg' },
+    overview: [
+      'Audrey’s Nest offers postpartum doula support and maternal wellness care in Los Angeles: occupational therapy, fertility Reiki and infant massage for new mothers.',
+      'I designed and built the website: a soft, welcoming experience that explains each service clearly and makes it easy to book a free consultation.',
+    ],
+    contribution: [
+      { title: 'Website design', body: 'A warm, natural look with arched photography and gentle type that works beautifully on phones.' },
+      { title: 'Website development', body: 'A fast site built with Next.js: service pages, resources and a clear path to booking.' },
+      { title: 'Easy to update', body: 'A simple content editor, so the practice can change services and articles without code.' },
+    ],
+  },
+  {
     slug: 'ctcla',
     name: 'Child Therapy Center LA',
-    index: '03',
-    headline: 'Digital strategy for a family practice.',
-    summary: 'Digital experience and technology strategy for a therapy practice serving children, teens and families.',
-    role: 'Digital experience & technology strategy',
-    scope: ['Digital experience', 'Technology strategy', 'Website optimization', 'Client engagement'],
+    index: '04',
+    headline: 'A website for a family practice.',
+    summary: 'Website development and digital strategy for a therapy practice serving children, teens and families.',
+    role: 'Website development & digital strategy',
+    scope: ['Website development', 'Digital experience', 'Technology strategy', 'Client engagement'],
     url: 'https://childtherapycenterla.com',
     domain: 'childtherapycenterla.com',
     logo: '/work/ctcla/logo.png',
@@ -89,18 +113,18 @@ export const projects: Project[] = [
     images: { desktop: '/work/ctcla/desktop.jpg', mobile: '/work/ctcla/mobile.jpg', full: '/work/ctcla/full.jpg' },
     overview: [
       'Child Therapy Center LA offers online and in-person therapy for children, teens and families across California.',
-      'My work there focuses on the digital side of the practice: how families find it, understand it and take the first step.',
+      'I develop the practice’s website and lead its digital side: how families find it, understand it and take the first step.',
     ],
     contribution: [
+      { title: 'Website development', body: 'Building and improving the website, so families can find the practice, understand it and reach out.' },
       { title: 'Digital experience', body: 'Shaping how the practice shows up online, so families feel understood before the first call.' },
       { title: 'Technology strategy', body: 'Choosing and connecting the tools the practice runs on, with privacy and simplicity in mind.' },
-      { title: 'Website optimization & engagement', body: 'Ongoing improvements to the website and to how the practice stays in touch with clients.' },
     ],
   },
   {
     slug: 'liquid-iv',
     name: 'Liquid I.V.',
-    index: '04',
+    index: '05',
     headline: 'Technology at enterprise scale.',
     summary: 'IT leadership for a nationally recognized consumer brand, part of Unilever.',
     role: 'IT Director · 2022 to present',
