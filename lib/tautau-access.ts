@@ -56,7 +56,7 @@ export function unlockPage(wrong: boolean, digits = 0, next = '/tautau'): string
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="theme-color" content="#1e0c2c">
 <title>Brandon Bibbins · Proposal for Tau Tau Chapter</title>
 <meta name="description" content="A website proposal for Tau Tau Chapter of Omega Psi Phi Fraternity, Inc., from Brandon Bibbins. Passcode required.">
 <meta property="og:type" content="website">
@@ -78,10 +78,10 @@ export function unlockPage(wrong: boolean, digits = 0, next = '/tautau'): string
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{min-height:100%}
-body{background:#0a0a0a;color:#f5f5f4;font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:radial-gradient(1200px 800px at 85% -10%,#4b1c6b 0%,transparent 60%),radial-gradient(900px 700px at -10% 110%,#3a1652 0%,transparent 55%),#1e0c2c;background-attachment:fixed;color:#f4eee3;font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 .grain::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.glow{position:fixed;width:900px;height:900px;right:-260px;top:-300px;border-radius:50%;background:radial-gradient(circle,rgba(184,153,90,.16),transparent 62%);pointer-events:none}
+.glow{position:fixed;width:900px;height:900px;right:-260px;top:-300px;border-radius:50%;background:radial-gradient(circle,rgba(217,195,143,.14),transparent 62%);pointer-events:none}
 .wrap{position:relative;min-height:100svh;max-width:1360px;margin:0 auto;padding:32px 28px;display:grid;grid-template-rows:auto 1fr auto;gap:40px}
 header{display:flex;align-items:center;justify-content:space-between}
 .logo{display:inline-flex;align-items:center;gap:12px;transition:opacity .25s}
@@ -89,7 +89,7 @@ header{display:flex;align-items:center;justify-content:space-between}
 .mark{display:inline-flex;align-items:center;gap:3px}
 .mark b{font:500 24px/1 'Inter Tight',Arial,sans-serif}
 .logo span.name{font:300 20px/1 'Inter Tight',Arial,sans-serif;letter-spacing:-.3px}
-.back{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;transition:color .25s}
+.back{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9a6c9;transition:color .25s}
 .back:hover{color:#f5f5f4}
 main{display:grid;gap:56px;align-items:center}
 @media (min-width:960px){main{grid-template-columns:1.15fr .85fr;gap:80px}.wrap{padding:40px 56px}}
@@ -97,22 +97,22 @@ main{display:grid;gap:56px;align-items:center}
 h1{margin-top:22px;font:300 clamp(48px,7.4vw,112px)/.94 'Inter Tight',Arial,sans-serif;letter-spacing:-.045em;text-wrap:balance}
 h1 em{font-style:normal;color:#d9c38f;display:inline-block;position:relative}
 h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:2px;background:#b8995a;transform:scaleX(0);transform-origin:left;animation:draw 1.2s 1s cubic-bezier(.2,.7,.2,1) forwards}
-.lede{margin-top:28px;max-width:520px;font-size:18px;line-height:1.6;color:#a3a3a3}
+.lede{margin-top:28px;max-width:520px;font-size:18px;line-height:1.6;color:#d4c6df}
 .meta{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px}
-.meta span{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#a3a3a3;padding:9px 14px;border:1px solid #262626;border-radius:999px}
-.card{position:relative;background:linear-gradient(180deg,#141414,#101010);border:1px solid #262626;border-radius:28px;padding:40px 34px 34px;box-shadow:0 40px 120px rgba(0,0,0,.5)}
+.meta span{font:400 12px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:#d4c6df;padding:9px 14px;border:1px solid rgba(217,195,143,.28);border-radius:999px}
+.card{position:relative;background:linear-gradient(180deg,rgba(58,22,82,.92),rgba(36,13,52,.95));border:1px solid rgba(217,195,143,.22);border-radius:28px;padding:40px 34px 34px;box-shadow:0 40px 120px rgba(0,0,0,.5)}
 @media (min-width:960px){.card{padding:48px 44px 40px}}
 .card .lock{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(184,153,90,.14);color:#d9c38f}
 .card h2{margin-top:24px;font:300 32px/1.1 'Inter Tight',Arial,sans-serif;letter-spacing:-.02em}
-.card p.sub{margin-top:10px;font-size:15px;line-height:1.5;color:#8f8f8f}
+.card p.sub{margin-top:10px;font-size:15px;line-height:1.5;color:#c4b3d1}
 form{margin-top:30px}
 .boxes{display:none;gap:12px}
 .js .boxes{display:flex}
 .js .plain{display:none}
-.box{width:100%;min-width:0;aspect-ratio:4/5;max-height:88px;text-align:center;font:400 34px/1 'JetBrains Mono',monospace;color:#f5f5f4;background:#0a0a0a;border:1px solid #2e2e2e;border-radius:16px;outline:none;caret-color:#d9c38f;transition:border-color .2s,box-shadow .2s,transform .2s}
+.box{width:100%;min-width:0;aspect-ratio:4/5;max-height:88px;text-align:center;font:400 34px/1 'JetBrains Mono',monospace;color:#f4eee3;background:rgba(20,6,30,.65);border:1px solid rgba(217,195,143,.25);border-radius:16px;outline:none;caret-color:#d9c38f;transition:border-color .2s,box-shadow .2s,transform .2s}
 .box:focus{border-color:#b8995a;box-shadow:0 0 0 4px rgba(184,153,90,.15)}
-.box.filled{border-color:#4a4a4a}
-.plain{width:100%;padding:18px 20px;font:400 20px/1 'JetBrains Mono',monospace;letter-spacing:.2em;color:#f5f5f4;background:#0a0a0a;border:1px solid #2e2e2e;border-radius:16px;outline:none}
+.box.filled{border-color:rgba(217,195,143,.55)}
+.plain{width:100%;padding:18px 20px;font:400 20px/1 'JetBrains Mono',monospace;letter-spacing:.2em;color:#f4eee3;background:rgba(20,6,30,.65);border:1px solid rgba(217,195,143,.25);border-radius:16px;outline:none}
 .plain:focus{border-color:#b8995a;box-shadow:0 0 0 4px rgba(184,153,90,.15)}
 button{margin-top:18px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:18px 20px;font:500 16px/1 Inter,Arial,sans-serif;color:#1e0c2c;background:#d9c38f;border:0;border-radius:16px;cursor:pointer;transition:background .2s,transform .2s}
 button:hover{background:#e6d4a6}
@@ -120,9 +120,13 @@ button:active{transform:scale(.99)}
 button span{transition:transform .25s}
 button:hover span{transform:translateX(4px)}
 .error{margin-top:16px;font-size:14px;color:#f0a4a4;display:flex;gap:8px;align-items:center}
-.help{margin-top:26px;padding-top:22px;border-top:1px solid #222;font-size:14px;line-height:1.5;color:#737373}
+.help{margin-top:26px;padding-top:22px;border-top:1px solid rgba(217,195,143,.18);font-size:14px;line-height:1.5;color:#b9a6c9}
 .help a{color:#d9c38f;border-bottom:1px solid rgba(217,195,143,.35)}
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 12px/1.4 'JetBrains Mono',monospace;color:#5c5c5c}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 12px/1.4 'JetBrains Mono',monospace;color:#9a86ab}
+.client{display:flex;align-items:center;gap:16px;margin-bottom:34px}
+.client img{width:76px;height:76px;border-radius:50%;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.client p{font:400 17px/1.35 'Inter Tight',Arial,sans-serif;color:#f4eee3}
+.client p span{display:block;font:400 11px/1.4 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#d9c38f;margin-bottom:4px}
 .rise{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
 .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}.d5{animation-delay:.6s}
 .shake{animation:shake .5s cubic-bezier(.36,.07,.19,.97) .5s both}
@@ -144,7 +148,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:4
 </header>
 <main>
 <section>
-<p class="eyebrow rise d2">Private proposal · Prepared for</p>
+<div class="client rise d2"><img src="/brand/tau-tau-seal.png" alt="Tau Tau Chapter seal" width="76" height="76"><p><span>Prepared for</span>Tau Tau Chapter, Omega Psi Phi Fraternity, Inc.</p></div>
+<p class="eyebrow rise d2">Private proposal</p>
 <h1 class="rise d3">A modern home for <em>Tau Tau Chapter.</em></h1>
 <p class="lede rise d4">An early look at a new website for the chapter: a homepage concept, how it works on a phone, the plan and timeline, and what it takes to launch.</p>
 <div class="meta rise d5"><span>16 slides</span><span>Concept · Not final design</span><span>October 2026</span></div>

@@ -31,14 +31,16 @@ const pages = {
     </div>
     <img src="${pub('about/brandon.jpg')}" style="width:430px;height:630px;object-fit:cover;object-position:center 30%">
   </div>`,
-  tautau: `<div style="position:relative;height:630px;background:#0a0a0a;color:#f5f5f4;padding:64px;display:flex;flex-direction:column;justify-content:space-between">
-    <div style="display:flex;align-items:center;gap:14px">${mark('#f5f5f4')}<span style="font:300 26px 'Inter Tight'">brandon bibbins</span></div>
-    <div>
-      <p style="font:400 15px 'JetBrains Mono';letter-spacing:3px;text-transform:uppercase;color:#b8995a">Private proposal</p>
-      <h1 style="margin-top:22px;font:300 88px/0.95 'Inter Tight';letter-spacing:-3.5px">A modern home for<br><span style="color:#d9c38f">Tau Tau Chapter.</span></h1>
+  tautau: `<div style="position:relative;height:630px;overflow:hidden;color:#f4eee3;padding:60px 64px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(700px 500px at 90% -10%,#4b1c6b 0%,transparent 62%),radial-gradient(600px 500px at -10% 120%,#3a1652 0%,transparent 60%),#1e0c2c">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:14px">${mark('#f4eee3')}<span style="font:300 26px 'Inter Tight'">brandon bibbins</span></div>
+      <p style="font:400 14px 'JetBrains Mono';letter-spacing:3px;text-transform:uppercase;color:#d9c38f">Private proposal</p>
     </div>
-    <p style="font:400 15px 'JetBrains Mono';letter-spacing:2px;color:#a3a3a3">Website proposal · Passcode required</p>
-    <div style="position:absolute;right:0;top:0;bottom:0;width:14px;background:#3a1652"></div>
+    <div style="display:flex;align-items:center;gap:44px">
+      <img src="${pub('brand/tau-tau-seal.png')}" style="width:190px;height:190px;border-radius:50%;box-shadow:0 20px 50px rgba(0,0,0,.4)">
+      <h1 style="font:300 76px/0.98 'Inter Tight';letter-spacing:-3px">A modern home for<br><span style="color:#d9c38f">Tau Tau Chapter.</span></h1>
+    </div>
+    <p style="font:400 15px 'JetBrains Mono';letter-spacing:2px;color:#c4b3d1">Omega Psi Phi Fraternity, Inc. · Website proposal · Passcode required</p>
   </div>`,
 };
 
