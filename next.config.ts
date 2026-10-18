@@ -14,6 +14,18 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+
+  // Shortlinks
+  async redirects() {
+    return [
+      {
+        // Tau Tau Chapter pitch deck
+        source: '/tautau',
+        destination: 'https://claude.ai/artifact/7pj5XrLBYNHstfLhQNxvT9',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
