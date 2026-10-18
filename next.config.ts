@@ -15,14 +15,22 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
 
-  // Shortlinks
-  async redirects() {
+  // Tau Tau Chapter pitch deck: a static page in public/tautau, kept out of search results
+  async rewrites() {
+    return [
+      { source: '/tautau', destination: '/tautau/index.html' },
+    ];
+  },
+
+  async headers() {
     return [
       {
-        // Tau Tau Chapter pitch deck
+        source: '/tautau/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
         source: '/tautau',
-        destination: 'https://claude.ai/artifact/7pj5XrLBYNHstfLhQNxvT9',
-        permanent: false,
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
     ];
   },

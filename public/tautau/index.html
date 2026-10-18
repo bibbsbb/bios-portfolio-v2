@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Brandon Bibbins · Proposal for Tau Tau Chapter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..500;1,300..400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&amp;display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#0a0a0a;overflow:hidden;-webkit-font-smoothing:antialiased}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{position:relative;width:1920px;height:1080px;flex:none;transform-origin:center center}
+#stage>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;visibility:hidden;opacity:0}
+#stage>section.on{visibility:visible;opacity:1;z-index:2}
+#stage>section.leaving{visibility:visible;z-index:1}
+x-shape{display:block}
+x-shape.ellipse{border-radius:50%}
+img{display:block}
+video{display:block;background:#111}
+.motion #stage>section{transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.motion [data-build-in]{transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+[data-build-in].pre{opacity:0}
+[data-build-in].pre.b-rise{transform:translateY(40px)}
+[data-build-in].pre.b-left{transform:translateX(-40px)}
+[data-build-in].pre.b-pop{transform:scale(.9)}
+#ui{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.08);z-index:10}
+#bar{height:100%;width:0;background:#b8995a;transition:width .4s ease}
+#nav{position:fixed;right:16px;bottom:14px;display:flex;gap:6px;z-index:10;opacity:.0;transition:opacity .3s}
+body:hover #nav,#nav:focus-within{opacity:1}
+#nav button{font:500 13px/1 'JetBrains Mono',monospace;color:#f4eee3;background:rgba(20,20,20,.8);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 12px;cursor:pointer}
+#nav span{font:500 13px/1 'JetBrains Mono',monospace;color:#a3a3a3;align-self:center;padding:0 6px}
+@media (hover:none){#nav{opacity:1}}
+#hint{display:none;position:fixed;left:0;right:0;padding:0 28px;top:calc(env(safe-area-inset-top,0px) + 20px);text-align:center;font:500 13px/1.4 'JetBrains Mono',monospace;color:#a3a3a3;z-index:10;pointer-events:none}
+@media (hover:none) and (orientation:portrait){#hint{display:block}}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+<section id="cover" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px">
+<img src="/tautau/assets/bb-icon-white.png" alt="The b mark: a lowercase b between code brackets" style="position:absolute;left:128px;top:112px;width:84px;height:60px;object-fit:contain">
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="position:absolute;left:236px;top:120px;width:380px;height:45px;object-fit:contain">
+<p style="position:absolute;right:314px;top:104px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;letter-spacing:2px;text-transform:uppercase;text-align:right;color:#8f8f8f">Prepared for</p>
+<p style="position:absolute;right:314px;top:140px;width:420px;font-family:'Inter Tight', Arial, sans-serif;font-size:36px;font-weight:300;line-height:1.1;text-align:right;color:#ffffff">Tau Tau Chapter</p>
+<img src="/tautau/assets/tau-tau-seal.png" alt="Tau Tau Chapter seal, Omega Psi Phi Fraternity, Inc." style="position:absolute;right:128px;top:72px;width:154px;height:154px;object-fit:contain">
+<p style="position:absolute;left:128px;top:540px;width:1200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Web design · Development · Digital strategy</p>
+<h1 style="position:absolute;left:128px;top:600px;width:1600px;font-family:'Inter Tight', Arial, sans-serif;font-size:128px;font-weight:300;line-height:1.02;letter-spacing:-4px;color:#ffffff">Websites and digital products,<br>designed and built.</h1>
+<p style="position:absolute;left:128px;bottom:64px;width:1100px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">Proposal for Tau Tau Chapter, Omega Psi Phi Fraternity, Inc.</p>
+<p style="position:absolute;right:128px;bottom:64px;width:400px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;text-align:right;color:#8f8f8f">October 2026</p>
+
+</section>
+
+<section id="hello" data-transition="fade" style="background:#ffffff;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:0">
+<div style="position:absolute;left:1180px;top:0;width:740px;height:1080px;background:#0a0a0a"></div>
+<p style="position:absolute;left:128px;top:128px;width:900px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5c5c5c">About</p>
+<h2 style="position:absolute;left:128px;top:184px;width:940px;font-family:'Inter Tight', Arial, sans-serif;font-size:68px;font-weight:300;line-height:1.08;letter-spacing:-2px;color:#0a0a0a">I design, build and run digital products, from the first sketch to the code in production.</h2>
+<div data-build-in="rise 1 auto" style="position:absolute;left:128px;top:520px;width:940px;display:flex;flex-direction:row;align-items:baseline;gap:32px;border-top:1px solid #0a0a0a;padding:28px 0">
+<p style="width:56px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">01</p>
+<h3 style="width:220px;font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Design</h3>
+<p style="flex:1;font-size:24px;line-height:1.45;color:#5c5c5c">Brand experience, UX and interface design that feels clear and considered.</p>
+</div>
+<div data-build-in="rise 2 auto" style="position:absolute;left:128px;top:650px;width:940px;display:flex;flex-direction:row;align-items:baseline;gap:32px;border-top:1px solid #e5e5e5;padding:28px 0">
+<p style="width:56px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02</p>
+<h3 style="width:220px;font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Build</h3>
+<p style="flex:1;font-size:24px;line-height:1.45;color:#5c5c5c">Full-stack websites and web apps that load fast and are easy to update.</p>
+</div>
+<div data-build-in="rise 3 auto" style="position:absolute;left:128px;top:780px;width:940px;display:flex;flex-direction:row;align-items:baseline;gap:32px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 0">
+<p style="width:56px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">03</p>
+<h3 style="width:220px;font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Strategy</h3>
+<p style="flex:1;font-size:24px;line-height:1.45;color:#5c5c5c">Technology strategy and leadership, from small practices to a national brand.</p>
+</div>
+<img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="position:absolute;left:1260px;top:128px;width:84px;height:60px;object-fit:contain">
+<p style="position:absolute;left:1260px;top:250px;width:580px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">My approach</p>
+<h3 style="position:absolute;left:1260px;top:296px;width:580px;font-family:'Inter Tight', Arial, sans-serif;font-size:46px;font-weight:300;line-height:1.12;letter-spacing:-1px;color:#ffffff">Understand the people first. Then make it <span style="color:#d9c38f">beautiful.</span></h3>
+<img data-build-in="rise 1 auto" src="/tautau/assets/hello-hero.jpg" alt="Concept homepage for Tau Tau Chapter: the chapter portrait with The Mighty Tau Tau set large" style="position:absolute;left:1260px;top:478px;width:580px;height:346px;object-fit:cover;border-radius:6px;border:1px solid #2e2e2e">
+<x-shape class="ellipse" data-build-in="pop 2 auto" style="position:absolute;left:1260px;top:868px;width:44px;height:44px;border-radius:22px;background:#1e0c2c;border:1px solid #5c5c5c"></x-shape>
+<p style="position:absolute;left:1260px;top:924px;width:130px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f">Aubergine</p>
+<x-shape class="ellipse" data-build-in="pop 3 auto" style="position:absolute;left:1410px;top:868px;width:44px;height:44px;border-radius:22px;background:#4b1c6b"></x-shape>
+<p style="position:absolute;left:1410px;top:924px;width:130px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f">Purple</p>
+<x-shape class="ellipse" data-build-in="pop 4 auto" style="position:absolute;left:1560px;top:868px;width:44px;height:44px;border-radius:22px;background:#b8995a"></x-shape>
+<p style="position:absolute;left:1560px;top:924px;width:130px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f">Old gold</p>
+<x-shape class="ellipse" data-build-in="pop 5 auto" style="position:absolute;left:1710px;top:868px;width:44px;height:44px;border-radius:22px;background:#f4eee3"></x-shape>
+<p style="position:absolute;left:1710px;top:924px;width:130px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f">Ivory</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02</p>
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="experience" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:0">
+<p style="position:absolute;left:128px;top:112px;width:900px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">Selected experience</p>
+<h2 style="position:absolute;left:128px;top:162px;width:1400px;font-family:'Inter Tight', Arial, sans-serif;font-size:84px;font-weight:300;line-height:1.05;letter-spacing:-3px;color:#ffffff">Three highlight projects, <span style="color:#8f8f8f">2026.</span></h2>
+<div data-build-in="rise 1 auto" style="position:absolute;left:128px;top:330px;width:528px;height:640px;display:flex;flex-direction:column;background:#ffffff;border-radius:14px;overflow:hidden;color:#0a0a0a">
+<img src="/tautau/assets/shot-daylogue.jpg" alt="Daylogue homepage" style="width:528px;height:300px;object-fit:cover;object-position:top">
+<div style="display:flex;flex-direction:column;gap:18px;padding:32px 36px">
+<div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between"><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;color:#8f8f8f">01</p></div>
+<div style="height:56px;display:flex;flex-direction:column;justify-content:center"><img src="/tautau/assets/logo-daylogue.png" alt="Daylogue logo" style="width:200px;height:52px;object-fit:contain"></div>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.5px">Founder, digital product</h3>
+<p style="font-size:22px;line-height:1.45;color:#5c5c5c">Brand experience, UX/UI design and full-stack development.</p>
+</div></div>
+<div data-build-in="rise 2 auto" style="position:absolute;left:696px;top:330px;width:528px;height:640px;display:flex;flex-direction:column;background:#ffffff;border-radius:14px;overflow:hidden;color:#0a0a0a">
+<img src="/tautau/assets/shot-ctcla.jpg" alt="Child Therapy Center LA homepage" style="width:528px;height:300px;object-fit:cover;object-position:top">
+<div style="display:flex;flex-direction:column;gap:18px;padding:32px 36px">
+<div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between"><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;color:#8f8f8f">02</p></div>
+<div style="height:56px;display:flex;flex-direction:column;justify-content:center"><img src="/tautau/assets/logo-ctcla.png" alt="Child Therapy Center LA wordmark" style="width:340px;height:33px;object-fit:contain"></div>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.5px">Digital experience &amp; technology strategy</h3>
+<p style="font-size:22px;line-height:1.45;color:#5c5c5c">Website optimization and client engagement.</p>
+</div></div>
+<div data-build-in="rise 3 auto" style="position:absolute;left:1264px;top:330px;width:528px;height:640px;display:flex;flex-direction:column;background:#ffffff;border-radius:14px;overflow:hidden;color:#0a0a0a">
+<img src="/tautau/assets/shot-liquid-iv.jpg" alt="Liquid I.V. homepage, shown for brand context" style="width:528px;height:300px;object-fit:cover;object-position:top">
+<div style="display:flex;flex-direction:column;gap:18px;padding:32px 36px">
+<div style="display:flex;flex-direction:row;align-items:center;justify-content:space-between"><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;color:#8f8f8f">03</p><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#5c5c5c;padding:6px 12px;border:1px solid #e5e5e5;border-radius:20px">Brand context</p></div>
+<div style="height:56px;display:flex;flex-direction:column;justify-content:center"><img src="/tautau/assets/logo-liquid-iv.png" alt="Liquid I.V. logo" style="width:230px;height:38px;object-fit:contain"></div>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2;letter-spacing:-0.5px">Enterprise technology experience</h3>
+<p style="font-size:22px;line-height:1.45;color:#5c5c5c">Technology leadership supporting a nationally recognized consumer brand.</p>
+</div></div>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">03</p>
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:40px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="daylogue" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:0">
+<div style="position:absolute;left:860px;top:0;width:1060px;height:1080px;background:#efe6d8"></div>
+<p style="position:absolute;left:128px;top:128px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">01 · Daylogue</p>
+<h2 style="position:absolute;left:128px;top:184px;width:640px;font-family:'Inter Tight', Arial, sans-serif;font-size:80px;font-weight:300;line-height:1.04;letter-spacing:-3px;color:#ffffff">Founder-led,<br>end to end.</h2>
+<div style="position:absolute;left:128px;top:560px;width:600px;display:flex;flex-direction:column;border-top:1px solid #2e2e2e">
+<div data-build-in="left 1 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">01</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Digital product &amp; brand experience</p></div>
+<div data-build-in="left 2 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">02</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">UX/UI design</p></div>
+<div data-build-in="left 3 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">03</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Full-stack product development</p></div>
+</div>
+<p style="position:absolute;left:128px;top:910px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">↗ daylogue.com</p>
+<img src="/tautau/assets/logo-daylogue.png" alt="Daylogue logo" style="position:absolute;left:960px;top:112px;width:230px;height:59px;object-fit:contain;object-position:left center">
+<div data-build-in="rise 1 auto" style="position:absolute;left:960px;top:232px;width:860px;display:flex;flex-direction:column;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(10,10,10,0.28)">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:40px;padding:0 16px;background:#f5f5f4;border-bottom:1px solid #e5e5e5"><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><div style="flex:1"></div><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f;padding:4px 18px;background:#ffffff;border-radius:6px">daylogue.com</p><div style="flex:1"></div></div>
+<img src="/tautau/assets/shot-daylogue.jpg" alt="Daylogue homepage on desktop, captured October 17, 2026" style="width:860px;height:484px;object-fit:cover;object-position:top">
+</div>
+<img data-build-in="rise 2 auto" src="/tautau/assets/mobile-daylogue.jpg" alt="Daylogue homepage on a phone" style="position:absolute;left:1600px;top:500px;width:240px;height:519px;object-fit:cover;object-position:top;border:10px solid #0a0a0a;border-radius:40px;box-shadow:0 30px 70px rgba(10,10,10,0.35)">
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">04</p>
+
+</section>
+
+<section id="ctcla" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:0">
+<div style="position:absolute;left:860px;top:0;width:1060px;height:1080px;background:#e3ebe6"></div>
+<p style="position:absolute;left:128px;top:128px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">02 · Child Therapy Center LA</p>
+<h2 style="position:absolute;left:128px;top:184px;width:640px;font-family:'Inter Tight', Arial, sans-serif;font-size:80px;font-weight:300;line-height:1.04;letter-spacing:-3px;color:#ffffff">Digital strategy for a family practice.</h2>
+<div style="position:absolute;left:128px;top:520px;width:600px;display:flex;flex-direction:column;border-top:1px solid #2e2e2e">
+<div data-build-in="left 1 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">01</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Digital experience</p></div>
+<div data-build-in="left 2 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">02</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Technology strategy</p></div>
+<div data-build-in="left 3 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">03</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Website optimization</p></div>
+<div data-build-in="left 4 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:18px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">04</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Client engagement</p></div>
+</div>
+<p style="position:absolute;left:128px;top:910px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">↗ childtherapycenterla.com</p>
+<img src="/tautau/assets/logo-ctcla.png" alt="Child Therapy Center LA wordmark" style="position:absolute;left:960px;top:112px;width:400px;height:39px;object-fit:contain;object-position:left center">
+<div data-build-in="rise 1 auto" style="position:absolute;left:960px;top:232px;width:860px;display:flex;flex-direction:column;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(10,10,10,0.28)">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:40px;padding:0 16px;background:#f5f5f4;border-bottom:1px solid #e5e5e5"><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><div style="flex:1"></div><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f;padding:4px 18px;background:#ffffff;border-radius:6px">childtherapycenterla.com</p><div style="flex:1"></div></div>
+<img src="/tautau/assets/shot-ctcla.jpg" alt="Child Therapy Center LA homepage on desktop, captured October 17, 2026" style="width:860px;height:484px;object-fit:cover;object-position:top">
+</div>
+<img data-build-in="rise 2 auto" src="/tautau/assets/mobile-ctcla.jpg" alt="Child Therapy Center LA homepage on a phone" style="position:absolute;left:1600px;top:500px;width:240px;height:519px;object-fit:cover;object-position:top;border:10px solid #0a0a0a;border-radius:40px;box-shadow:0 30px 70px rgba(10,10,10,0.35)">
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">05</p>
+
+</section>
+
+<section id="liquid" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:0">
+<div style="position:absolute;left:860px;top:0;width:1060px;height:1080px;background:#e6eef9"></div>
+<p style="position:absolute;left:128px;top:128px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#8f8f8f">03 · Liquid I.V.</p>
+<h2 style="position:absolute;left:128px;top:184px;width:640px;font-family:'Inter Tight', Arial, sans-serif;font-size:80px;font-weight:300;line-height:1.04;letter-spacing:-3px;color:#ffffff">Technology at enterprise scale.</h2>
+<p style="position:absolute;left:128px;top:420px;width:620px;font-size:28px;line-height:1.45;color:#b5b5b5">Enterprise technology leadership supporting a nationally recognized consumer brand.</p>
+<p style="position:absolute;left:128px;top:568px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;letter-spacing:2px;text-transform:uppercase;color:#d9c38f">What it brings to Tau Tau</p>
+<div style="position:absolute;left:128px;top:610px;width:620px;display:flex;flex-direction:column;border-top:1px solid #2e2e2e">
+<div data-build-in="left 1 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">01</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Process and accountability at scale</p></div>
+<div data-build-in="left 2 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">02</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Security and access done right</p></div>
+<div data-build-in="left 3 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">03</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Reliable releases, with nothing left to chance</p></div>
+<div data-build-in="left 4 auto" style="display:flex;flex-direction:row;align-items:baseline;gap:24px;padding:16px 0;border-bottom:1px solid #2e2e2e"><p style="width:40px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;color:#8f8f8f">04</p><p style="flex:1;font-size:26px;line-height:1.35;color:#ffffff">Systems built to grow with the organization</p></div>
+</div>
+<p style="position:absolute;left:128px;top:930px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">↗ liquid-iv.com</p>
+<img src="/tautau/assets/logo-liquid-iv.png" alt="Liquid I.V. logo" style="position:absolute;left:960px;top:112px;width:290px;height:48px;object-fit:contain;object-position:left center">
+<div data-build-in="rise 1 auto" style="position:absolute;left:960px;top:232px;width:860px;display:flex;flex-direction:column;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(10,10,10,0.28)">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:40px;padding:0 16px;background:#f5f5f4;border-bottom:1px solid #e5e5e5"><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#d4d4d4"></x-shape><div style="flex:1"></div><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;color:#8f8f8f;padding:4px 18px;background:#ffffff;border-radius:6px">liquid-iv.com</p><div style="flex:1"></div></div>
+<img src="/tautau/assets/shot-liquid-iv.jpg" alt="Liquid I.V. homepage on desktop, captured October 17, 2026, shown for brand context" style="width:860px;height:484px;object-fit:cover;object-position:top">
+</div>
+<img data-build-in="rise 2 auto" src="/tautau/assets/mobile-liquid-iv.jpg" alt="Liquid I.V. homepage on a phone, captured October 17, 2026, shown for brand context" style="position:absolute;left:1600px;top:500px;width:240px;height:519px;object-fit:cover;object-position:top;border:10px solid #0a0a0a;border-radius:40px;box-shadow:0 30px 70px rgba(10,10,10,0.35)">
+<p style="position:absolute;left:960px;top:796px;width:600px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:22px;color:#3d4a5c">Public website shown for brand context.</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">06</p>
+
+</section>
+
+<section id="plan" data-transition="fade" style="background:#3a1652;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:112px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#d9c38f">◆ The plan</p>
+<h1 style="width:1664px;font-family:'Inter Tight', Arial, sans-serif;font-size:88px;font-weight:300;line-height:1.02;letter-spacing:-3px;color:#f4eee3">A modern home for <span style="color:#d9c38f">Tau Tau Chapter.</span></h1>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:48px">
+<div style="display:flex;flex-direction:column;gap:28px">
+<img data-build-in="rise 1 auto" src="/tautau/assets/plan-history.jpg" alt="Tau Tau Chapter brothers in a formal group portrait" style="width:100%;height:300px;object-fit:cover;border-radius:4px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #b8995a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#d9c38f">01</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Preserve the history</h3>
+<p style="font-size:24px;line-height:1.5;color:#e6dcef">Six decades, the lineage and the founders, in one lasting place.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<img data-build-in="rise 2 auto" src="/tautau/assets/plan-brothers.jpg" alt="Two Tau Tau Chapter brothers in purple at a chapter event" style="width:100%;height:300px;object-fit:cover;border-radius:4px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #b8995a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#d9c38f">02</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Serve the brothers</h3>
+<p style="font-size:24px;line-height:1.5;color:#e6dcef">Events, the calendar and resources, easy to reach on any phone.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<img data-build-in="rise 3 auto" src="/tautau/assets/plan-impact.jpg" alt="Tau Tau Chapter brothers at a community donation" style="width:100%;height:300px;object-fit:cover;border-radius:4px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #b8995a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#d9c38f">03</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Show the impact</h3>
+<p style="font-size:24px;line-height:1.5;color:#e6dcef">Programs, scholarships and service, presented with the pride they deserve.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#d9c38f">07</p>
+<p style="position:absolute;left:640px;bottom:66px;width:640px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:18px;text-align:center;color:#a993bd">Photos: Tau Tau Chapter gallery</p>
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="concept" data-transition="push" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px">
+<div data-build-in="rise 1 auto" style="position:absolute;left:128px;top:160px;width:1040px;height:686px;display:flex;flex-direction:column;background:#1c1c1c;border:1px solid #2e2e2e;border-radius:10px;overflow:hidden">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:36px;padding:0 16px">
+<x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape>
+<div style="flex:1"></div><p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.2;color:#9a9a9a">homepage concept</p><div style="flex:1"></div>
+</div>
+<img src="/tautau/assets/concept-scroll-desktop-poster.jpg" data-video="/tautau/assets/video/concept-scroll-desktop.mp4" alt="Animated scroll through the homepage concept: the chapter portrait and The Mighty Tau Tau rise in, then impact figures count up, the timeline draws, and the lineage, events and member portal reveal" style="width:1040px;height:650px;object-fit:cover">
+</div>
+<div style="position:absolute;left:1240px;top:160px;width:552px;display:flex;flex-direction:column;gap:24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Concept · Not final design</p>
+<h2 style="font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.08;letter-spacing:-2px;color:#ffffff">An early look.</h2>
+<p style="font-size:24px;line-height:1.5;color:#b5b5b5">A homepage built from the chapter’s own history, leadership and photography, that comes alive as you scroll. On desktop and phone.</p>
+</div>
+<img data-build-in="rise 2 auto" src="/tautau/assets/concept-scroll-mobile-poster.jpg" data-video="/tautau/assets/video/concept-scroll-mobile.mp4" alt="Animated scroll through the homepage concept on a phone" style="position:absolute;left:1240px;top:470px;width:200px;height:433px;object-fit:cover;border:6px solid #2e2e2e;border-radius:28px">
+<p style="position:absolute;left:1480px;top:840px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.3;color:#8f8f8f">Photos: Tau Tau Chapter</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">08</p>
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="mock-story" data-transition="push" style="background:#ffffff;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px">
+<p data-build-in="fade 1 auto" style="position:absolute;left:128px;top:128px;width:520px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5c5c5c">Mockup 01 · Our story</p>
+<h2 data-build-in="fade 1 auto" style="position:absolute;left:128px;top:186px;width:520px;font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.08;letter-spacing:-2px">Their history, front and center.</h2>
+<p data-build-in="fade 1 auto" style="position:absolute;left:128px;top:460px;width:400px;font-size:24px;line-height:1.5;color:#5c5c5c">A six-decade timeline, and a lineage wall with every line since 1961.</p>
+<div data-build-in="rise 2 auto" style="position:absolute;left:720px;top:128px;width:1072px;height:578px;display:flex;flex-direction:column;background:#ececea;border:1px solid #e5e5e5;border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(10,10,10,0.16)">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:36px;padding:0 16px">
+<x-shape class="ellipse" style="width:12px;height:12px;background:#c9c9c6"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#c9c9c6"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#c9c9c6"></x-shape>
+</div>
+<img src="/tautau/assets/mock-history.jpg" alt="Mockup: six decades of the Mighty Tau Tau, a timeline from 1961 to 2026" style="width:1072px;height:542px;object-fit:cover">
+</div>
+<img data-build-in="rise 3 auto" src="/tautau/assets/mock-lineage.jpg" alt="Mockup: the chapter lineage wall, every line since 1961" style="position:absolute;left:560px;top:600px;width:640px;height:311px;object-fit:cover;border:1px solid #e5e5e5;border-radius:8px;box-shadow:0 30px 70px rgba(10,10,10,0.28)">
+<p data-build-in="pop 4 auto" style="position:absolute;left:1260px;top:748px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;background:#0a0a0a;padding:10px 20px;border-radius:4px">› Six-decade timeline</p>
+<p data-build-in="pop 5 auto" style="position:absolute;left:1260px;top:822px;width:420px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;background:#4b1c6b;padding:10px 20px;border-radius:4px">› Every line since 1961</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">09</p>
+<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="mock-impact" data-transition="push" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px">
+<div data-build-in="rise 1 auto" style="position:absolute;left:128px;top:128px;width:1040px;height:556px;display:flex;flex-direction:column;background:#1c1c1c;border:1px solid #2e2e2e;border-radius:10px;overflow:hidden">
+<div style="display:flex;flex-direction:row;align-items:center;gap:8px;height:36px;padding:0 16px">
+<x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape><x-shape class="ellipse" style="width:12px;height:12px;background:#3d3d3d"></x-shape>
+</div>
+<img src="/tautau/assets/mock-impact.jpg" alt="Mockup: Service, measured. Chapter-reported impact beside a scholarship presentation photo" style="width:1040px;height:520px;object-fit:cover">
+</div>
+<img data-build-in="rise 2 auto" src="/tautau/assets/mock-leadership.jpg" alt="Mockup: chapter leadership roster" style="position:absolute;left:680px;top:580px;width:760px;height:279px;object-fit:cover;border:1px solid #2e2e2e;border-radius:8px;box-shadow:0 30px 70px rgba(0,0,0,0.6)">
+<p data-build-in="fade 3 auto" style="position:absolute;left:1240px;top:128px;width:552px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Mockup 02 · Impact</p>
+<h2 data-build-in="fade 3 auto" style="position:absolute;left:1240px;top:186px;width:552px;font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.08;letter-spacing:-2px;color:#ffffff">Pride, made visible.</h2>
+<p data-build-in="fade 3 auto" style="position:absolute;left:1240px;top:370px;width:520px;font-size:24px;line-height:1.5;color:#b5b5b5">Chapter-reported impact and the current executive board, presented with care.</p>
+<p data-build-in="pop 4 auto" style="position:absolute;left:1480px;top:640px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#2a0f3d;background:#d9c38f;padding:10px 20px;border-radius:4px">› Real figures</p>
+<p data-build-in="pop 5 auto" style="position:absolute;left:1480px;top:714px;width:312px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#0a0a0a;background:#ffffff;padding:10px 20px;border-radius:4px">› Current officers</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">10</p>
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="mock-mobile" data-transition="push" style="background:#f5f5f4;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px">
+<p data-build-in="fade 1 auto" style="position:absolute;left:128px;top:128px;width:760px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5c5c5c">Mockup 03 · Mobile</p>
+<h2 data-build-in="fade 1 auto" style="position:absolute;left:128px;top:186px;width:720px;font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.08;letter-spacing:-2px">Built for the phone in every brother’s pocket.</h2>
+<p data-build-in="fade 1 auto" style="position:absolute;left:128px;top:470px;width:620px;font-size:24px;line-height:1.5;color:#5c5c5c">Home, history and the member portal, designed for small screens first.</p>
+<img data-build-in="rise 2 auto" src="/tautau/assets/phone-home.jpg" alt="Phone mockup: homepage with the chapter portrait and The Mighty Tau Tau" style="position:absolute;left:964px;top:180px;width:268px;height:580px;object-fit:cover;border:10px solid #0a0a0a;border-radius:44px;box-shadow:0 24px 50px rgba(10,10,10,0.22)">
+<img data-build-in="rise 3 auto" src="/tautau/assets/phone-history.jpg" alt="Phone mockup: six decades timeline" style="position:absolute;left:1240px;top:240px;width:268px;height:580px;object-fit:cover;border:10px solid #0a0a0a;border-radius:44px;box-shadow:0 24px 50px rgba(10,10,10,0.22)">
+<img data-build-in="rise 4 auto" src="/tautau/assets/phone-members.jpg" alt="Phone mockup: member portal with dues, calendar, gallery and links" style="position:absolute;left:1516px;top:300px;width:268px;height:580px;object-fit:cover;border:10px solid #0a0a0a;border-radius:44px;box-shadow:0 24px 50px rgba(10,10,10,0.22)">
+<p data-build-in="left 5 auto" style="position:absolute;left:128px;top:620px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;padding:14px 0;border-top:1px solid #0a0a0a">01 Home</p>
+<p data-build-in="left 6 auto" style="position:absolute;left:128px;top:690px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;padding:14px 0;border-top:1px solid #0a0a0a">02 Our story</p>
+<p data-build-in="left 7 auto" style="position:absolute;left:128px;top:760px;width:620px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;padding:14px 0;border-top:1px solid #0a0a0a;border-bottom:1px solid #0a0a0a;color:#4b1c6b">03 Member portal</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">11</p>
+<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="hub-tease" data-transition="push" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px">
+<img data-build-in="fade 2 auto" src="/tautau/assets/hub-dues.jpg" alt="Brothers’ Hub dues screen: You’re financial" style="position:absolute;left:1020px;top:250px;width:270px;height:584px;object-fit:cover;border:8px solid #2e2e2e;border-radius:40px;opacity:0.85;transform:rotate(-8deg)">
+<img data-build-in="fade 3 auto" src="/tautau/assets/hub-card.jpg" alt="Brothers’ Hub member card screen" style="position:absolute;left:1500px;top:250px;width:270px;height:584px;object-fit:cover;border:8px solid #2e2e2e;border-radius:40px;opacity:0.85;transform:rotate(8deg)">
+<img data-build-in="rise 1 auto" src="/tautau/assets/hub-teaser-poster.jpg" data-video="/tautau/assets/video/hub-teaser.mp4" alt="Brothers’ Hub teaser: home dashboard, event RSVP and ticket, dues, a chapter vote and the digital member card" style="position:absolute;left:1220px;top:136px;width:340px;height:736px;object-fit:cover;border:10px solid #3a3a3a;border-radius:52px;box-shadow:0 40px 90px rgba(0,0,0,0.6)">
+<p data-build-in="fade 1 auto" style="position:absolute;left:128px;top:128px;width:820px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Phase 2 · Quoted separately</p>
+<h2 data-build-in="fade 1 auto" style="position:absolute;left:128px;top:186px;width:860px;font-family:'Inter Tight', Arial, sans-serif;font-size:120px;font-weight:300;line-height:1;letter-spacing:-4px;color:#ffffff">The Brothers’ Hub.</h2>
+<p data-build-in="fade 2 auto" style="position:absolute;left:128px;top:460px;width:760px;font-size:32px;line-height:1.4;color:#c7c7c7">Dues, events, votes and every brother’s card, in one place that feels like an app.</p>
+<p data-build-in="left 4 auto" style="position:absolute;left:128px;top:640px;width:760px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;padding:14px 0;border-top:1px solid #3a3a3a">› One-tap dues and receipts</p>
+<p data-build-in="left 5 auto" style="position:absolute;left:128px;top:708px;width:760px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;padding:14px 0;border-top:1px solid #3a3a3a">› RSVP, calendar and QR check-in</p>
+<p data-build-in="left 6 auto" style="position:absolute;left:128px;top:776px;width:760px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#ffffff;padding:14px 0;border-top:1px solid #3a3a3a;border-bottom:1px solid #3a3a3a">› Announcements and chapter votes</p>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8f8f8f">12</p>
+<p style="position:absolute;right:128px;bottom:64px;width:700px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;text-align:right;color:#8f8f8f">Concept · Sample data</p>
+
+</section>
+
+<section id="hub-screens" data-transition="push" style="background:#f5f5f4;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px">
+<h2 data-build-in="fade 1 auto" style="position:absolute;left:128px;top:116px;width:1664px;font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.08;letter-spacing:-2px">Everything a brother needs, one tap away.</h2>
+<p data-build-in="fade 2 auto" style="position:absolute;left:128px;top:250px;width:284px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">01 Home</p>
+<p data-build-in="fade 3 auto" style="position:absolute;left:473px;top:250px;width:284px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02 RSVP &amp; ticket</p>
+<p data-build-in="fade 4 auto" style="position:absolute;left:818px;top:250px;width:284px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">03 Dues</p>
+<p data-build-in="fade 5 auto" style="position:absolute;left:1163px;top:250px;width:284px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">04 Votes</p>
+<p data-build-in="fade 6 auto" style="position:absolute;left:1508px;top:250px;width:284px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#4b1c6b">05 Member card</p>
+<img data-build-in="rise 2 auto" src="/tautau/assets/hub-home.jpg" alt="Hub home: financial status, next event and announcements" style="position:absolute;left:128px;top:300px;width:284px;height:614px;object-fit:cover;border:8px solid #0a0a0a;border-radius:42px;box-shadow:0 20px 44px rgba(10,10,10,0.2)">
+<img data-build-in="rise 3 auto" src="/tautau/assets/hub-event.jpg" alt="Hub event: Scholarship Gala RSVP and QR ticket" style="position:absolute;left:473px;top:300px;width:284px;height:614px;object-fit:cover;border:8px solid #0a0a0a;border-radius:42px;box-shadow:0 20px 44px rgba(10,10,10,0.2)">
+<img data-build-in="rise 4 auto" src="/tautau/assets/hub-dues.jpg" alt="Hub dues: You’re financial, with paid items and receipts" style="position:absolute;left:818px;top:300px;width:284px;height:614px;object-fit:cover;border:8px solid #0a0a0a;border-radius:42px;box-shadow:0 20px 44px rgba(10,10,10,0.2)">
+<img data-build-in="rise 5 auto" src="/tautau/assets/hub-vote.jpg" alt="Hub votes: spring service project poll with results" style="position:absolute;left:1163px;top:300px;width:284px;height:614px;object-fit:cover;border:8px solid #0a0a0a;border-radius:42px;box-shadow:0 20px 44px rgba(10,10,10,0.2)">
+<img data-build-in="rise 6 auto" src="/tautau/assets/hub-card.jpg" alt="Hub member card with line anniversary and service hours" style="position:absolute;left:1508px;top:300px;width:284px;height:614px;object-fit:cover;border:8px solid #0a0a0a;border-radius:42px;box-shadow:0 20px 44px rgba(10,10,10,0.2)">
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">13</p>
+<p style="position:absolute;right:128px;bottom:64px;width:900px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;text-align:right;color:#5c5c5c">Phase 2 · Concept screens · Sample data</p>
+
+</section>
+
+<section id="process" data-transition="fade" style="background:#f5f5f4;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5c5c5c">How I work</p>
+<h2 style="font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.1;letter-spacing:-2px">Four steps, one shared plan.</h2>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#0a0a0a"><span style="color:#4b1c6b">›</span> Kickoff to website launch by November 1, 2026</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #0a0a0a;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">01</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Discover</h3>
+<p style="font-size:24px;line-height:1.5;color:#5c5c5c">Learn the chapter’s goals, audience, history and content.</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#4b1c6b">› Goals and content plan</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #0a0a0a;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Design</h3>
+<p style="font-size:24px;line-height:1.5;color:#5c5c5c">Explore the experience and agree on the visual direction.</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#4b1c6b">› Approved page designs</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #0a0a0a;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">03</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Build</h3>
+<p style="font-size:24px;line-height:1.5;color:#5c5c5c">Develop the agreed site and move the content in.</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#4b1c6b">› A working site to review</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #0a0a0a;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">04</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:44px;font-weight:400;line-height:1.1;letter-spacing:-1px">Launch</h3>
+<p style="font-size:24px;line-height:1.5;color:#5c5c5c">Test, refine and prepare the chapter to keep it current.</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.4;color:#4b1c6b">› Live site and handoff</p>
+</div>
+</div>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">14</p>
+<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="needs" data-transition="fade" style="background:#ffffff;color:#0a0a0a;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5c5c5c">What I need</p>
+<h2 style="font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.1;letter-spacing:-2px">To do this well, I’ll need six things.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:40px 48px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">01</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">A point of contact</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">One brother to coordinate, and a small group to review and approve.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">02</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">Chapter content</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">History, officers, programs and events, or who can provide them.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">03</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">Approved photography</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">Chapter photos, with permission to use them online.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">04</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">Access</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">Logins for the current site, the domain and hosting.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">05</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">Timely feedback</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">Comments within 2 business days at each review.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid #0a0a0a;padding:28px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">06</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.2">Budget and go-ahead</h3>
+<p style="font-size:24px;line-height:1.45;color:#5c5c5c">$2,500 for the website, with 50% ($1,250) upfront, and approval from chapter leadership.</p>
+</div>
+</div>
+<p style="position:absolute;left:48px;bottom:36px;width:200px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#5c5c5c">15</p>
+<img src="/tautau/assets/bb-wordmark-black.png" alt="brandon bibbins" style="position:absolute;right:128px;bottom:68px;width:200px;height:24px;object-fit:contain">
+
+</section>
+
+<section id="next" data-transition="fade" style="background:#0a0a0a;color:#ffffff;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#a3a3a3">Next steps</p>
+<h2 style="width:1300px;font-family:'Inter Tight', Arial, sans-serif;font-size:72px;font-weight:300;line-height:1.1;letter-spacing:-2px;color:#ffffff">Let’s build something the chapter is proud to share.</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #ffffff;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">01</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.25">A conversation with chapter leadership</h3>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #ffffff;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">02</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.25">Agree on scope, timeline and budget</h3>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #ffffff;padding:32px 0 0 0">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#a3a3a3">03</p>
+<h3 style="font-family:'Inter Tight', Arial, sans-serif;font-size:32px;font-weight:400;line-height:1.25">Kick off Discover</h3>
+</div>
+</div>
+<div style="display:flex;flex-direction:row;align-items:end;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:20px">
+<img src="/tautau/assets/bb-wordmark-white.png" alt="brandon bibbins wordmark" style="width:400px;height:47px;object-fit:contain">
+</div>
+<img src="/tautau/assets/bb-icon-white.png" alt="The b mark" style="width:160px;height:114px;object-fit:contain">
+</div>
+
+</section>
+
+</div></div>
+<div id="ui"><div id="bar"></div></div>
+<p id="hint">Turn your phone sideways for a bigger view · Swipe to move</p>
+<div id="nav" aria-label="Slide controls"><button id="prev" aria-label="Previous slide">←</button><span id="count"></span><button id="next" aria-label="Next slide">→</button></div>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) document.documentElement.classList.add('motion');
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(stage.children);
+  var cur = -1;
+
+  // Swap poster images that carry a video for real, silent, looping video elements.
+  document.querySelectorAll('img[data-video]').forEach(function(img){
+    var v = document.createElement('video');
+    v.src = img.getAttribute('data-video');
+    v.poster = img.getAttribute('src');
+    v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'metadata';
+    v.setAttribute('muted',''); v.setAttribute('playsinline','');
+    v.setAttribute('aria-label', img.alt || '');
+    v.setAttribute('style', img.getAttribute('style') || '');
+    if (img.hasAttribute('data-build-in')) v.setAttribute('data-build-in', img.getAttribute('data-build-in'));
+    img.replaceWith(v);
+  });
+
+  function fit(){
+    var s = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    stage.style.transform = 'scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit); fit();
+
+  function builds(sec){
+    var els = Array.prototype.slice.call(sec.querySelectorAll('[data-build-in]'));
+    els.forEach(function(el){
+      var p = el.getAttribute('data-build-in').split(/\s+/);
+      el.classList.add('pre', 'b-' + p[0]);
+      el.style.transitionDelay = '';
+    });
+    if (reduce) { els.forEach(function(el){ el.classList.remove('pre'); }); return; }
+    void sec.offsetWidth;
+    els.forEach(function(el){
+      var n = parseInt(el.getAttribute('data-build-in').split(/\s+/)[1], 10) || 1;
+      el.style.transitionDelay = (0.25 + (n - 1) * 0.22) + 's';
+      el.classList.remove('pre');
+    });
+  }
+
+  function go(i, dir){
+    if (i < 0 || i >= slides.length || i === cur) return;
+    var prev = slides[cur], next = slides[i];
+    if (prev) {
+      prev.classList.remove('on'); prev.classList.add('leaving');
+      prev.style.opacity = '0';
+      if (!reduce && next.getAttribute('data-transition') === 'push') prev.style.transform = 'translateX(' + (dir > 0 ? -6 : 6) + '%)';
+      prev.querySelectorAll('video').forEach(function(v){ v.pause(); });
+      setTimeout(function(p){ return function(){ p.classList.remove('leaving'); p.style.transform=''; p.style.opacity=''; }; }(prev), 750);
+    }
+    if (!reduce && next.getAttribute('data-transition') === 'push') {
+      next.style.transition = 'none';
+      next.style.transform = 'translateX(' + (dir > 0 ? 6 : -6) + '%)';
+      void next.offsetWidth; next.style.transition = '';
+    }
+    next.classList.add('on'); next.style.transform = '';
+    builds(next);
+    next.querySelectorAll('video').forEach(function(v){ try { v.currentTime = 0; } catch(e){} var p = v.play(); if (p && p.catch) p.catch(function(){}); });
+    // Warm up the next slide's videos.
+    var after = slides[i+1]; if (after) after.querySelectorAll('video').forEach(function(v){ v.preload = 'auto'; });
+    cur = i;
+    document.getElementById('bar').style.width = ((i + 1) / slides.length * 100) + '%';
+    document.getElementById('count').textContent = (i + 1) + ' / ' + slides.length;
+    if (history.replaceState) history.replaceState(null, '', '#' + (i + 1));
+  }
+  function step(d){ go(cur + d, d); }
+
+  document.addEventListener('keydown', function(e){
+    if (['ArrowRight','ArrowDown','PageDown',' ','Enter'].indexOf(e.key) > -1) { e.preventDefault(); step(1); }
+    else if (['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key) > -1) { e.preventDefault(); step(-1); }
+    else if (e.key === 'Home') go(0, -1);
+    else if (e.key === 'End') go(slides.length - 1, 1);
+    else if (e.key === 'f' && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(function(){});
+  });
+  document.getElementById('prev').addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
+  document.getElementById('next').addEventListener('click', function(e){ e.stopPropagation(); step(1); });
+  document.getElementById('viewport').addEventListener('click', function(e){ step(e.clientX < window.innerWidth * 0.3 ? -1 : 1); });
+  var tx = null, ty = null;
+  document.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) step(dx < 0 ? 1 : -1);
+    tx = null;
+  }, {passive:true});
+
+  var start = parseInt((location.hash || '').slice(1), 10);
+  go(start >= 1 && start <= slides.length ? start - 1 : 0, 1);
+})();
+</script>
+</body>
+</html>
