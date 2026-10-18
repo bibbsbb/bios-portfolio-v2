@@ -58,18 +58,18 @@ export function unlockPage(wrong: boolean, digits = 0, next = '/tautau'): string
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0a0a0a">
 <title>Brandon Bibbins · Proposal for Tau Tau Chapter</title>
-<meta name="description" content="A website proposal for Tau Tau Chapter from Brandon Bibbins. Passcode required.">
+<meta name="description" content="A website proposal for Tau Tau Chapter of Omega Psi Phi Fraternity, Inc., from Brandon Bibbins. Passcode required.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Brandon Bibbins">
 <meta property="og:title" content="A modern home for Tau Tau Chapter">
-<meta property="og:description" content="A website proposal from Brandon Bibbins. Passcode required.">
+<meta property="og:description" content="A website proposal for Tau Tau Chapter of Omega Psi Phi Fraternity, Inc., from Brandon Bibbins. Passcode required.">
 <meta property="og:url" content="https://www.brandonbibbins.io/tautau">
 <meta property="og:image" content="https://www.brandonbibbins.io/og/tautau.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="A modern home for Tau Tau Chapter">
-<meta name="twitter:description" content="A website proposal from Brandon Bibbins. Passcode required.">
+<meta name="twitter:description" content="A website proposal for Tau Tau Chapter of Omega Psi Phi Fraternity, Inc., from Brandon Bibbins. Passcode required.">
 <meta name="twitter:image" content="https://www.brandonbibbins.io/og/tautau.jpg">
 <link rel="icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
