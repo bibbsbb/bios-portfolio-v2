@@ -22,8 +22,10 @@ export async function proxy(request: NextRequest) {
   }
   // Numeric passcodes get one box per digit on the passcode screen.
   const digits = passcode && /^\d{3,8}$/.test(passcode) ? passcode.length : 0;
+  // 200, not 401: link previews (iMessage, Slack, LinkedIn) skip pages that answer 401,
+  // and this page only shows the passcode form and preview tags, never the deck itself.
   return new NextResponse(unlockPage(searchParams.has('wrong'), digits, GATED_PAGES[pathname]), {
-    status: 401,
+    status: 200,
     headers: { ...headers, 'Content-Type': 'text/html; charset=utf-8' },
   });
 }
