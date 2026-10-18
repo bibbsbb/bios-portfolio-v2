@@ -11,7 +11,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const p = getProject((await params).slug);
   if (!p) return {};
-  return { title: `${p.name} | Brandon Bibbins`, description: p.summary };
+  const title = `${p.name} | Brandon Bibbins`;
+  const images = [{ url: `/og/${p.slug}.jpg`, width: 1200, height: 630, alt: `${p.name}: ${p.headline}` }];
+  return {
+    title,
+    description: p.summary,
+    openGraph: { title, description: p.summary, url: `/work/${p.slug}`, siteName: 'Brandon Bibbins', images, type: 'article' },
+    twitter: { card: 'summary_large_image', title, description: p.summary, images: images.map((i) => i.url) },
+  };
 }
 
 export default async function WorkPage({ params }: { params: Promise<{ slug: string }> }) {

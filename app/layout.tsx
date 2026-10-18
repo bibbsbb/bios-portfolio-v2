@@ -12,7 +12,7 @@ const description =
 export const metadata: Metadata = {
   title: "Brandon Bibbins | Design, development and IT leadership",
   description,
-  metadataBase: new URL('https://brandonbibbins.io'),
+  metadataBase: new URL('https://www.brandonbibbins.io'),
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Brandon Bibbins | Design, development and IT leadership",
     description,
-    url: 'https://brandonbibbins.io',
+    url: '/',
     siteName: 'Brandon Bibbins',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og/home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Brandon Bibbins portfolio',
+        alt: 'Brandon Bibbins: I design, build and run digital products.',
       },
     ],
     type: 'website',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Brandon Bibbins | Design, development and IT leadership",
     description,
-    images: ['/og-image.jpg'],
+    images: ['/og/home.jpg'],
   },
 };
 

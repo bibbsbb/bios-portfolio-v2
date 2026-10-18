@@ -36,6 +36,19 @@ export function unlockPage(wrong: boolean): string {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Brandon Bibbins · Proposal for Tau Tau Chapter</title>
+<meta name="description" content="A website proposal for Tau Tau Chapter from Brandon Bibbins. Passcode required.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brandon Bibbins">
+<meta property="og:title" content="A modern home for Tau Tau Chapter">
+<meta property="og:description" content="A website proposal from Brandon Bibbins. Passcode required.">
+<meta property="og:url" content="https://www.brandonbibbins.io/tautau">
+<meta property="og:image" content="https://www.brandonbibbins.io/og/tautau.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A modern home for Tau Tau Chapter">
+<meta name="twitter:description" content="A website proposal from Brandon Bibbins. Passcode required.">
+<meta name="twitter:image" content="https://www.brandonbibbins.io/og/tautau.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap">
