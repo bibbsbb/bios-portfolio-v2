@@ -163,7 +163,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:4
 <p class="eyebrow rise d2">Private proposal</p>
 <h1 class="rise d3">A modern home for <em>Tau Tau Chapter.</em></h1>
 <p class="lede rise d4">An early look at a new website for the chapter: a homepage concept, how it works on a phone, the plan and timeline, and what it takes to launch.</p>
-<div class="meta rise d5"><span>16 slides</span><span>Concept · Not final design</span><span>October 2026</span></div>
+<div class="meta rise d5"><span>17 slides</span><span>Concept · Not final design</span><span>October 2026</span></div>
 </section>
 <section class="card ${wrong ? 'shake' : 'rise d4'}" aria-labelledby="t">
 <div class="lock" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
