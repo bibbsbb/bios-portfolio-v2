@@ -14,6 +14,9 @@ export const GATED_PAGES: Record<string, string> = {
   '/tautau/checklist': '/tautau/checklist',
   '/tautau/checklist/': '/tautau/checklist',
   '/tautau/checklist/index.html': '/tautau/checklist',
+  '/tautau/intake': '/tautau/intake',
+  '/tautau/intake/': '/tautau/intake',
+  '/tautau/intake/index.html': '/tautau/intake',
 };
 
 // Only known proposal pages are valid return targets after unlocking.

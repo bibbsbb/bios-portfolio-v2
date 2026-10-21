@@ -7,6 +7,7 @@ import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'fram
 import { projects, type Project } from '@/lib/work';
 import { resumeData } from '@/lib/data';
 import { BrowserFrame, Eyebrow, MaskLines, PhoneFrame, Reveal, ease, useIntroDone } from './ui';
+import { ContactForm } from './ContactForm';
 
 /* ---------- Hero ---------- */
 
@@ -394,31 +395,30 @@ export function About() {
 export function Contact() {
   return (
     <section id="contact" className="grain relative scroll-mt-20 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-28 text-center sm:px-10 sm:pt-40 sm:text-left">
-        <Eyebrow>Contact</Eyebrow>
-        <h2 className="mt-6 font-display text-[clamp(3.4rem,10vw,11rem)] font-light leading-[0.9] tracking-[-0.05em]">
-          <MaskLines play lines={['Let’s build', <span key="b" className="text-fog">something good.</span>]} />
-        </h2>
-        <Reveal delay={0.1}>
-          <a
-            href={`mailto:${resumeData.email}`}
-            className="group mt-14 inline-flex flex-wrap items-center justify-center gap-4 font-display text-[22px] font-light tracking-tight sm:justify-start sm:text-4xl"
-          >
-            <span className="draw-line">{resumeData.email}</span>
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper text-xl text-ink transition-transform duration-500 group-hover:rotate-[-45deg] sm:h-14 sm:w-14">
-              →
-            </span>
-          </a>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="mt-12 flex flex-wrap justify-center gap-3 sm:justify-start">
-            <a href={`https://${resumeData.linkedin}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-6 py-3 text-sm transition-colors hover:border-white/40">
-              LinkedIn ↗
-            </a>
-            <a href="/Brandon_Bibbins_Resume.pdf" target="_blank" className="rounded-full border border-white/15 px-6 py-3 text-sm transition-colors hover:border-white/40">
-              Résumé (PDF) ↗
-            </a>
-          </div>
+      <div className="mx-auto grid max-w-[1440px] gap-14 px-6 pb-20 pt-28 sm:px-10 sm:pt-40 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-20">
+        <div className="text-center lg:sticky lg:top-32 lg:text-left">
+          <Eyebrow>Contact</Eyebrow>
+          <h2 className="mt-6 font-display text-[clamp(3.2rem,8vw,8.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
+            <MaskLines play lines={['Let’s build', <span key="b" className="text-fog">something good.</span>]} />
+          </h2>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-8 max-w-md text-lg leading-relaxed text-mist lg:mx-0">
+              Tell me a little about your project and I’ll be in touch.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
+              <a href={`https://${resumeData.linkedin}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/15 px-6 py-3 text-sm transition-colors hover:border-white/40">
+                LinkedIn ↗
+              </a>
+              <a href="/Brandon_Bibbins_Resume.pdf" target="_blank" className="rounded-full border border-white/15 px-6 py-3 text-sm transition-colors hover:border-white/40">
+                Résumé (PDF) ↗
+              </a>
+            </div>
+          </Reveal>
+        </div>
+        <Reveal delay={0.15}>
+          <ContactForm />
         </Reveal>
       </div>
       <Footer />

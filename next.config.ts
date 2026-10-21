@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
     return [
       { source: '/tautau', destination: '/tautau/index.html' },
       { source: '/tautau/checklist', destination: '/tautau/checklist/index.html' },
+      { source: '/tautau/intake', destination: '/tautau/intake/index.html' },
     ];
   },
 

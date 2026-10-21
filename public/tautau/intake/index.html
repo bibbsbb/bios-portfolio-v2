@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1e0c2c">
+<title>A few questions before we start · Tau Tau Chapter proposal</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--plum:#1e0c2c;--cream:#f4eee3;--gold:#d9c38f;--gold-2:#b8995a;--muted:#c4b3d1;--soft:#9d88ae;--line:rgba(217,195,143,.14);--edge:rgba(217,195,143,.25);--panel:rgba(20,6,30,.55)}
+html{background:var(--plum)}
+body{background:radial-gradient(1200px 800px at 85% -10%,#4b1c6b 0%,transparent 60%),radial-gradient(900px 700px at -10% 110%,#3a1652 0%,transparent 55%),var(--plum);background-attachment:fixed;color:var(--cream);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+@media (min-width:760px){.wrap{padding:0 48px}}
+
+/* Top bar */
+.top{position:sticky;top:0;z-index:5;background:rgba(30,12,44,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:inline-flex;align-items:center;gap:10px;transition:opacity .2s}
+.logo:hover{opacity:.6}
+.mark{display:inline-flex;align-items:center;gap:2px}
+.mark b{font:500 20px/1 'Inter Tight',Arial,sans-serif}
+.logo .name{font:300 18px/1 'Inter Tight',Arial,sans-serif;letter-spacing:-.2px;white-space:nowrap}
+.top .for{font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
+@media (max-width:560px){.top .for{display:none}}
+
+/* Header */
+header.intro{padding:56px 0 24px}
+.client{display:flex;align-items:center;gap:16px;margin-bottom:44px}
+.client img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 1px var(--edge),0 12px 40px rgba(0,0,0,.35)}
+.client p{font:400 16px/1.35 'Inter Tight',Arial,sans-serif}
+.client p span{display:block;font:400 11px/1.4 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.eyebrow{font:400 12px/1.4 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
+h1{margin-top:18px;font:300 clamp(44px,7vw,76px)/1 'Inter Tight',Arial,sans-serif;letter-spacing:-.04em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{margin-top:22px;max-width:600px;font-size:18px;line-height:1.6;color:var(--muted)}
+.facts{margin-top:36px;display:grid;border-top:1px solid var(--gold-2)}
+@media (min-width:760px){.facts{grid-template-columns:repeat(3,1fr)}}
+.facts div{padding:18px 0;border-bottom:1px solid var(--line)}
+@media (min-width:760px){.facts div{border-bottom:0;padding:20px 24px 0 0}}
+.facts dt{font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.facts dd{margin-top:8px;font:400 20px/1.3 'Inter Tight',Arial,sans-serif;letter-spacing:-.2px}
+
+/* Sections */
+section.group{padding:48px 0 0}
+.ghead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--gold-2)}
+.ghead h2{font:400 28px/1.1 'Inter Tight',Arial,sans-serif;letter-spacing:-.6px}
+.ghead span{font:400 12px/1 'JetBrains Mono',monospace;color:var(--gold)}
+.gsub{margin-top:12px;font-size:15px;line-height:1.5;color:var(--muted)}
+
+/* Questions */
+.row{display:grid}
+@media (min-width:760px){.row{grid-template-columns:1fr 1fr;column-gap:32px}}
+.q{padding:24px 0;border:0;border-bottom:1px solid var(--line);min-width:0}
+fieldset.q{padding-top:0}
+fieldset.q .ql{padding-top:24px}
+.ql{display:block;padding:0;font:400 20px/1.3 'Inter Tight',Arial,sans-serif;letter-spacing:-.3px}
+.ql em{font-style:normal;color:var(--soft)}
+.qh{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--muted)}
+.field{display:block;margin-top:14px;width:100%;font:400 16px/1.45 Inter,Arial,sans-serif;color:var(--cream);background:var(--panel);padding:13px 16px;border:1px solid var(--edge);border-radius:12px;caret-color:var(--gold);transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.field::placeholder{color:#8a769b}
+.field:hover{border-color:rgba(217,195,143,.45)}
+.field:focus{outline:none;border-color:var(--gold-2);box-shadow:0 0 0 4px rgba(184,153,90,.15)}
+textarea.field{min-height:104px;resize:vertical}
+.chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--panel);border:1px solid var(--edge);border-radius:999px;font-size:15px;line-height:1.2;transition:background .2s,color .2s,border-color .2s}
+.chip:hover span{border-color:var(--gold)}
+.chip input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--plum)}
+.chip input:focus-visible+span{outline:2px solid var(--gold);outline-offset:3px}
+.chip.box span::before{content:"";width:14px;height:14px;border:1.5px solid currentColor;border-radius:4px;opacity:.5}
+.chip.box input:checked+span::before{opacity:1;background:var(--plum) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7.5l2.6 2.6L11 4.5' stroke='%23d9c38f' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--plum)}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+/* Send */
+.send{margin-top:56px;padding:36px 28px;background:linear-gradient(180deg,rgba(58,22,82,.92),rgba(36,13,52,.95));border:1px solid rgba(217,195,143,.22);border-radius:28px;box-shadow:0 40px 120px rgba(0,0,0,.4)}
+@media (min-width:760px){.send{padding:44px}}
+.send h2{font:300 clamp(32px,4.4vw,44px)/1.05 'Inter Tight',Arial,sans-serif;letter-spacing:-.03em}
+.send p{margin-top:12px;max-width:560px;font-size:16px;line-height:1.6;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:24px;padding:16px 28px;border-radius:999px;background:var(--gold);color:var(--plum);font:500 15px/1 Inter,Arial,sans-serif;transition:transform .2s,opacity .2s,background .2s}
+.btn:hover{transform:translateY(-1px);background:#e4d1a3}
+.btn:disabled{opacity:.55;transform:none;cursor:default}
+.btn.ghost{background:transparent;color:var(--cream);border:1px solid var(--edge)}
+.btn.ghost:hover{background:rgba(217,195,143,.08)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btns .btn{margin-top:20px}
+.err{margin-top:16px;font-size:15px;line-height:1.55;color:#f0b4b4}
+.err a{text-decoration:underline;text-underline-offset:3px;color:var(--gold)}
+
+/* Done */
+.done{padding:96px 0 40px;text-align:center}
+.done .tick{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--plum)}
+.done h1{margin-top:28px}
+.done .lede{margin-left:auto;margin-right:auto}
+.done .btns{justify-content:center}
+
+/* Footer */
+footer{margin-top:72px;padding:36px 0 120px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:400 12px/1.5 'JetBrains Mono',monospace;color:var(--soft)}
+.actions{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(20,6,30,.92);border:1px solid var(--edge);backdrop-filter:blur(12px);box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.actions a{font:500 13px/1 Inter,Arial,sans-serif;color:var(--cream);padding:11px 16px;border-radius:999px;white-space:nowrap;transition:background .2s}
+.actions a:hover{background:rgba(217,195,143,.1)}
+.actions .count{font:400 12px/1 'JetBrains Mono',monospace;color:var(--plum);background:var(--gold);padding:11px 16px;border-radius:999px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* Phones: center the header and section titles; questions stay left-aligned for easy reading. */
+@media (max-width:759px){
+  header.intro{text-align:center;padding-top:40px}
+  .client{flex-direction:column;justify-content:center;gap:12px;margin-bottom:32px}
+  .lede{margin-left:auto;margin-right:auto}
+  .facts div{text-align:center}
+  .ghead{flex-direction:column;align-items:center;gap:6px;text-align:center}
+  .gsub{text-align:center}
+  .send{text-align:center}
+  .send p{margin-left:auto;margin-right:auto}
+  .send .btn{width:100%}
+  .btns{justify-content:center}
+  footer{flex-direction:column;align-items:center;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Brandon Bibbins, home page">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 40 80" width="9" height="18"><path d="M34 6 L8 40 L34 74" stroke="currentColor" stroke-width="9" fill="none"/></svg><b>b</b><svg viewBox="0 0 40 80" width="9" height="18"><path d="M6 6 L32 40 L6 74" stroke="currentColor" stroke-width="9" fill="none"/></svg></span>
+      <span class="name">brandon bibbins</span>
+    </a>
+    <span class="for">Tau Tau Chapter proposal</span>
+  </div>
+</div>
+
+<main class="wrap" id="main">
+  <form id="intake" novalidate>
+  <header class="intro">
+    <div class="client">
+      <img src="/tautau/assets/tau-tau-seal.png" alt="Tau Tau Chapter seal" width="64" height="64">
+      <p><span>Prepared for</span>Tau Tau Chapter, Omega Psi Phi Fraternity, Inc.</p>
+    </div>
+    <p class="eyebrow">Project questions</p>
+    <h1>A few questions <em>before we start.</em></h1>
+    <p class="lede">Your answers help me plan the site around how the chapter really works. Skip anything you’re not sure about and we’ll cover it when we talk.</p>
+    <dl class="facts">
+      <div><dt>Time</dt><dd>About 10 minutes</dd></div>
+      <div><dt>Required</dt><dd>Just your name and email</dd></div>
+      <div><dt>Saving</dt><dd>Saves as you go on this device</dd></div>
+    </dl>
+  </header>
+
+  <section class="group">
+    <div class="ghead"><h2>About you</h2><span>01</span></div>
+    <div class="row">
+      <div class="q"><label class="ql" for="f-name">Your name</label><input class="field" id="f-name" name="name" autocomplete="name" required></div>
+      <div class="q"><label class="ql" for="f-role">Your role in the chapter</label><input class="field" id="f-role" name="role" placeholder="e.g. Basileus, chapter advisor"></div>
+      <div class="q"><label class="ql" for="f-email">Email</label><input class="field" id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="q"><label class="ql" for="f-phone">Phone <em>(optional)</em></label><input class="field" id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    </div>
+    <fieldset class="q"><legend class="ql">Best way to reach you</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="reach" value="Text"><span>Text</span></label>
+        <label class="chip"><input type="radio" name="reach" value="Call"><span>Call</span></label>
+        <label class="chip"><input type="radio" name="reach" value="Email"><span>Email</span></label>
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>Who’s involved</h2><span>02</span></div>
+    <div class="q"><label class="ql" for="f-contact">Who should I work with day to day?</label><span class="qh">Leave blank if it’s you.</span><input class="field" id="f-contact" name="contact"></div>
+    <div class="q"><label class="ql" for="f-reviewers">Who will review the designs?</label><span class="qh">Three to five brothers works best. Names are enough.</span><textarea class="field" id="f-reviewers" name="reviewers" rows="3"></textarea></div>
+    <div class="q"><label class="ql" for="f-signoff">Who gives the final sign-off?</label><input class="field" id="f-signoff" name="signoff"></div>
+    <fieldset class="q"><legend class="ql">Does the chapter need to vote on it?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="vote" value="Yes"><span>Yes</span></label>
+        <label class="chip"><input type="radio" name="vote" value="No"><span>No</span></label>
+        <label class="chip"><input type="radio" name="vote" value="Not sure"><span>Not sure</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="q"><legend class="ql">Where is the $2,500 budget?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="budget" value="Approved"><span>Approved</span></label>
+        <label class="chip"><input type="radio" name="budget" value="Waiting on a vote"><span>Waiting on a vote</span></label>
+        <label class="chip"><input type="radio" name="budget" value="Not discussed yet"><span>Not discussed yet</span></label>
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>Today’s website</h2><span>03</span></div>
+    <div class="row">
+      <div class="q"><label class="ql" for="f-site">Current website address</label><input class="field" id="f-site" name="site" inputmode="url" autocapitalize="off" placeholder="e.g. yourchapter.org"></div>
+      <div class="q"><label class="ql" for="f-manager">Who looks after it now?</label><input class="field" id="f-manager" name="manager" placeholder="A brother, a vendor, no one"></div>
+    </div>
+    <fieldset class="q"><legend class="ql">What is it built on?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="platform" value="Squarespace"><span>Squarespace</span></label>
+        <label class="chip"><input type="radio" name="platform" value="Wix"><span>Wix</span></label>
+        <label class="chip"><input type="radio" name="platform" value="WordPress"><span>WordPress</span></label>
+        <label class="chip"><input type="radio" name="platform" value="Something else"><span>Something else</span></label>
+        <label class="chip"><input type="radio" name="platform" value="Not sure"><span>Not sure</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="q"><legend class="ql">Who has the login for the domain name?</legend>
+      <span class="qh">The account where the web address is registered, like GoDaddy or Squarespace Domains.</span>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="domain" value="The chapter has it"><span>The chapter has it</span></label>
+        <label class="chip"><input type="radio" name="domain" value="A past brother or vendor"><span>A past brother or vendor</span></label>
+        <label class="chip"><input type="radio" name="domain" value="Not sure"><span>Not sure</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="q"><legend class="ql">Do brothers use email at that address?</legend>
+      <span class="qh">Like name@yourchapter.org. If so, I’ll keep it working through the switch.</span>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="domainEmail" value="Yes"><span>Yes</span></label>
+        <label class="chip"><input type="radio" name="domainEmail" value="No"><span>No</span></label>
+        <label class="chip"><input type="radio" name="domainEmail" value="Not sure"><span>Not sure</span></label>
+      </div>
+    </fieldset>
+    <div class="q"><label class="ql" for="f-keep">Anything on the current site we have to keep?</label><span class="qh">Pages, links people use, forms, or anything else.</span><textarea class="field" id="f-keep" name="keep" rows="3"></textarea></div>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>Goals</h2><span>04</span></div>
+    <div class="q"><label class="ql" for="f-why">Why a new website, and why now?</label><textarea class="field" id="f-why" name="why" rows="3"></textarea></div>
+    <fieldset class="q"><legend class="ql">Who should the site speak to first?</legend>
+      <span class="qh">Pick any that apply.</span>
+      <div class="chips">
+        <label class="chip box"><input type="checkbox" name="audience" value="Brothers"><span>Brothers</span></label>
+        <label class="chip box"><input type="checkbox" name="audience" value="Men interested in joining"><span>Men interested in joining</span></label>
+        <label class="chip box"><input type="checkbox" name="audience" value="Families and the community"><span>Families and the community</span></label>
+        <label class="chip box"><input type="checkbox" name="audience" value="Partners and sponsors"><span>Partners and sponsors</span></label>
+        <label class="chip box"><input type="checkbox" name="audience" value="Students looking for scholarships"><span>Students looking for scholarships</span></label>
+      </div>
+    </fieldset>
+    <div class="q"><label class="ql" for="f-tasks">What are the top things a visitor should be able to do?</label><textarea class="field" id="f-tasks" name="tasks" rows="3" placeholder="e.g. Find upcoming events, apply for the scholarship, donate"></textarea></div>
+    <div class="q"><label class="ql" for="f-feel">In a few words, how should people feel when they land?</label><input class="field" id="f-feel" name="feel" placeholder="e.g. Proud, welcomed, ready to get involved"></div>
+    <div class="q"><label class="ql" for="f-like">Any websites you like the look of?</label><span class="qh">Any site, any industry. Links are fine.</span><textarea class="field" id="f-like" name="like" rows="2"></textarea></div>
+    <fieldset class="q"><legend class="ql">Is November 1 still the right launch date?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="launch" value="Yes"><span>Yes</span></label>
+        <label class="chip"><input type="radio" name="launch" value="We need it sooner"><span>We need it sooner</span></label>
+        <label class="chip"><input type="radio" name="launch" value="Later is fine"><span>Later is fine</span></label>
+      </div>
+    </fieldset>
+    <div class="q"><label class="ql" for="f-date">Is there an event or date it needs to be ready for?</label><input class="field" id="f-date" name="date"></div>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>What the site should include</h2><span>05</span></div>
+    <p class="gsub">Member logins, dues and RSVPs come later with the Brothers’ Hub, so they aren’t listed here.</p>
+    <fieldset class="q"><legend class="ql">Pick what matters for launch</legend>
+      <div class="chips">
+        <label class="chip box"><input type="checkbox" name="features" value="Events calendar"><span>Events calendar</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Officers and chapter history"><span>Officers and chapter history</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Programs and community service"><span>Programs and community service</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Scholarship information"><span>Scholarship information</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Donations or sponsorships"><span>Donations or sponsorships</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Photo gallery"><span>Photo gallery</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Interest form for future members"><span>Interest form for future members</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Contact form"><span>Contact form</span></label>
+        <label class="chip box"><input type="checkbox" name="features" value="Email newsletter signup"><span>Email newsletter signup</span></label>
+      </div>
+    </fieldset>
+    <div class="q"><label class="ql" for="f-pay">How does the chapter take donations or payments today?</label><input class="field" id="f-pay" name="pay" placeholder="e.g. PayPal, Cash App, Zelle, a ticketing site"></div>
+    <div class="q"><label class="ql" for="f-more">Anything else the site should do?</label><textarea class="field" id="f-more" name="more" rows="2"></textarea></div>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>Content and files</h2><span>06</span></div>
+    <div class="q"><label class="ql" for="f-folder">Link to a shared folder</label><span class="qh">A Google Drive or Dropbox folder with photos, logo files and any history or program write-ups. Send what you have; we’ll fill the gaps together.</span><input class="field" id="f-folder" name="folder" inputmode="url" autocapitalize="off" placeholder="https://"></div>
+    <div class="q"><label class="ql" for="f-social">Chapter social media</label><span class="qh">Instagram, Facebook, or anything else to link from the site.</span><textarea class="field" id="f-social" name="social" rows="2"></textarea></div>
+    <fieldset class="q"><legend class="ql">How ready is the written content?</legend>
+      <span class="qh">History, program descriptions, officer bios.</span>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="copy" value="Mostly ready"><span>Mostly ready</span></label>
+        <label class="chip"><input type="radio" name="copy" value="Some of it"><span>Some of it</span></label>
+        <label class="chip"><input type="radio" name="copy" value="We’ll need help writing it"><span>We’ll need help writing it</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="q"><legend class="ql">Approval from national to use fraternity marks</legend>
+      <span class="qh">The letters, crest and colors need written approval before they go on the site.</span>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="marks" value="We have it"><span>We have it</span></label>
+        <label class="chip"><input type="radio" name="marks" value="We’ll request it"><span>We’ll request it</span></label>
+        <label class="chip"><input type="radio" name="marks" value="Not sure who to ask"><span>Not sure who to ask</span></label>
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>After launch</h2><span>07</span></div>
+    <div class="q"><label class="ql" for="f-editor">Who will keep the site up to date?</label><span class="qh">I’ll train them. No code needed.</span><input class="field" id="f-editor" name="editor"></div>
+    <fieldset class="q"><legend class="ql">How often does chapter news change?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="cadence" value="Weekly"><span>Weekly</span></label>
+        <label class="chip"><input type="radio" name="cadence" value="Monthly"><span>Monthly</span></label>
+        <label class="chip"><input type="radio" name="cadence" value="A few times a year"><span>A few times a year</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="q"><legend class="ql">Would you like ongoing help from me after launch?</legend>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="support" value="Yes"><span>Yes</span></label>
+        <label class="chip"><input type="radio" name="support" value="Maybe, let’s talk"><span>Maybe, let’s talk</span></label>
+        <label class="chip"><input type="radio" name="support" value="No, we’ll handle it"><span>No, we’ll handle it</span></label>
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="group">
+    <div class="ghead"><h2>Anything else</h2><span>08</span></div>
+    <div class="q"><label class="ql" for="f-else">Anything else I should know?</label><textarea class="field" id="f-else" name="else" rows="4"></textarea></div>
+  </section>
+
+  <input class="trap" name="company_site" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="send">
+    <h2>Ready to send?</h2>
+    <p>Send what you have. It’s fine to leave things blank; I’ll follow up on anything we still need.</p>
+    <button class="btn" type="submit" id="send">Send my answers <span aria-hidden="true">→</span></button>
+    <div class="err" id="err" role="alert" hidden></div>
+  </div>
+  </form>
+
+  <div class="done" id="done" hidden>
+    <span class="tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h1 id="done-title" tabindex="-1">Thank you.</h1>
+    <p class="lede">I’ve got your answers and will read through them before we talk next.</p>
+    <div class="btns">
+      <button class="btn ghost" type="button" data-download>Download a copy</button>
+      <a class="btn" href="/tautau/checklist">See the checklist →</a>
+    </div>
+  </div>
+
+  <footer>
+    <span>Prepared by Brandon Bibbins for Tau Tau Chapter · October 2026</span>
+    <a href="/">brandonbibbins.io</a>
+  </footer>
+</main>
+
+<nav class="actions" aria-label="Proposal links">
+  <a href="/tautau">← Proposal</a>
+  <a href="/tautau/checklist">Checklist</a>
+  <span class="count" id="count" aria-live="polite">0 answered</span>
+</nav>
+
+<script>
+(function () {
+  var KEY = 'tt-intake-v1';
+  var EMAIL = 'brandonbibbins@gmail.com';
+  var form = document.getElementById('intake');
+  var questions = Array.prototype.slice.call(form.querySelectorAll('.q'));
+  var started = Date.now();
+  var lastText = '';
+
+  function valueOf(q) {
+    var vals = [];
+    q.querySelectorAll('input,textarea').forEach(function (el) {
+      if (el.type === 'radio' || el.type === 'checkbox') { if (el.checked) vals.push(el.value); }
+      else if (el.value.trim()) vals.push(el.value.trim());
+    });
+    return vals.join(', ');
+  }
+
+  function answers() {
+    return questions.map(function (q) {
+      return {
+        section: q.closest('section').querySelector('h2').textContent,
+        label: q.querySelector('.ql').textContent.replace(/\s*\(optional\)$/, ''),
+        value: valueOf(q),
+      };
+    }).filter(function (a) { return a.value; });
+  }
+
+  function asText(list) {
+    var out = ['Tau Tau Chapter project questions', ''];
+    var section = '';
+    list.forEach(function (a) {
+      if (a.section !== section) { section = a.section; out.push(section.toUpperCase()); }
+      out.push(a.label, a.value, '');
+    });
+    return out.join('\n');
+  }
+
+  // Save every answer on this device, so closing the tab loses nothing.
+  function save() {
+    var data = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || el.name === 'company_site') return;
+      if (el.type === 'radio' || el.type === 'checkbox') {
+        if (el.checked) (data[el.name] = data[el.name] || []).push(el.value);
+      } else if (el.value) data[el.name] = el.value;
+    });
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {}
+  }
+  function restore() {
+    var data = {};
+    try { data = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || !(el.name in data)) return;
+      if (el.type === 'radio' || el.type === 'checkbox') el.checked = data[el.name].indexOf(el.value) > -1;
+      else el.value = data[el.name];
+    });
+  }
+  function count() {
+    var n = questions.filter(function (q) { return valueOf(q); }).length;
+    document.getElementById('count').textContent = n + ' of ' + questions.length + ' answered';
+  }
+
+  function download() {
+    var url = URL.createObjectURL(new Blob([lastText || asText(answers())], { type: 'text/plain' }));
+    var a = document.createElement('a');
+    a.href = url; a.download = 'Tau Tau project answers.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function showError(message, offerCopy) {
+    var err = document.getElementById('err');
+    err.textContent = message + ' ';
+    if (offerCopy) {
+      var dl = document.createElement('a');
+      dl.href = '#'; dl.textContent = 'Download your answers';
+      dl.addEventListener('click', function (e) { e.preventDefault(); download(); });
+      var mail = document.createElement('a');
+      mail.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Tau Tau project answers');
+      mail.textContent = EMAIL;
+      err.append(dl, ' and email them to ', mail, '.');
+    }
+    err.hidden = false;
+  }
+
+  form.addEventListener('input', function () { save(); count(); });
+  form.addEventListener('change', function () { save(); count(); });
+  document.querySelectorAll('[data-download]').forEach(function (b) { b.addEventListener('click', download); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err = document.getElementById('err');
+    err.hidden = true;
+    var name = form.elements.name.value.trim();
+    var email = form.elements.email.value.trim();
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('Please add your name and a valid email at the top.', false);
+      (name ? form.elements.email : form.elements.name).focus();
+      return;
+    }
+    var list = answers();
+    lastText = asText(list);
+    var btn = document.getElementById('send');
+    btn.disabled = true;
+    btn.firstChild.textContent = 'Sending… ';
+    fetch('/tautau/intake/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, answers: list, company_site: form.elements.company_site.value, started: started }),
+    }).then(function (res) {
+      if (!res.ok) throw new Error(String(res.status));
+      try { localStorage.removeItem(KEY); } catch (x) {}
+      form.hidden = true;
+      document.getElementById('done-title').textContent = 'Thank you, ' + name.split(' ')[0] + '.';
+      document.getElementById('done').hidden = false;
+      window.scrollTo(0, 0);
+      document.getElementById('done-title').focus();
+    }).catch(function () {
+      showError('That didn’t go through. Your answers are still saved here.', true);
+    }).finally(function () {
+      btn.disabled = false;
+      btn.firstChild.textContent = 'Send my answers ';
+    });
+  });
+
+  restore();
+  count();
+})();
+</script>
+</body>
+</html>
